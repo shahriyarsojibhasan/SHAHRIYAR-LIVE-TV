@@ -1,0 +1,21 @@
+{
+  "name": "SHAHRIYAR LIVE TV",
+  "short_name": "LIVE TV",
+  "description": "Watch Live TV seamlessly. Auto-switching, HLS streaming, and blazing fast performance by SHAHRIYAR SOJIB HASAN.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1121",
+  "theme_color": "#0b1121",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
