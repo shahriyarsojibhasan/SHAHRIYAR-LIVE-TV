@@ -2,222 +2,268 @@ import os
 import requests
 import concurrent.futures
 from datetime import datetime, timezone, timedelta
-import json
 import random
-from urllib.parse import urlparse
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
 
-# Multiple User-Agents for better compatibility
+# ==================== MULTIPLE USER-AGENTS FOR BETTER COMPATIBILITY ====================
+# This list helps bypass stricter servers that check User-Agent headers
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15',
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1',
-    'Mozilla/5.0 (Linux; Android 13; SM-A135F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0',
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1',
 ]
 
-def get_random_headers():
+# ==================== COMPREHENSIVE HEADERS WITH CORS SUPPORT ====================
+# These headers help with CORS issues and make requests more authentic
+def get_headers():
     """
-    Generate random headers with rotation to bypass restrictions
+    Generate random headers for each request to avoid detection and bypass rate limiting.
+    Includes CORS headers and comprehensive Accept headers.
     """
-    ua = random.choice(USER_AGENTS)
     return {
-        'User-Agent': ua,
+        'User-Agent': random.choice(USER_AGENTS),
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9',
         'Accept-Encoding': 'gzip, deflate, br',
+        'DNT': '1',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
         'Sec-Fetch-Dest': 'document',
         'Sec-Fetch-Mode': 'navigate',
         'Sec-Fetch-Site': 'none',
         'Cache-Control': 'max-age=0',
+        'Pragma': 'no-cache',
+        # CORS Headers
         'Origin': 'https://github.com',
         'Referer': 'https://github.com/',
     }
 
-def get_session_with_retries():
-    """
-    Create a requests session with automatic retry strategy
-    """
-    session = requests.Session()
-    
-    retry_strategy = Retry(
-        total=3,
-        backoff_factor=0.5,
-        status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["HEAD", "GET", "OPTIONS"]
-    )
-    
-    adapter = HTTPAdapter(max_retries=retry_strategy)
-    session.mount("http://", adapter)
-    session.mount("https://", adapter)
-    
-    return session
 
 def is_vod(url):
     """
-    Enhanced VOD detection with extended patterns
+    Checks if a URL is a VOD (Movie/Series) instead of a Live TV channel.
+    
+    Logic:
+    - VODs typically use specific file extensions (.mp4, .mkv, .avi, .m4v, .mov)
+    - Xtream Codes API usually contains '/movie/' or '/series/' paths for VODs
+    
+    Args:
+        url (str): The streaming URL to check
+        
+    Returns:
+        bool: True if URL is a VOD, False if it's Live TV
     """
     url_lower = url.lower()
     
-    # Common VOD file extensions
-    vod_extensions = ['.mp4', '.mkv', '.avi', '.m4v', '.mov', '.flv', '.wmv', '.webm', '.m3u8.mp4']
+    # Common VOD file extensions - Check if URL ends with media file extension
+    vod_extensions = ['.mp4', '.mkv', '.avi', '.m4v', '.mov', '.flv', '.wmv']
     if any(url_lower.endswith(ext) for ext in vod_extensions):
         return True
-    
-    # Common VOD paths in Xtream Codes API and streaming platforms
-    vod_patterns = [
-        '/movie/', '/series/', '/movies/', '/serial/', 
-        '/film/', '/episode/', '/videos/', '/content/video',
-        'movie=', 'series=', 'content_type=movie'
-    ]
-    if any(pattern in url_lower for pattern in vod_patterns):
+        
+    # Common VOD paths in Xtream Codes API format
+    # If URL contains /movie/ or /series/, it's typically VOD content
+    if '/movie/' in url_lower or '/series/' in url_lower:
         return True
-    
+        
     return False
 
-def is_channel_live_advanced(url, session=None):
+
+def is_channel_live(url):
     """
-    Enhanced stream verification with multiple fallback strategies
+    Enhanced stream verification with multiple checks and robust error handling.
+    
+    Verification Process:
+    1. Send HEAD/GET request to check if server responds
+    2. Verify Content-Type header contains valid media type
+    3. Attempt to read initial stream data (chunk verification)
+    4. Validate HTTP status codes
+    5. Handle CORS and redirect responses
+    
+    Args:
+        url (str): The streaming URL to verify
+        
+    Returns:
+        bool: True if stream is playable, False otherwise
     """
-    if session is None:
-        session = get_session_with_retries()
+    if not url or not url.startswith('http'):
+        return False
     
     try:
-        # Try HEAD request first (faster, less bandwidth)
-        try:
-            head_response = session.head(url, headers=get_random_headers(), timeout=8, allow_redirects=True)
-            if head_response.status_code == 200:
-                content_type = head_response.headers.get('Content-Type', '').lower()
-                valid_media_types = ['video', 'audio', 'mpegurl', 'dash+xml', 'octet-stream', 'x-mpegurl', 'vnd.apple']
-                
-                if any(media_type in content_type for media_type in valid_media_types) or not content_type:
-                    return True
-        except:
-            pass  # Fallback to GET if HEAD fails
-        
-        # Try GET request with stream
-        get_response = session.get(url, headers=get_random_headers(), stream=True, timeout=10, allow_redirects=True)
-        
-        if get_response.status_code == 200:
-            content_type = get_response.headers.get('Content-Type', '').lower()
-            content_length = get_response.headers.get('Content-Length', '')
-            
-            valid_media_types = ['video', 'audio', 'mpegurl', 'dash+xml', 'octet-stream', 'x-mpegurl', 'vnd.apple']
-            
-            # Check content type
-            if any(media_type in content_type for media_type in valid_media_types) or not content_type:
-                # Try to read chunk
-                try:
-                    next(get_response.iter_content(chunk_size=1024))
-                    return True
-                except (StopIteration, requests.RequestException):
-                    # Sometimes streams don't send data immediately but are still valid
-                    if content_length and int(content_length) > 0:
-                        return True
-                    return False
-        
-        return False
-    
-    except requests.Timeout:
-        # Timeout might mean stream is slow but valid - try one more time
-        try:
-            final_response = session.get(url, headers=get_random_headers(), stream=True, timeout=15)
-            return final_response.status_code == 200
-        except:
-            return False
-    
-    except requests.RequestException as e:
-        return False
-    
-    finally:
-        if 'get_response' in locals():
+        # Try different request methods and timeouts for robustness
+        for attempt in range(2):
             try:
-                get_response.close()
-            except:
-                pass
+                # First attempt: GET request with stream=True
+                if attempt == 0:
+                    response = requests.get(
+                        url,
+                        headers=get_headers(),
+                        stream=True,
+                        timeout=10,
+                        allow_redirects=True,
+                        verify=False  # Disable SSL verification for HTTPS issues
+                    )
+                # Second attempt: HEAD request if GET fails (faster, less bandwidth)
+                else:
+                    response = requests.head(
+                        url,
+                        headers=get_headers(),
+                        timeout=8,
+                        allow_redirects=True,
+                        verify=False
+                    )
+                
+                # Check if response status indicates success
+                if response.status_code in [200, 206, 301, 302, 307, 308]:
+                    content_type = response.headers.get('Content-Type', '').lower()
+                    
+                    # Valid media content types for streaming
+                    valid_media_types = [
+                        'video',           # video/mp4, video/x-msvideo, etc.
+                        'audio',           # audio/mpeg, audio/aac, etc.
+                        'application/x-mpegURL',  # HLS playlists
+                        'application/vnd.apple.mpegurl',  # HLS variant
+                        'application/dash+xml',   # DASH manifests
+                        'application/octet-stream',  # Generic binary streams
+                        'text/plain',      # Some streams serve as plain text
+                        'text/html',       # Some streaming sites use HTML
+                    ]
+                    
+                    # If Content-Type matches valid types or is empty (some streams don't send it)
+                    if any(media_type in content_type for media_type in valid_media_types) or not content_type:
+                        # Try to read initial chunk to verify actual stream data exists
+                        try:
+                            for chunk in response.iter_content(chunk_size=1024):
+                                if chunk:  # If we got data, stream is valid
+                                    return True
+                        except Exception:
+                            # If chunk reading fails on first attempt, try HEAD request
+                            if attempt == 0:
+                                continue
+                            return False
+                        
+                        # If no chunks but status was good and content-type valid, consider it valid
+                        return True
+                
+                # Handle redirect responses (follow chain)
+                elif response.status_code in [301, 302, 307, 308]:
+                    return is_channel_live(response.headers.get('location', ''))
+                
+            except requests.Timeout:
+                # Timeout on this attempt, try next method
+                if attempt == 0:
+                    continue
+                return False
+            except requests.ConnectionError:
+                if attempt == 0:
+                    continue
+                return False
+        
+        return False
+        
+    except Exception as e:
+        # Generic error handling - log and return False
+        print(f"Stream verification error for {url}: {str(e)[:50]}")
+        return False
+    finally:
+        # Ensure connection is properly closed
+        try:
+            if 'response' in locals():
+                response.close()
+        except Exception:
+            pass
 
-def read_m3u_playlist_advanced(source, session=None):
+
+def read_m3u_playlist(source):
     """
-    Advanced M3U parser with better error handling and format support
+    Bulletproof Line-by-Line M3U parser with comprehensive channel extraction.
+    
+    Features:
+    - Handles both URL and local file sources
+    - Robust line-by-line parsing
+    - Extracts logos, group titles, and channel names
+    - Filters out unwanted content (VODs, movies, blocked keywords)
+    - Applies custom branding to channels
+    
+    Args:
+        source (str): URL or file path to M3U playlist
+        
+    Returns:
+        list: List of channel dictionaries with 'logo', 'group', 'channel_name', 'url'
     """
     playlist = []
     if not source:
         return []
 
-    if session is None:
-        session = get_session_with_retries()
-
     content = ""
     
+    # ==================== FETCH CONTENT FROM SOURCE ====================
     if source.startswith("http"):
+        # Source is a URL - fetch with enhanced headers and error handling
         try:
-            response = session.get(source, headers=get_random_headers(), timeout=20, allow_redirects=True)
-            response.encoding = 'utf-8'
+            response = requests.get(
+                source,
+                headers=get_headers(),
+                timeout=15,
+                verify=False,  # Handle SSL issues
+                allow_redirects=True
+            )
+            response.encoding = 'utf-8'  # Ensure UTF-8 decoding
             content = response.text
-            response.close()
         except requests.RequestException as e:
-            print(f"⚠️  Error fetching playlist from {source}: {e}")
+            print(f"Error fetching playlist from {source}: {e}")
             return []
     else:
+        # Source is a local file - read with UTF-8 encoding
         try:
             with open(source, 'r', encoding='utf-8') as f:
                 content = f.read()
         except IOError as e:
-            print(f"⚠️  Error reading file {source}: {e}")
+            print(f"Error reading file {source}: {e}")
             return []
 
-    # Normalize lines - handle multiple formats
-    lines = content.replace('\r\n', '\n').replace('\r', '\n').split('\n')
+    # ==================== NORMALIZE AND PARSE LINES ====================
+    # Convert all line endings to \n for consistent parsing
+    lines = content.replace('\r\n', '\n').split('\n')
     
-    blocked_keywords = ['himel op', 'promo', 'playz tv', 'test', 'dummy', '(off)', '[off]', 'disabled']
+    # Keywords to block (unwanted channels/groups)
+    blocked_keywords = ['himel op', 'promo', 'playz tv', 'test', 'dummy']
     current_channel = {}
 
-    for idx, line in enumerate(lines):
+    for line in lines:
         line = line.strip()
+        
+        # Skip empty lines
         if not line:
             continue
         
-        # Skip non-extinf lines and non-url lines
-        if not line.startswith('#EXTINF:') and not line.startswith('http') and idx > 0:
-            continue
-            
+        # ==================== PARSE #EXTINF HEADER ====================
         if line.startswith('#EXTINF:'):
-            # Extract Logo
+            # Extract Logo URL from tvg-logo attribute
             logo_start = line.find('tvg-logo="')
             if logo_start != -1:
                 logo_end = line.find('"', logo_start + 10)
                 current_channel['logo'] = line[logo_start + 10:logo_end]
             else:
-                logo_start = line.find("tvg-logo='")
-                if logo_start != -1:
-                    logo_end = line.find("'", logo_start + 10)
-                    current_channel['logo'] = line[logo_start + 10:logo_end]
-                else:
-                    current_channel['logo'] = ""
+                current_channel['logo'] = ""
 
-            # Extract Group Title
+            # Extract Group Title from group-title attribute
+            # This categorizes channels (Sports, News, Entertainment, etc.)
             group_start = line.find('group-title="')
             if group_start != -1:
                 group_end = line.find('"', group_start + 13)
                 current_channel['group'] = line[group_start + 13:group_end]
             else:
-                group_start = line.find("group-title='")
-                if group_start != -1:
-                    group_end = line.find("'", group_start + 13)
-                    current_channel['group'] = line[group_start + 13:group_end]
-                else:
-                    current_channel['group'] = "Uncategorized"
+                current_channel['group'] = "Uncategorized"
 
-            # Extract Channel Name
+            # Extract Channel Name - usually after the last comma
             name_split = line.split(',')
             current_channel['name'] = name_split[-1].strip() if len(name_split) > 1 else "Unknown Channel"
-            current_channel['source'] = source  # Track which source this came from
 
+        # ==================== PARSE STREAMING URL ====================
         elif line.startswith('http'):
             if current_channel:
                 url = line
@@ -225,178 +271,177 @@ def read_m3u_playlist_advanced(source, session=None):
                 group_lower = current_channel['group'].lower()
                 url_lower = url.lower()
 
-                # 1. Block unwanted keywords
+                # ========== FILTER 1: BLOCK UNWANTED KEYWORDS ==========
+                # Skip channels with blocked keywords in name, group, or URL
                 if any(kw in name_lower or kw in group_lower or kw in url_lower for kw in blocked_keywords):
                     current_channel = {}
                     continue
                 
-                # 2. Block Movies & Series (VODs)
+                # ========== FILTER 2: BLOCK MOVIES & SERIES (VODs) ==========
+                # Skip VOD content - keep only Live TV channels
                 if is_vod(url):
                     current_channel = {}
                     continue
 
-                # 3. Validate URL format
-                try:
-                    parsed = urlparse(url)
-                    if not parsed.scheme or not parsed.netloc:
-                        current_channel = {}
-                        continue
-                except:
-                    current_channel = {}
-                    continue
-
-                # 4. Apply Branding & Save
+                # ========== APPLY BRANDING & ADD TO PLAYLIST ==========
+                # Add custom branding to channel name for identification
                 branded_name = f"{current_channel['name']} | SHAHRIYAR LIVE TV"
+                
                 playlist.append({
                     'logo': current_channel['logo'],
                     'group': current_channel['group'],
                     'channel_name': branded_name,
-                    'url': url,
-                    'source': current_channel['source'],
-                    'original_name': current_channel['name']
+                    'url': url
                 })
                 
+                # Reset for next channel
                 current_channel = {}
 
     return playlist
 
-def check_channel_worker(channel, session=None):
-    """Worker function for concurrent execution with session pooling"""
-    if is_channel_live_advanced(channel['url'], session):
+
+def check_channel_worker(channel):
+    """
+    Worker function for concurrent stream verification.
+    Used by ThreadPoolExecutor to verify multiple channels in parallel.
+    
+    Args:
+        channel (dict): Channel dictionary with 'url' key
+        
+    Returns:
+        dict: Channel dictionary if stream is valid, None if invalid
+    """
+    if is_channel_live(channel['url']):
         return channel
     return None
 
-def combine_playlists_advanced(playlist_sources, priority_order, max_workers=30):
-    """
-    Advanced playlist combining with smart sorting and deduplication
-    """
-    session = get_session_with_retries()
-    raw_combined_playlist = []
-    seen_channels = {}  # Changed to dict to track source priority
-    source_position = {}  # Track position for stable sorting
 
-    # Combine priority order with additional sources
-    valid_sources = [s for s in priority_order + playlist_sources if s]
+def combine_playlists(playlist_sources, priority_order):
+    """
+    Combines multiple M3U playlists with priority ordering and deduplication.
     
-    # Create source position mapping
-    for position, source in enumerate(valid_sources):
-        source_position[source] = position
-
-    print(f"📡 Loading {len(valid_sources)} playlist sources...")
-
-    # Process sources in priority order
-    for source_idx, source in enumerate(valid_sources):
-        print(f"   [{source_idx + 1}/{len(valid_sources)}] Parsing: {source[:50]}...")
-        source_playlist = read_m3u_playlist_advanced(source, session)
+    Features:
+    - Reads multiple playlist sources (URLs and files)
+    - Maintains priority order - sources listed first take precedence
+    - Deduplicates channels by URL (prevents duplicates)
+    - Verifies each stream is live and accessible
+    - Uses concurrent verification for speed (20 parallel threads)
+    
+    Args:
+        playlist_sources (list): List of playlist URLs/files to combine
+        priority_order (list): List of priority sources (checked first)
         
+    Returns:
+        list: Combined and verified playlist of live channels
+    """
+    raw_combined_playlist = []
+    seen_channels = set()
+
+    # Combine priority and regular sources, filter out None values
+    valid_sources = [s for s in priority_order + playlist_sources if s]
+
+    # ==================== READ ALL PLAYLISTS ====================
+    # Iterate through sources in priority order
+    for source in valid_sources:
+        source_playlist = read_m3u_playlist(source)
+        
+        # Add channels from this source, skipping duplicates
         for channel in source_playlist:
-            channel_identity = channel['url']
+            channel_identity = channel['url']  # Use URL as unique identifier
             
-            # Keep first occurrence (priority order matters)
+            # Only add if we haven't seen this URL before (deduplication)
             if channel_identity not in seen_channels:
-                seen_channels[channel_identity] = {
-                    'data': channel,
-                    'source_priority': source_idx
-                }
+                seen_channels.add(channel_identity)
                 raw_combined_playlist.append(channel)
 
-    print(f"\n✅ Total channels extracted (VODs filtered): {len(raw_combined_playlist)}")
-    print(f"🔍 Verifying stream playability (this may take a few minutes)...\n")
+    # ==================== VERIFY STREAMS CONCURRENTLY ====================
+    combined_playlist = []
+    print(f"Total Live TV channels extracted (Movies skipped): {len(raw_combined_playlist)}. Verifying stream status... 🚀")
 
-    # Concurrent verification with progress
-    verified_playlist = []
-    verified_count = 0
-    total_count = len(raw_combined_playlist)
-
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(check_channel_worker, ch, session): ch for ch in raw_combined_playlist}
+    # Use ThreadPoolExecutor for concurrent stream verification (20 parallel threads)
+    # This significantly speeds up the verification process
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        results = executor.map(check_channel_worker, raw_combined_playlist)
         
-        for future in concurrent.futures.as_completed(futures):
-            result = future.result()
-            if result is not None:
-                verified_playlist.append(result)
-                verified_count += 1
-            
-            # Progress indicator
-            total_checked = verified_count + (total_count - len(futures))
-            if total_checked % 10 == 0:
-                print(f"   Progress: {verified_count} / {total_count} verified playable...")
+        # Collect results - only add channels that verified successfully
+        for channel in results:
+            if channel is not None:
+                combined_playlist.append(channel)
 
-    print(f"\n")
-    
-    # Sort by group, then by channel name (stable sort - maintains order within groups)
-    verified_playlist.sort(key=lambda x: (x['group'].lower(), x['original_name'].lower()))
-    
-    session.close()
-    return verified_playlist
+    return combined_playlist
+
 
 def write_to_file(playlist, output_file, promo_channel=None):
-    """Write playlist to M3U file"""
+    """
+    Writes the final playlist to M3U file with headers and metadata.
+    
+    M3U Format:
+    - #EXTM3U header
+    - #EXTINF metadata (logo, group, name)
+    - Stream URL
+    
+    Features:
+    - Includes creation timestamp (BD timezone)
+    - Adds promo channel at top
+    - Includes author credits and update info
+    - Properly formatted for media players (VLC, Kodi, etc.)
+    
+    Args:
+        playlist (list): List of verified channel dictionaries
+        output_file (str): Output M3U file path
+        promo_channel (dict): Optional promo channel to add at top
+    """
+    # Get current time in Bangladesh timezone (UTC+6)
     bd_timezone = timezone(timedelta(hours=6))
     current_time_bd = datetime.now(bd_timezone).strftime('%Y-%m-%d %H:%M:%S')
 
     with open(output_file, 'w', encoding='utf-8') as f:
+        # ==================== WRITE M3U HEADER ====================
         f.write("#EXTM3U\n")
         f.write("# By SHAHRIYAR SOJIB HASAN\n")
-        f.write("# TELEGRAM @SHAHRIYARTVBOT\n")
-        f.write(f"# Updated: {current_time_bd} (BD Time)\n")
-        f.write("# 100% Playable Live TV Channels | VODs Excluded\n")
-        f.write("# Multi-source aggregation with advanced verification\n\n")
-            
+        f.write("# TELEGRAM @SHAHRIAYRTVBOT\n")
+        f.write(f"# Update on {current_time_bd} (BD Time)\n")
+        f.write("# Note: Auto-filtered to strictly contain Live TV only. No VODs/Movies.\n")
+        f.write("# Enhanced with multiple user-agents, CORS support, and robust verification\n\n")
+        
+        # ==================== WRITE PROMO CHANNEL ====================
         if promo_channel:
-            f.write("#EXTINF:-1 tvg-logo=\"%s\" group-title=\"📢 Promo\",%s\n%s\n" % (
+            f.write("#EXTINF:-1 tvg-logo=\"%s\" group-title=\"Promo\",%s\n%s\n" % (
                 promo_channel['logo'], promo_channel['channel_name'], promo_channel['url']
             ))
-            f.write("\n")
-            
+        
+        # ==================== WRITE ALL CHANNELS ====================
+        # Each channel has metadata (EXTINF) followed by URL
         for item in playlist:
             f.write("#EXTINF:-1 tvg-logo=\"%s\" group-title=\"%s\",%s\n%s\n" % (
                 item['logo'], item['group'], item['channel_name'], item['url']
             ))
 
-def main():
-    """Main execution function"""
-    print("=" * 60)
-    print("🚀 SHAHRIYAR LIVE TV - Advanced Playlist Generator")
-    print("=" * 60 + "\n")
 
-    # Load sources from environment variables
+if __name__ == "__main__":
+    # ==================== LOAD CONFIGURATION FROM ENVIRONMENT ====================
+    # Playlist sources from environment variables (PLAYLIST_SOURCE_URL_1 to _20)
     playlist_sources = [os.getenv(f'PLAYLIST_SOURCE_URL_{i}') for i in range(1, 21)]
-    playlist_sources = [s for s in playlist_sources if s]  # Remove None values
     
+    # Priority sources that are checked first (PRIORITY_PLAYLIST_URL_1 to _10)
     priority_order = [os.getenv(f'PRIORITY_PLAYLIST_URL_{i}') for i in range(1, 11)]
-    priority_order = [s for s in priority_order if s]  # Remove None values
     
+    # Output file name
     output_file = 'SHAHRIYAR-LIVE-TV.m3u'
 
-    if not playlist_sources and not priority_order:
-        print("❌ No playlist sources found in environment variables!")
-        return
+    # ==================== COMBINE AND VERIFY PLAYLISTS ====================
+    combined_playlist = combine_playlists(playlist_sources, priority_order)
 
-    print(f"📋 Configuration:")
-    print(f"   Priority sources: {len(priority_order)}")
-    print(f"   Additional sources: {len(playlist_sources)}")
-    print(f"   Total sources: {len(priority_order) + len(playlist_sources)}\n")
-
-    # Combine and verify playlists
-    combined_playlist = combine_playlists_advanced(playlist_sources, priority_order, max_workers=30)
-
-    # Promo channel
+    # ==================== PROMO CHANNEL CONFIGURATION ====================
     promo_channel = {
         'logo': 'https://camo.githubusercontent.com/80ae2e5389a61f88a909165f57b1d44d66ffa1337d25accd421e839e26c02472/68747470733a2f2f692e6962622e636f2e636f6d2f54465373736d572f696d6167652e706e67',
         'channel_name': 'SHAHRIYAR LIVE TV',
         'url': 'https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/raw/refs/heads/main/assest/shahriyarlivetv.m3u8'
     }
 
-    # Write to file
+    # ==================== WRITE FINAL PLAYLIST ====================
     write_to_file(combined_playlist, output_file, promo_channel)
     
-    print("=" * 60)
-    print(f"✨ Final Result:")
-    print(f"   📊 Total verified playable channels: {len(combined_playlist)}")
-    print(f"   💾 Output file: {output_file}")
-    print(f"   ✅ Status: SUCCESS")
-    print("=" * 60)
-
-if __name__ == "__main__":
-    main()
+    # ==================== FINAL REPORT ====================
+    print(f"Final valid Live TV channels: {len(combined_playlist)}")
+    print(f"Playlist saved to: {output_file}")
