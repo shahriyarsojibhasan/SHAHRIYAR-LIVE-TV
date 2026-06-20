@@ -82,7 +82,6 @@
         
         #toast { visibility: hidden; min-width: 250px; background-color: #ef4444; color: #fff; text-align: center; border-radius: 6px; padding: 12px 20px; position: fixed; z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 13px; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s, bottom 0.3s; }
         #toast.show { visibility: visible; opacity: 1; bottom: 40px; }
-        #toast.proxy { background-color: #eab308; color: #000; }
         #toast.info { background-color: #00b3ff; color: #000; }
         
         .install-banner { position: fixed; top: -100px; left: 50%; transform: translateX(-50%); background: #1e293b; color: white; padding: 12px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.8); z-index: 9999; display: flex; align-items: center; gap: 15px; transition: top 0.4s ease-in-out; width: 90%; max-width: 400px; border: 1px solid var(--primary-color); }
@@ -141,7 +140,7 @@
         <div class="header">
             <div class="header-left">
                 <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU" class="header-logo" alt="Logo">
-                <h1>SHAHRIYAR <span class="tv-text">LIVE TV</span></h1>
+                <h1>SHAHRIYAR <span class="tv-text">LIVE</span></h1>
             </div>
             <div class="header-right">
                 <span id="totalChannels" class="badge">0</span>
@@ -178,14 +177,14 @@
             </div>
             <div class="copyright">
                 &copy; <span id="year">2026</span> | Developed by <br>
-                <a href="https://t.me/shahriyartvbot" target="_blank">SHAHRIYAR SOJIB HASAN</a> <br>
-                <a href="https://t.me/shahriyartvbot" target="_blank">Contact @Telegram</a>
+                <a href="https://t.me/shahriyartvbot" target="_blank">SHAHRIYAR SOJIB</a> <br>
+                <a href="https://t.me/shahriyartvbot" target="_blank">@Telegram</a>
             </div>
         </div>
     </div>
 
     <div class="mobile-copyright">
-        &copy; 2026 | Developed by <a href="https://t.me/shahriyartvbot" target="_blank">SHAHRIYAR SOJIB HASAN</a>
+        &copy; 2026 | <a href="https://t.me/shahriyartvbot" target="_blank">SHAHRIYAR SOJIB</a>
     </div>
 
     <script>
@@ -220,10 +219,9 @@
         function showToast(message, type = "error") {
             const toast = document.getElementById("toast");
             toast.innerText = message;
-            if(type === "proxy") toast.className = "show proxy";
-            else if(type === "info") toast.className = "show info";
+            if(type === "info") toast.className = "show info";
             else toast.className = "show";
-            setTimeout(function(){ toast.className = toast.className.replace(/show|proxy|info/g, "").trim(); }, 3000);
+            setTimeout(function(){ toast.className = toast.className.replace(/show|info/g, "").trim(); }, 3000);
         }
 
         const M3U_URL = 'https://raw.githubusercontent.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/main/SHAHRIYAR-LIVE-TV.m3u'; 
@@ -231,6 +229,8 @@
         let groupsMap = new Map(); 
         let currentChannelIndex = -1;
         let isUnloading = false;
+        let loadTimeout = null;
+        const LOAD_TIMEOUT_MS = 5000;
 
         const videoElement = document.getElementById('player');
         const loadingOverlay = document.getElementById('loading');
@@ -259,10 +259,28 @@
             } catch(e) {}
         }
 
+        function clearLoadTimeout() {
+            if(loadTimeout) {
+                clearTimeout(loadTimeout);
+                loadTimeout = null;
+            }
+        }
+
+        function setLoadTimeout() {
+            clearLoadTimeout();
+            loadTimeout = setTimeout(() => {
+                console.log('Stream load timeout - switching');
+                showToast('⏱️ Timeout - Switching');
+                cleanupEngines();
+                setTimeout(playNextChannel, 300);
+            }, LOAD_TIMEOUT_MS);
+        }
+
         function hideLoading() {
+            clearLoadTimeout();
             setTimeout(() => { 
                 if(loadingOverlay) loadingOverlay.style.display = 'none'; 
-            }, 600);
+            }, 300);
         }
 
         function playNextChannel() {
@@ -292,11 +310,12 @@
             }
         }
 
-        // --- Core Smart Routing System with 4K Support ---
-        function playStream(originalUrl, channelName, channelLogo, channelCategory, useProxy = false) {
+        // --- Core Smart Routing System with 4K Support & Hard Auto-Switch ---
+        function playStream(originalUrl, channelName, channelLogo, channelCategory) {
             if(isUnloading) return;
             
             loadingOverlay.style.display = 'flex'; 
+            setLoadTimeout();
             
             currentChannelIndex = allChannels.findIndex(c => c.url === originalUrl);
 
@@ -315,15 +334,11 @@
                 playUrl = playUrl.replace('/raw/', '@');
             }
 
-            // CORS Proxy Bypass
-            if (useProxy) playUrl = "https://corsproxy.io/?" + encodeURIComponent(playUrl);
-
             // Smart Extension Detection
             const urlLower = playUrl.split('?')[0].toLowerCase();
             const isM3U8 = urlLower.includes('.m3u8') || urlLower.includes('.m3u');
             const isDASH = urlLower.includes('.mpd');
             const isTS = urlLower.includes('.ts') || urlLower.includes('.flv');
-            const isMP4 = urlLower.includes('.mp4');
 
             currentEngine = "Auto";
 
@@ -331,14 +346,21 @@
                 if (isDASH) {
                     currentEngine = "DASH";
                     dashInstance = dashjs.MediaPlayer().create();
-                    dashInstance.updateSettings({ streaming: { abr: { autoSwitchBitrate: { video: true } } } });
+                    dashInstance.updateSettings({ 
+                        streaming: { 
+                            bufferTimeDefault: 3,
+                            bufferTimeMax: 10,
+                            abr: { autoSwitchBitrate: { video: true, audio: false } } 
+                        } 
+                    });
                     dashInstance.initialize(videoElement, playUrl, true);
                     dashInstance.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, () => {
                         hideLoading();
                     });
                     dashInstance.on(dashjs.MediaPlayer.events.ERROR, () => {
-                        showToast("⚠️ Switching...");
-                        setTimeout(playNextChannel, 800);
+                        showToast("⚠️ Unavailable");
+                        cleanupEngines();
+                        setTimeout(playNextChannel, 300);
                     });
 
                 } else if (isTS && mpegts && mpegts.getFeatureList && mpegts.getFeatureList().mseLivePlayback) {
@@ -353,18 +375,27 @@
                     tsInstance = mpegts.createPlayer(tsConfig);
                     tsInstance.attachMediaElement(videoElement);
                     tsInstance.load();
-                    tsInstance.play().then(() => {
+                    
+                    const playPromise = tsInstance.play();
+                    if(playPromise && typeof playPromise.then === 'function') {
+                        playPromise.then(() => {
+                            hideLoading();
+                        }).catch(() => {
+                            showToast("⚠️ Unavailable");
+                            cleanupEngines();
+                            setTimeout(playNextChannel, 300);
+                        });
+                    } else {
                         hideLoading();
-                    }).catch(() => {
-                        showToast("⚠️ Switching...");
-                        setTimeout(playNextChannel, 800);
-                    });
+                    }
+                    
                     tsInstance.on(mpegts.Events.ERROR, () => {
-                        showToast("⚠️ Switching...");
-                        setTimeout(playNextChannel, 800);
+                        showToast("⚠️ Unavailable");
+                        cleanupEngines();
+                        setTimeout(playNextChannel, 300);
                     });
 
-                } else if (isM3U8 || (!isM3U8 && !isDASH && !isTS && useProxy)) {
+                } else if (isM3U8) {
                     currentEngine = "HLS";
                     if (Hls.isSupported()) {
                         const hlsConfig = { 
@@ -382,24 +413,28 @@
                             player.play().catch(() => {});
                         });
                         hlsInstance.on(Hls.Events.ERROR, function(e, data) {
-                            if (data.fatal) {
-                                showToast("⚠️ Switching...");
-                                setTimeout(playNextChannel, 800);
-                            }
+                            showToast("⚠️ Unavailable");
+                            cleanupEngines();
+                            setTimeout(playNextChannel, 300);
                         });
                     } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
                         currentEngine = "Native";
                         videoElement.src = playUrl;
-                        videoElement.addEventListener('loadedmetadata', function handler() {
+                        const loadHandler = function() {
                             hideLoading();
                             player.play().catch(() => {});
-                            videoElement.removeEventListener('loadedmetadata', handler);
-                        });
-                        videoElement.addEventListener('error', function handler() {
-                            showToast("⚠️ Switching...");
-                            setTimeout(playNextChannel, 800);
-                            videoElement.removeEventListener('error', handler);
-                        });
+                            videoElement.removeEventListener('loadedmetadata', loadHandler);
+                            videoElement.removeEventListener('error', errorHandler);
+                        };
+                        const errorHandler = function() {
+                            showToast("⚠️ Unavailable");
+                            cleanupEngines();
+                            setTimeout(playNextChannel, 300);
+                            videoElement.removeEventListener('loadedmetadata', loadHandler);
+                            videoElement.removeEventListener('error', errorHandler);
+                        };
+                        videoElement.addEventListener('loadedmetadata', loadHandler);
+                        videoElement.addEventListener('error', errorHandler);
                     }
                 } else {
                     currentEngine = "Native";
@@ -408,10 +443,13 @@
                         hideLoading();
                         player.play().catch(() => {});
                         videoElement.removeEventListener('loadeddata', loadHandler);
+                        videoElement.removeEventListener('error', errorHandler);
                     };
                     const errorHandler = function() {
-                        showToast("⚠️ Switching...");
-                        setTimeout(playNextChannel, 800);
+                        showToast("⚠️ Unavailable");
+                        cleanupEngines();
+                        setTimeout(playNextChannel, 300);
+                        videoElement.removeEventListener('loadeddata', loadHandler);
                         videoElement.removeEventListener('error', errorHandler);
                     };
                     videoElement.addEventListener('loadeddata', loadHandler);
@@ -419,15 +457,16 @@
                 }
             } catch(e) {
                 console.error('Playback Error:', e);
-                showToast("⚠️ Switching...");
-                setTimeout(playNextChannel, 800);
+                showToast("⚠️ Unavailable");
+                cleanupEngines();
+                setTimeout(playNextChannel, 300);
             }
 
             document.getElementById('npCategory').innerText = `${channelCategory} | ${currentEngine}`;
         }
 
         videoElement.addEventListener('ended', () => { 
-            if(!isUnloading) setTimeout(playNextChannel, 1500); 
+            if(!isUnloading) setTimeout(playNextChannel, 500); 
         });
 
         document.addEventListener('keydown', (e) => {
@@ -438,6 +477,7 @@
 
         window.addEventListener('beforeunload', () => {
             isUnloading = true;
+            clearLoadTimeout();
             cleanupEngines();
         });
 
