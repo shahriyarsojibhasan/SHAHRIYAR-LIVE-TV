@@ -1,146 +1,244 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHAHRIYAR LIVE TV - Web Player</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SHAHRIYAR LIVE TV - Premium Web Player</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
+    <script src="https://cdn.dashjs.org/v4.7.1/dash.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
     <style>
         :root {
-            --bg-color: #0f172a;
-            --sidebar-bg: #1e293b;
-            --primary-color: #ef4444;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --hover-bg: #334155;
+            --bg-color: #0b0f19;
+            --sidebar-bg: #111827;
+            --primary: #00b3ff;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --hover-bg: #1f2937;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); display: flex; height: 100vh; overflow: hidden; }
+
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* ----- Loader Styling ----- */
+        .loading {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; z-index: 9999; display: flex;
+            align-items: center; justify-content: center; transition: opacity 0.3s;
+        }
+        .loading-text span {
+            display: inline-block; margin: 0 5px; color: var(--primary);
+            font-size: 24px; font-weight: bold; font-family: 'Quattrocento Sans', sans-serif;
+        }
+        .loading-text span:nth-child(1) { animation: blur-text 1s 0s infinite linear alternate; }
+        .loading-text span:nth-child(2) { animation: blur-text 1s 0.1s infinite linear alternate; }
+        .loading-text span:nth-child(3) { animation: blur-text 1s 0.2s infinite linear alternate; }
+        .loading-text span:nth-child(4) { animation: blur-text 1s 0.3s infinite linear alternate; }
+        .loading-text span:nth-child(5) { animation: blur-text 1s 0.4s infinite linear alternate; }
+        .loading-text span:nth-child(6) { animation: blur-text 1s 0.5s infinite linear alternate; }
+        .loading-text span:nth-child(7) { animation: blur-text 1s 0.6s infinite linear alternate; }
+        .loading-text span:nth-child(8) { animation: blur-text 1s 0.7s infinite linear alternate; }
+        .loading-text span:nth-child(9) { animation: blur-text 1s 0.8s infinite linear alternate; }
         
-        /* Sidebar (Channel List) */
-        .sidebar { width: 320px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; border-right: 1px solid #334155; }
-        .header { padding: 20px; text-align: center; background: #0b1120; border-bottom: 2px solid var(--primary-color); }
-        .header h1 { font-size: 20px; font-weight: bold; color: var(--text-main); }
-        .header span { color: var(--primary-color); }
-        
+        @keyframes blur-text {
+            0% { filter: blur(0px); opacity: 1; }
+            100% { filter: blur(4px); opacity: 0.5; }
+        }
+
+        /* ----- Layout: Sidebar & Player ----- */
+        .sidebar {
+            width: 320px; background: var(--sidebar-bg); display: flex;
+            flex-direction: column; border-right: 1px solid #374151; z-index: 10;
+        }
+        .sidebar-header {
+            padding: 20px; text-align: center; background: #000;
+            border-bottom: 2px solid var(--primary); font-weight: 700;
+        }
         .channel-list { flex: 1; overflow-y: auto; padding: 10px; }
-        .category-title { font-size: 14px; color: var(--text-muted); text-transform: uppercase; margin: 15px 10px 5px; font-weight: bold; border-bottom: 1px solid var(--hover-bg); padding-bottom: 5px; }
         
-        .channel-item { display: flex; align-items: center; padding: 10px; cursor: pointer; border-radius: 8px; transition: background 0.2s; margin-bottom: 5px; }
-        .channel-item:hover, .channel-item.active { background-color: var(--hover-bg); }
-        .channel-item.active { border-left: 4px solid var(--primary-color); }
-        .channel-logo { width: 40px; height: 40px; border-radius: 5px; object-fit: contain; margin-right: 15px; background: #000; padding: 2px; }
-        .channel-name { font-size: 15px; font-weight: 500; }
-
-        /* Main Content (Player) */
-        .main-content { flex: 1; display: flex; flex-direction: column; }
-        .player-wrapper { flex: 1; background-color: #000; display: flex; align-items: center; justify-content: center; position: relative; }
-        video { width: 100%; height: 100%; max-height: 100vh; object-fit: contain; outline: none; }
+        .group-title {
+            font-size: 13px; color: var(--text-muted); text-transform: uppercase;
+            margin: 15px 10px 5px; font-weight: bold; border-bottom: 1px solid #374151; padding-bottom: 5px;
+        }
         
-        .now-playing { padding: 20px; background-color: var(--sidebar-bg); display: flex; align-items: center; border-top: 1px solid #334155; }
-        .now-playing img { width: 60px; height: 60px; border-radius: 8px; margin-right: 20px; object-fit: contain; background: #000; }
-        .now-playing-info h2 { font-size: 24px; margin-bottom: 5px; }
-        .now-playing-info p { color: var(--text-muted); font-size: 14px; }
+        .channel-item {
+            display: flex; align-items: center; padding: 10px; cursor: pointer;
+            border-radius: 8px; transition: 0.2s; margin-bottom: 5px;
+        }
+        .channel-item:hover, .channel-item.active { background: var(--hover-bg); }
+        .channel-item.active { border-left: 3px solid var(--primary); }
+        .channel-logo {
+            width: 45px; height: 45px; border-radius: 5px; object-fit: contain;
+            margin-right: 15px; background: #fff; padding: 2px;
+        }
+        .channel-name { font-size: 14px; font-weight: 500; }
 
-        /* Loader */
-        .loader { display: none; position: absolute; color: white; font-size: 20px; }
+        .main-content {
+            flex: 1; display: flex; flex-direction: column; position: relative; background: #000;
+        }
+        
+        /* ----- Player Wrapper & Watermarks ----- */
+        .player-wrapper { flex: 1; display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; position: relative; }
+        video { width: 100%; height: 100%; outline: none; }
+        
+        .plyr { width: 100%; height: 100%; }
+        .plyr__video-wrapper::before {
+            position: absolute; top: 10px; right: 10px; z-index: 10; content: ''; height: 35px; width: 35px;
+            background: url('https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU') no-repeat;
+            background-size: 35px auto, auto; opacity: 0.8;
+        }
+        .plyr__video-wrapper::after {
+            position: absolute; top: 15px; left: 15px; z-index: 10; content: ''; height: 35px; width: 35px;
+            background: url('https://blogger.googleusercontent.com/img/a/AVvXsEh8DLS0d7oD8nxU-uswutrfGSXP0RXi__027cYuzdfbDTClQLDMqv27TEM4aqeLrUFpwtXlFBsoQwLZJG4oylJ8TjDIJVSvblFVhxtNDDEHJV01r7aJzF7kU6asbDCgmDUWRMw8uonzcHc71ba8HmrGzoGglBGZ5x50cR7Yz-fTlHmCl6HSjF1hsMIr') no-repeat;
+            background-size: 35px auto, auto; opacity: 0.8;
+        }
 
-        /* Responsive for Mobile */
+        /* ----- Footer Branding ----- */
+        .footer {
+            padding: 15px; text-align: center; background: #000; font-size: 12px;
+            color: var(--text-muted); border-top: 1px solid #1f2937;
+        }
+        .footer span { color: var(--primary); font-weight: bold; }
+
+        /* ----- Responsive Mobile ----- */
         @media (max-width: 768px) {
             body { flex-direction: column; }
-            .sidebar { width: 100%; height: 40vh; order: 2; border-right: none; border-top: 1px solid #334155; }
-            .main-content { height: 60vh; order: 1; }
-            .now-playing { display: none; } /* Hide on mobile to save space */
+            .sidebar { width: 100%; height: 45vh; order: 2; border-right: none; border-top: 1px solid #374151; }
+            .main-content { height: 55vh; order: 1; }
+            .plyr__video-wrapper::before, .plyr__video-wrapper::after { transform: scale(0.7); }
         }
     </style>
 </head>
 <body>
 
+    <div id="loading" class="loading">
+        <div class="loading-text">
+            <span>S</span><span>H</span><span>A</span><span>H</span><span>R</span><span>I</span><span>Y</span><span>A</span><span>R</span>
+        </div>
+    </div>
+
     <div class="sidebar">
-        <div class="header">
-            <h1>SHAHRIYAR <span>LIVE TV</span></h1>
+        <div class="sidebar-header">
+            SHAHRIYAR <span style="color: #00b3ff;">LIVE TV</span>
         </div>
         <div class="channel-list" id="channelList">
-            <div style="text-align:center; padding:20px; color: #94a3b8;">Loading channels...</div>
+            <div style="text-align:center; padding:20px; color: #9ca3af;">Loading channels...</div>
         </div>
     </div>
 
     <div class="main-content">
         <div class="player-wrapper">
-            <div class="loader" id="loader">Loading stream...</div>
-            <video id="videoPlayer" controls autoplay></video>
+            <video id="player" controls crossorigin playsinline></video>
         </div>
-        <div class="now-playing" id="nowPlayingSection" style="display: none;">
-            <img id="npLogo" src="" alt="Logo">
-            <div class="now-playing-info">
-                <h2 id="npName">Select a channel</h2>
-                <p id="npCategory">Category</p>
-            </div>
+        
+        <div class="footer">
+            &copy; 2026 - <span id="currentYear"></span> <span>SHAHRIYAR SOJIB HASAN</span>. All Rights Reserved. <br>
+            <small>Contact Admin for any queries or branding.</small>
         </div>
     </div>
 
     <script>
-        // আপনার গিটহাবের র ফাইল লিংক বা লোকাল ফাইলের নাম (যেহেতু একই রিপোতে থাকবে, ফাইলের নাম দিলেই হবে)
-        const M3U_URL = 'SHAHRIYAR-LIVE-TV.m3u'; 
+        // M3U Playlist Source (Cache-busted for realtime sync)
+        const M3U_URL = 'SHAHRIYAR-LIVE-TV.m3u';
         
-        let hls;
-        const video = document.getElementById('videoPlayer');
-        const loader = document.getElementById('loader');
+        // Setup Player Variables
+        const videoElement = document.getElementById('player');
+        let playerInstance = null;
+        let hlsInstance = null;
+        let dashInstance = null;
 
-        // Parse M3U File
-        async function fetchAndParseM3U() {
+        // Set Current Year in Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 1. Remove Loader Fast
+        function hideLoader() {
+            const loader = document.getElementById('loading');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 300);
+        }
+        // Loader removed in 800ms to ensure fast UI perception
+        setTimeout(hideLoader, 800);
+
+        // 2. Fetch and Parse M3U
+        async function fetchPlaylist() {
             try {
-                // ব্রাউজার ক্যাশ এড়াতে টাইমস্ট্যাম্প যোগ করা হয়েছে
-                const response = await fetch(`${M3U_URL}?t=${new Date().getTime()}`); 
-                const data = await response.text();
-                
-                const lines = data.split('\n');
-                const channels = [];
-                let currentChannel = {};
-
-                for (let i = 0; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    
-                    if (line.startsWith('#EXTINF:')) {
-                        // Extract Name
-                        const nameMatch = line.split(',');
-                        currentChannel.name = nameMatch.length > 1 ? nameMatch[1].trim() : 'Unknown Channel';
-                        
-                        // Extract Logo
-                        const logoMatch = line.match(/tvg-logo="(.*?)"/);
-                        currentChannel.logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/150x150/000000/FFFFFF/?text=TV';
-                        
-                        // Extract Group/Category
-                        const groupMatch = line.match(/group-title="(.*?)"/);
-                        currentChannel.group = groupMatch && groupMatch[1] ? groupMatch[1] : 'Uncategorized';
-                        
-                    } else if (line.startsWith('http')) {
-                        currentChannel.url = line;
-                        channels.push(currentChannel);
-                        currentChannel = {}; // Reset for next
-                    }
-                }
-                
-                renderChannels(channels);
+                // Realtime sync: append timestamp to bypass cache
+                const response = await fetch(`${M3U_URL}?t=${Date.now()}`);
+                const text = await response.text();
+                parseM3U(text);
             } catch (error) {
-                console.error("Error loading playlist:", error);
-                document.getElementById('channelList').innerHTML = '<div style="color:red; text-align:center; padding:20px;">Failed to load playlist.</div>';
+                console.error("Error fetching M3U:", error);
+                document.getElementById('channelList').innerHTML = '<div style="color:red; text-align:center; padding:20px;">Failed to load M3U file.</div>';
             }
         }
 
-        // Render Channels in Sidebar grouped by Category
+        function parseM3U(data) {
+            const lines = data.split('\n');
+            const channels = [];
+            let currentChannel = {};
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                if (line.startsWith('#EXTINF:')) {
+                    // Get Channel Name
+                    const nameParts = line.split(',');
+                    currentChannel.name = nameParts.length > 1 ? nameParts[1].trim() : 'Unknown';
+                    
+                    // Clean specific branding texts from UI if needed
+                    currentChannel.cleanName = currentChannel.name.replace(' | SHAHRIYAR LIVE TV', '');
+
+                    // Get Logo
+                    const logoMatch = line.match(/tvg-logo="(.*?)"/);
+                    currentChannel.logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/150/000000/FFFFFF/?text=TV';
+                    
+                    // Get Group
+                    const groupMatch = line.match(/group-title="(.*?)"/);
+                    currentChannel.group = groupMatch && groupMatch[1] ? groupMatch[1] : 'Others';
+                    
+                } else if (line.startsWith('http')) {
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = {}; // Reset for next loop
+                }
+            }
+            renderChannels(channels);
+        }
+
+        // 3. Render Channels by Group
         function renderChannels(channels) {
             const listContainer = document.getElementById('channelList');
             listContainer.innerHTML = '';
 
-            // Group channels by category
+            if (channels.length === 0) {
+                listContainer.innerHTML = '<div style="text-align:center; padding:20px;">No channels found.</div>';
+                return;
+            }
+
+            // Grouping logic
             const grouped = channels.reduce((acc, channel) => {
                 if (!acc[channel.group]) acc[channel.group] = [];
                 acc[channel.group].push(channel);
                 return acc;
             }, {});
 
-            // First render Promo group if exists, then the rest
+            // Sort groups (Promo always on top)
             const groups = Object.keys(grouped).sort((a, b) => {
                 if (a.toLowerCase() === 'promo') return -1;
                 if (b.toLowerCase() === 'promo') return 1;
@@ -148,79 +246,92 @@
             });
 
             groups.forEach(group => {
-                // Category Title
-                const catDiv = document.createElement('div');
-                catDiv.className = 'category-title';
-                catDiv.textContent = group;
-                listContainer.appendChild(catDiv);
+                // Add Group Header
+                const groupTitle = document.createElement('div');
+                groupTitle.className = 'group-title';
+                groupTitle.textContent = group;
+                listContainer.appendChild(groupTitle);
 
-                // Channels in this category
+                // Add Channels inside Group
                 grouped[group].forEach(channel => {
                     const item = document.createElement('div');
                     item.className = 'channel-item';
                     item.innerHTML = `
-                        <img src="${channel.logo}" class="channel-logo" alt="${channel.name}" onerror="this.src='https://via.placeholder.com/150x150/000000/FFFFFF/?text=TV'">
-                        <div class="channel-name">${channel.name.replace(' | SHAHRIYAR LIVE TV', '')}</div>
+                        <img src="${channel.logo}" class="channel-logo" onerror="this.src='https://via.placeholder.com/150/000000/FFFFFF/?text=TV'">
+                        <div class="channel-name">${channel.cleanName}</div>
                     `;
                     
                     item.onclick = () => {
-                        // Remove active class from all
                         document.querySelectorAll('.channel-item').forEach(el => el.classList.remove('active'));
                         item.classList.add('active');
-                        playStream(channel);
+                        initPlayer(channel.url);
                     };
                     
                     listContainer.appendChild(item);
                 });
             });
 
-            // Auto play first channel (Promo)
-            if (channels.length > 0) {
-                document.querySelector('.channel-item').classList.add('active');
-                playStream(channels[0]);
-            }
+            // Auto-play the first channel
+            document.querySelector('.channel-item').classList.add('active');
+            initPlayer(channels[0].url);
         }
 
-        // Play HLS Stream
-        function playStream(channel) {
-            loader.style.display = 'block';
-            
-            // Update Now Playing Info
-            document.getElementById('nowPlayingSection').style.display = 'flex';
-            document.getElementById('npLogo').src = channel.logo;
-            document.getElementById('npName').innerText = channel.name.replace(' | SHAHRIYAR LIVE TV', '');
-            document.getElementById('npCategory').innerText = channel.group;
+        // 4. Ultimate Universal Player Setup (HLS / DASH / MP4)
+        function initPlayer(sourceUrl) {
+            // Destroy existing instances to prevent overlap bugs
+            if (playerInstance) { playerInstance.destroy(); }
+            if (hlsInstance) { hlsInstance.destroy(); }
+            if (dashInstance) { dashInstance.reset(); }
 
-            if (Hls.isSupported()) {
-                if (hls) {
-                    hls.destroy();
-                }
-                hls = new Hls();
-                hls.loadSource(channel.url);
-                hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                    loader.style.display = 'none';
-                    video.play().catch(e => console.log("Auto-play prevented by browser"));
+            const type = sourceUrl.includes('.mpd') ? 'dash' : (sourceUrl.includes('.m3u8') ? 'hls' : 'mp4');
+
+            // --- Plyr Settings ---
+            const defaultOptions = {
+                controls: ['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'settings', 'fullscreen'],
+                settings: ['quality', 'speed'],
+                autoplay: true,
+                quality: { default: 720, options: [1080, 720, 480, 360] }
+            };
+
+            // --- HLS (.m3u8) Support ---
+            if (type === 'hls' && Hls.isSupported()) {
+                hlsInstance = new Hls({ maxMaxBufferLength: 100 });
+                hlsInstance.loadSource(sourceUrl);
+                
+                hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
+                    const availableQualities = hlsInstance.levels.map(e => e.height);
+                    defaultOptions.quality = {
+                        default: availableQualities[0],
+                        options: availableQualities,
+                        forced: true,
+                        onChange: (e) => {
+                            hlsInstance.levels.forEach((level, levelIndex) => {
+                                if (level.height === e) { hlsInstance.currentLevel = levelIndex; }
+                            });
+                        }
+                    };
+                    playerInstance = new Plyr(videoElement, defaultOptions);
+                    videoElement.play().catch(()=>console.log("Autoplay blocked"));
                 });
-                hls.on(Hls.Events.ERROR, function (event, data) {
-                    if (data.fatal) {
-                        loader.style.display = 'none';
-                        alert('Error playing this stream. It might be offline.');
-                    }
-                });
+                hlsInstance.attachMedia(videoElement);
             } 
-            // For Safari (Native HLS support)
-            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = channel.url;
-                video.addEventListener('loadedmetadata', function () {
-                    loader.style.display = 'none';
-                    video.play();
-                });
+            // --- DASH (.mpd) & DRM Support ---
+            else if (type === 'dash') {
+                dashInstance = dashjs.MediaPlayer().create();
+                dashInstance.initialize(videoElement, sourceUrl, true);
+                playerInstance = new Plyr(videoElement, defaultOptions);
+                /* Note: If DRM is needed, add dashInstance.setProtectionData({ ...keys }) here */
+            } 
+            // --- MP4 or Native Safari Support ---
+            else {
+                videoElement.src = sourceUrl;
+                playerInstance = new Plyr(videoElement, defaultOptions);
+                videoElement.play().catch(()=>console.log("Autoplay blocked"));
             }
         }
 
-        // Initialize
-        window.onload = fetchAndParseM3U;
+        // Run on load
+        document.addEventListener("DOMContentLoaded", fetchPlaylist);
     </script>
 </body>
 </html>

@@ -42,7 +42,7 @@ This script is designed to merge and keep up-to-date m3u links collected from pu
 Primarily focused on Bangladeshi users (Use Vlc for PC)
 
 ```bash
-https://raw.githubusercontent.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/main/combined_playlist.m3u
+https://raw.githubusercontent.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/main/SHAHRIYAR-LIVE-TV.m3u
 ```
 Use this link for Toffee Tsports and M3U all-in-one link 👇 ( [Use Ott Navigator for android](https://t.me/xhahriyar_modz/81) )
 
