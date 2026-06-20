@@ -29,24 +29,25 @@ app.get('/master.m3u8', async (req, res) => {
     }
     
     try {
-        // Generate M3U8 master playlist
+        // Generate M3U8 master playlist - DON'T encode the URL
         const m3u8Content = `#EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-TARGETDURATION:10
 #EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-PLAYLIST-TYPE:EVENT
 #EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=1920x1080
-${encodeURIComponent(tsUrl)}
+${tsUrl}
 #EXT-X-ENDLIST`;
 
         res.set({
-            'Content-Type': 'application/vnd.apple.mpegurl',
+            'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type, Range',
             'Cache-Control': 'no-cache, no-store, must-revalidate',
             'Pragma': 'no-cache',
-            'Expires': '0'
+            'Expires': '0',
+            'Content-Length': Buffer.byteLength(m3u8Content)
         });
         
         res.send(m3u8Content);
@@ -54,6 +55,86 @@ ${encodeURIComponent(tsUrl)}
     } catch (error) {
         console.error('M3U8 conversion error:', error.message);
         res.status(500).json({ error: 'M3U8 conversion error: ' + error.message });
+    }
+});
+
+// ✅ Direct TS Stream Proxy - for HLS.js to fetch actual stream
+app.get('/stream', async (req, res) => {
+    const tsUrl = req.query.url;
+    
+    console.log('Streaming TS:', tsUrl);
+    
+    if (!tsUrl) {
+        return res.status(400).json({ error: 'URL parameter required' });
+    }
+    
+    // Validate URL format
+    try {
+        new URL(tsUrl);
+    } catch (e) {
+        return res.status(400).json({ error: 'Invalid URL format' });
+    }
+    
+    try {
+        const requestOptions = {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept': '*/*',
+                'Referer': 'https://github.com',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
+                'Range': req.headers.range || ''
+            },
+            timeout: 60000
+        };
+        
+        const response = await fetch(tsUrl, requestOptions);
+        
+        if (!response.ok) {
+            console.error('Stream error:', response.status, response.statusText);
+            return res.status(response.status).send(`Stream unavailable: ${response.statusText}`);
+        }
+        
+        // Set proper headers for video streaming
+        res.set({
+            'Content-Type': 'video/mp2t',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization, Range',
+            'Cache-Control': 'public, max-age=3600',
+            'Connection': 'keep-alive',
+            'Accept-Ranges': 'bytes'
+        });
+        
+        // Copy content headers
+        const contentType = response.headers.get('content-type');
+        if (contentType) {
+            res.set('Content-Type', contentType);
+        }
+        
+        const contentLength = response.headers.get('content-length');
+        if (contentLength) {
+            res.set('Content-Length', contentLength);
+        }
+        
+        // Stream the response
+        response.body.pipe(res);
+        
+        response.body.on('error', (error) => {
+            console.error('Stream body error:', error.message);
+            if (!res.headersSent) {
+                res.status(500).send('Stream read error');
+            }
+        });
+        
+    } catch (error) {
+        console.error('Stream proxy error:', error.message);
+        
+        if (!res.headersSent) {
+            res.status(500).send('Stream proxy error: ' + error.message);
+        } else {
+            res.end();
+        }
     }
 });
 
@@ -161,6 +242,15 @@ app.options('/master.m3u8', (req, res) => {
     res.sendStatus(200);
 });
 
+app.options('/stream', (req, res) => {
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Range'
+    });
+    res.sendStatus(200);
+});
+
 // ✅ Health check
 app.get('/health', (req, res) => {
     res.json({ 
@@ -180,7 +270,8 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Server running on port ${PORT}`);
     console.log(`📺 TV App: http://localhost:${PORT}`);
-    console.log(`🔗 Proxy: http://localhost:${PORT}/proxy?url=STREAM_URL`);
     console.log(`🎬 M3U8 Converter: http://localhost:${PORT}/master.m3u8?url=TS_URL`);
+    console.log(`📡 Stream Proxy: http://localhost:${PORT}/stream?url=STREAM_URL`);
+    console.log(`🔗 Legacy Proxy: http://localhost:${PORT}/proxy?url=STREAM_URL`);
     console.log(`💚 Health: http://localhost:${PORT}/health`);
 });
