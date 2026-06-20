@@ -1,7 +1,7 @@
 #EXTM3U
 # By SHAHRIYAR SOJIB HASAN
 # TELEGRAM @SHAHRIAYRTVBOT
-# Update on 2026-06-21 01:15:56 (BD Time)
+# Update on 2026-06-21 01:18:21 (BD Time)
 # Note: Please Don't Use Without Credits
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 
@@ -25,6 +25,8 @@ http://starhub.pro/live/farhat-3379/67897-913379/744524.ts
 http://starhub.pro/live/farhat-3379/67897-913379/744527.ts
 #EXTINF:-1 tvg-logo="https://carboncredits.com/wp-content/uploads/2025/09/shutterstock_2306088965-e1757112807302.jpg" group-title="Football World Cup 2026",Football World Cup 2026 4K | SHAHRIYAR LIVE TV
 http://starhub.pro/live/farhat-3379/67897-913379/745269.ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPCvTmUhiKDs4ehoVpFLh7xwdCNK2-N_gNFqnaOM4YRQ&s=10" group-title="Live Sports",Live Sports | SHAHRIYAR LIVE TV
+https://stream.snexus.co/live/SHARQ_GAME_TV/main_stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/ATN%20Bangla.png" group-title="Bangla",ATN Bangla UK | SHAHRIYAR LIVE TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Ekushey%20TV.png" group-title="Bangla",Ekushay TV | SHAHRIYAR LIVE TV
@@ -297,5 +299,7 @@ https://cdn-3.pishow.tv/live/1253/master.m3u8
 https://ml-pull-dvc-myco.io:2096/8XM_MUSIC/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="FIFA World Cup 2026",Somoy TV | SHAHRIYAR LIVE TV
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Hindi | 24/7",Hindi Movies | SHAHRIYAR LIVE TV
+https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg" group-title="LIVE",T Sports HD (5) | SHAHRIYAR LIVE TV
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/130714.ts
