@@ -28,10 +28,10 @@
         .sidebar { width: 300px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; border-right: 1px solid var(--border-color); z-index: 100; flex-shrink: 0; }
         .header { padding: 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--primary-color); flex-shrink: 0; }
         .header-left { display: flex; align-items: center; gap: 10px; }
-        .header-logo { width: 28px; height: 28px; }
-        .header h1 { font-size: 17px; font-weight: bold; }
+        .header-logo { width: 28px; height: 28px; flex-shrink: 0; }
+        .header h1 { font-size: 16px; font-weight: bold; white-space: nowrap; }
         .header span.tv-text { color: var(--primary-color); }
-        .header-right { display: flex; align-items: center; gap: 8px; }
+        .header-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
         .badge { background: var(--hover-bg); padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; color: var(--text-main); border: 1px solid var(--border-color); }
         .search-btn { background: none; border: none; font-size: 16px; cursor: pointer; color: var(--text-main); padding: 5px; outline: none; transition: 0.2s;}
         .search-btn:active { transform: scale(0.9); color: var(--primary-color); }
@@ -42,7 +42,7 @@
         .channel-list { flex: 1; overflow-y: auto; padding: 10px; scroll-behavior: smooth; will-change: auto;}
         .channel-list::-webkit-scrollbar { width: 6px; }
         .channel-list::-webkit-scrollbar-thumb { background-color: var(--hover-bg); border-radius: 4px; }
-        .category-title { font-size: 12px; color: var(--primary-color); text-transform: uppercase; margin: 15px 5px 10px; font-weight: bold; letter-spacing: 0.5px; }
+        .category-title { font-size: 11px; color: var(--primary-color); text-transform: uppercase; margin: 15px 5px 10px; font-weight: bold; letter-spacing: 0.5px; }
         .channel-item { display: flex; align-items: center; padding: 10px; cursor: pointer; border-radius: 8px; transition: all 0.2s; margin-bottom: 5px; background-color: transparent;}
         .channel-item:hover { background-color: var(--hover-bg); }
         .channel-item.active { background-color: var(--hover-bg); border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0; }
@@ -59,7 +59,7 @@
         }
         
         .loading { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 99; display: flex; align-items: center; justify-content: center; }
-        .loading-text span { display: inline-block; margin: 0 4px; color: var(--primary-color); font-size: 26px; font-weight: bold; letter-spacing: 2px; }
+        .loading-text span { display: inline-block; margin: 0 3px; color: var(--primary-color); font-size: 22px; font-weight: bold; letter-spacing: 1px; }
         .loading-text span:nth-child(1) { animation: blur-text 0.8s 0s infinite linear alternate; }
         .loading-text span:nth-child(2) { animation: blur-text 0.8s 0.1s infinite linear alternate; }
         .loading-text span:nth-child(3) { animation: blur-text 0.8s 0.2s infinite linear alternate; }
@@ -71,13 +71,13 @@
         .loading-text span:nth-child(9) { animation: blur-text 0.8s 0.8s infinite linear alternate; }
         @keyframes blur-text { 0% { filter: blur(0px); } 100% { filter: blur(5px); opacity: 0.5; } }
         
-        .footer { padding: 12px 20px; background-color: var(--sidebar-bg); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); flex-shrink: 0; min-height: 60px;}
+        .footer { padding: 12px 20px; background-color: var(--sidebar-bg); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); flex-shrink: 0;}
         .now-playing { display: flex; align-items: center; flex: 1; min-width: 0; }
         .now-playing img { width: 45px; height: 45px; border-radius: 6px; margin-right: 15px; object-fit: contain; background: #fff; padding: 2px; flex-shrink: 0;}
         .now-playing-info { min-width: 0; flex: 1; }
-        .now-playing-info h2 { font-size: 14px; margin-bottom: 2px; color: var(--text-main); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-        .now-playing-info p { color: var(--text-muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .copyright { font-size: 11px; color: var(--text-muted); text-align: right; line-height: 1.4; }
+        .now-playing-info h2 { font-size: 13px; margin-bottom: 2px; color: var(--text-main); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+        .now-playing-info p { color: var(--text-muted); font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .copyright { font-size: 10px; color: var(--text-muted); text-align: right; line-height: 1.4; }
         .copyright a { color: var(--primary-color); text-decoration: none; font-weight: 500;}
         
         #toast { visibility: hidden; min-width: 250px; background-color: #ef4444; color: #fff; text-align: center; border-radius: 6px; padding: 12px 20px; position: fixed; z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 13px; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s, bottom 0.3s; }
@@ -91,32 +91,32 @@
         .install-info h4 { font-size: 13px; margin-bottom: 2px; }
         .install-info p { font-size: 11px; color: var(--text-muted); }
         .install-actions { display: flex; gap: 10px; align-items: center; flex-shrink: 0;}
-        .btn-install { background: var(--primary-color); color: #000; border: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 12px;}
-        .btn-close { background: transparent; color: var(--text-muted); border: none; font-size: 20px; cursor: pointer; line-height: 1;}
+        .btn-install { background: var(--primary-color); color: #000; border: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 11px;}
+        .btn-close { background: transparent; color: var(--text-muted); border: none; font-size: 18px; cursor: pointer; line-height: 1;}
 
         @media (min-width: 769px) { .search-btn { display: none; } .search-box { display: block !important; } .mobile-copyright { display: none; } }
         @media (max-width: 768px) {
             body { flex-direction: column; display: flex; height: 100vh; width: 100vw; overflow: hidden; }
             .sidebar, .main-content { display: contents; } 
             .header { order: 1; padding: 10px 12px; background: var(--sidebar-bg); z-index: 10; border-bottom: 1px solid var(--border-color); flex: none; flex-shrink: 0; }
-            .search-box { order: 2; padding: 0 12px 10px 12px; background: var(--sidebar-bg); display: none; z-index: 10; border-bottom: 1px solid var(--border-color); flex: none; flex-shrink: 0; }
+            .search-box { order: 2; padding: 0 12px 10px 12px; background: var(--sidebar-bg); display: none; z-index: 10; border-bottom: 1px solid var(--border-color); flex: none; flex-shrink: 0;}
             .search-box.show { display: block; }
             .player-wrapper { order: 3; flex: none; height: 32vh; min-height: 200px; max-height: 320px; z-index: 9; background: #000; }
-            .footer { order: 4; flex: none; padding: 10px 12px; background: var(--sidebar-bg); border-bottom: 1px solid var(--border-color); z-index: 8; justify-content: flex-start; min-height: 55px; }
+            .footer { order: 4; flex: none; padding: 10px 12px; background: var(--sidebar-bg); border-bottom: 1px solid var(--border-color); z-index: 8; justify-content: flex-start; min-height: 50px;}
             .channel-list { order: 5; flex: 1 1 auto; overflow-y: auto; padding: 8px; background: var(--bg-color); z-index: 1; }
-            .mobile-copyright { order: 6; flex: none; display: block; text-align: center; padding: 10px; font-size: 10px; color: var(--text-muted); background: var(--sidebar-bg); border-top: 1px solid var(--border-color); z-index: 7; flex-shrink: 0;}
+            .mobile-copyright { order: 6; flex: none; display: block; text-align: center; padding: 10px; font-size: 10px; color: var(--text-muted); background: var(--sidebar-bg); border-top: 1px solid var(--border-color); z-index: 10;}
             .mobile-copyright a { color: var(--primary-color); text-decoration: none; }
             .copyright { display: none; } 
-            .header h1 { font-size: 14px; }
-            .header-logo { width: 24px; height: 24px; }
-            .badge { font-size: 10px; padding: 2px 6px; }
-            .search-btn { font-size: 14px; padding: 4px; }
-            .now-playing-info h2 { font-size: 12px; }
-            .now-playing-info p { font-size: 10px; }
-            .now-playing img { width: 38px; height: 38px; margin-right: 10px; }
-            .loading-text span { font-size: 20px; }
+            .header h1 { font-size: 13px; }
+            .header-logo { width: 22px; height: 22px; }
+            .badge { font-size: 9px; padding: 2px 6px; }
+            .search-btn { font-size: 13px; padding: 4px; }
+            .now-playing-info h2 { font-size: 11px; }
+            .now-playing-info p { font-size: 9px; }
+            .now-playing img { width: 36px; height: 36px; margin-right: 10px; }
+            .loading-text span { font-size: 18px; }
             .channel-name { font-size: 12px; }
-            .category-title { font-size: 11px; margin: 12px 3px 8px; }
+            .category-title { font-size: 10px; margin: 12px 3px 8px; }
         }
     </style>
 </head>
@@ -230,7 +230,8 @@
         let currentChannelIndex = -1;
         let isUnloading = false;
         let loadTimeout = null;
-        const LOAD_TIMEOUT_MS = 5000;
+        const LOAD_TIMEOUT_MS = 6000;
+        let attemptedChannels = new Set();
 
         const videoElement = document.getElementById('player');
         const loadingOverlay = document.getElementById('loading');
@@ -270,7 +271,7 @@
             clearLoadTimeout();
             loadTimeout = setTimeout(() => {
                 console.log('Stream load timeout - switching');
-                showToast('⏱️ Timeout - Switching');
+                showToast('⏱️ Stream timeout');
                 cleanupEngines();
                 setTimeout(playNextChannel, 300);
             }, LOAD_TIMEOUT_MS);
@@ -280,13 +281,16 @@
             clearLoadTimeout();
             setTimeout(() => { 
                 if(loadingOverlay) loadingOverlay.style.display = 'none'; 
-            }, 300);
+            }, 200);
         }
 
         function playNextChannel() {
             if (allChannels.length === 0 || isUnloading) return;
             let nextIndex = currentChannelIndex + 1;
-            if (nextIndex >= allChannels.length) nextIndex = 0; 
+            if (nextIndex >= allChannels.length) {
+                nextIndex = 0;
+                attemptedChannels.clear();
+            }
             const nextChan = allChannels[nextIndex];
             highlightSidebar(nextChan.url);
             playStream(nextChan.url, nextChan.name, nextChan.logo, nextChan.group);
@@ -310,7 +314,7 @@
             }
         }
 
-        // --- Core Smart Routing System with 4K Support & Hard Auto-Switch ---
+        // --- Core Smart Routing System with 4K TS Support & Hard Auto-Switch ---
         function playStream(originalUrl, channelName, channelLogo, channelCategory) {
             if(isUnloading) return;
             
@@ -339,6 +343,7 @@
             const isM3U8 = urlLower.includes('.m3u8') || urlLower.includes('.m3u');
             const isDASH = urlLower.includes('.mpd');
             const isTS = urlLower.includes('.ts') || urlLower.includes('.flv');
+            const isMP4 = urlLower.includes('.mp4');
 
             currentEngine = "Auto";
 
@@ -356,10 +361,12 @@
                     dashInstance.initialize(videoElement, playUrl, true);
                     dashInstance.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, () => {
                         hideLoading();
+                        attemptedChannels.add(originalUrl);
                     });
                     dashInstance.on(dashjs.MediaPlayer.events.ERROR, () => {
                         showToast("⚠️ Unavailable");
                         cleanupEngines();
+                        attemptedChannels.add(originalUrl);
                         setTimeout(playNextChannel, 300);
                     });
 
@@ -370,7 +377,9 @@
                         isLive: true, 
                         url: playUrl,
                         hasVideo: true,
-                        hasAudio: true
+                        hasAudio: true,
+                        reuseRedirectUrl: true,
+                        autoCleanupSourceBuffer: true
                     };
                     tsInstance = mpegts.createPlayer(tsConfig);
                     tsInstance.attachMediaElement(videoElement);
@@ -380,18 +389,22 @@
                     if(playPromise && typeof playPromise.then === 'function') {
                         playPromise.then(() => {
                             hideLoading();
+                            attemptedChannels.add(originalUrl);
                         }).catch(() => {
                             showToast("⚠️ Unavailable");
                             cleanupEngines();
+                            attemptedChannels.add(originalUrl);
                             setTimeout(playNextChannel, 300);
                         });
                     } else {
                         hideLoading();
+                        attemptedChannels.add(originalUrl);
                     }
                     
                     tsInstance.on(mpegts.Events.ERROR, () => {
                         showToast("⚠️ Unavailable");
                         cleanupEngines();
+                        attemptedChannels.add(originalUrl);
                         setTimeout(playNextChannel, 300);
                     });
 
@@ -403,18 +416,21 @@
                             maxBufferSize: 60 * 1000 * 1000,
                             maxBufferLength: 30,
                             liveSyncDuration: 3,
-                            liveMaxLatencyDuration: 10
+                            liveMaxLatencyDuration: 10,
+                            autoStartLoad: true
                         };
                         hlsInstance = new Hls(hlsConfig);
                         hlsInstance.loadSource(playUrl);
                         hlsInstance.attachMedia(videoElement);
                         hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
                             hideLoading();
+                            attemptedChannels.add(originalUrl);
                             player.play().catch(() => {});
                         });
                         hlsInstance.on(Hls.Events.ERROR, function(e, data) {
                             showToast("⚠️ Unavailable");
                             cleanupEngines();
+                            attemptedChannels.add(originalUrl);
                             setTimeout(playNextChannel, 300);
                         });
                     } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
@@ -422,6 +438,7 @@
                         videoElement.src = playUrl;
                         const loadHandler = function() {
                             hideLoading();
+                            attemptedChannels.add(originalUrl);
                             player.play().catch(() => {});
                             videoElement.removeEventListener('loadedmetadata', loadHandler);
                             videoElement.removeEventListener('error', errorHandler);
@@ -429,6 +446,7 @@
                         const errorHandler = function() {
                             showToast("⚠️ Unavailable");
                             cleanupEngines();
+                            attemptedChannels.add(originalUrl);
                             setTimeout(playNextChannel, 300);
                             videoElement.removeEventListener('loadedmetadata', loadHandler);
                             videoElement.removeEventListener('error', errorHandler);
@@ -436,11 +454,12 @@
                         videoElement.addEventListener('loadedmetadata', loadHandler);
                         videoElement.addEventListener('error', errorHandler);
                     }
-                } else {
+                } else if (isMP4 || !isM3U8 && !isDASH && !isTS) {
                     currentEngine = "Native";
                     videoElement.src = playUrl;
                     const loadHandler = function() {
                         hideLoading();
+                        attemptedChannels.add(originalUrl);
                         player.play().catch(() => {});
                         videoElement.removeEventListener('loadeddata', loadHandler);
                         videoElement.removeEventListener('error', errorHandler);
@@ -448,6 +467,7 @@
                     const errorHandler = function() {
                         showToast("⚠️ Unavailable");
                         cleanupEngines();
+                        attemptedChannels.add(originalUrl);
                         setTimeout(playNextChannel, 300);
                         videoElement.removeEventListener('loadeddata', loadHandler);
                         videoElement.removeEventListener('error', errorHandler);
@@ -459,6 +479,7 @@
                 console.error('Playback Error:', e);
                 showToast("⚠️ Unavailable");
                 cleanupEngines();
+                attemptedChannels.add(originalUrl);
                 setTimeout(playNextChannel, 300);
             }
 
@@ -466,7 +487,7 @@
         }
 
         videoElement.addEventListener('ended', () => { 
-            if(!isUnloading) setTimeout(playNextChannel, 500); 
+            if(!isUnloading) setTimeout(playNextChannel, 300); 
         });
 
         document.addEventListener('keydown', (e) => {
@@ -480,6 +501,13 @@
             clearLoadTimeout();
             cleanupEngines();
         });
+
+        // Prevent tab reopening on mobile
+        if (window.performance && window.performance.timing && window.performance.timing.navigationStart !== 0) {
+            if (performance.navigation.type !== 0) {
+                window.location.replace(window.location.pathname);
+            }
+        }
 
         async function fetchAndParseM3U() {
             try {
