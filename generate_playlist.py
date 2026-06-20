@@ -1,6 +1,7 @@
 import os
 import requests
 import re
+from datetime import datetime, timezone, timedelta
 
 def is_channel_live(url):
     try:
@@ -23,7 +24,6 @@ def is_channel_live(url):
 def read_m3u_playlist(source):
     playlist = []
     if source is None:
-        print("Error: Playlist source URL is None")
         return []
 
     if source.startswith("http"):
@@ -35,7 +35,7 @@ def read_m3u_playlist(source):
             return []
     else:
         try:
-            with open(source, 'r', encoding='utf-8') as f: # Added encoding to prevent read errors
+            with open(source, 'r', encoding='utf-8') as f:
                 content = f.read()
         except IOError as e:
             print(f"Error reading file {source}: {e}")
@@ -48,46 +48,54 @@ def read_m3u_playlist(source):
         duration, logo, group, channel_name, url = match
         
         # --- Filter out unwanted channels ---
-        channel_name_lower = channel_name.strip().lower()
+        channel_name_clean = channel_name.strip()
+        channel_name_lower = channel_name_clean.lower()
         
-        # Check if "himel op" is in the channel name
         if 'himel op' in channel_name_lower:
-            continue # Skip this channel
+            continue 
             
-        # Check if it's a short promo (assuming promo is in the group or name)
-        # You can adjust this logic based on how promos are usually named in your source
         if 'promo' in channel_name_lower or (group and 'promo' in group.strip().lower()):
-            continue # Skip this channel
+            continue 
             
         if '.m3u8' in url and is_channel_live(url):
-            playlist.append({'logo': logo, 'group': group, 'channel_name': channel_name.strip(), 'url': url.strip()})
+            # Add branding to channel name
+            branded_channel_name = f"{channel_name_clean} | SHAHRIYAR LIVE TV"
+            playlist.append({'logo': logo, 'group': group, 'channel_name': branded_channel_name, 'url': url.strip()})
+            
     return playlist
 
 def combine_playlists(playlist_sources, priority_order):
     combined_playlist = []
     seen_channels = set()
 
-    # Filter out None values from the lists before combining
+    # Filter out None values
     valid_sources = [s for s in priority_order + playlist_sources if s is not None]
 
     for source in valid_sources:
         source_playlist = read_m3u_playlist(source)
         for channel in source_playlist:
-            channel_identity = (channel['channel_name'].lower(), channel['url'])
+            # Check uniqueness based on the URL to avoid duplicates with different names
+            channel_identity = channel['url']
             if channel_identity not in seen_channels:
                 seen_channels.add(channel_identity)
                 combined_playlist.append(channel)
 
     return combined_playlist
 
-def write_to_file(playlist, output_file, include_credits=False, promo_channel=None):
-    credit_text = "# All the links in this file are collected from public sources. If anyone wants to remove their source, please let us know. We respect your opinions and efforts, so we will not object to removing your source. https://www.t.me/shahriyartvbot\n"
-    with open(output_file, 'w', encoding='utf-8') as f: # Added utf-8 encoding for write
-        f.write("#EXTM3U\n")  
-        if include_credits:
-            f.write(credit_text)
+def write_to_file(playlist, output_file, promo_channel=None):
+    # Calculate BD Time (UTC + 6 hours)
+    bd_timezone = timezone(timedelta(hours=6))
+    current_time_bd = datetime.now(bd_timezone).strftime('%Y-%m-%d %H:%M:%S')
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        # Write Custom Header
+        f.write("#EXTM3U\n")
+        f.write("# By SHAHRIYAR SOJIB HASAN\n")
+        f.write("# TELEGRAM @SHAHRIAYRTVBOT\n")
+        f.write(f"# Update on {current_time_bd} (BD Time)\n")
+        f.write("# Note: I do not host any content, everything is publicly available. And any issues, please contact me.\n\n")
             
-        # Write YOUR promo channel first if provided
+        # Write promo channel first if provided
         if promo_channel:
             f.write("#EXTINF:-1 tvg-logo=\"%s\" group-title=\"Promo\",%s\n%s\n" % (
                 promo_channel['logo'], promo_channel['channel_name'], promo_channel['url']
@@ -100,20 +108,12 @@ def write_to_file(playlist, output_file, include_credits=False, promo_channel=No
             f.write("#EXTINF:-1 tvg-logo=\"%s\" group-title=\"%s\",%s\n%s\n" % (logo, group, item['channel_name'], item['url']))
 
 if __name__ == "__main__":
-    playlist_sources = [
-        os.getenv('PLAYLIST_SOURCE_URL_1'),
-        os.getenv('PLAYLIST_SOURCE_URL_2'),
-        os.getenv('PLAYLIST_SOURCE_URL_3')  
-    ]
-    priority_order = [
-        os.getenv('PRIORITY_PLAYLIST_URL_1'),
-        os.getenv('PRIORITY_PLAYLIST_URL_2'),
-        os.getenv('PRIORITY_PLAYLIST_URL_3')  
-    ]
+    # Dynamically grab up to 20 normal sources and 10 priority sources from environment variables
+    playlist_sources = [os.getenv(f'PLAYLIST_SOURCE_URL_{i}') for i in range(1, 21)]
+    priority_order = [os.getenv(f'PRIORITY_PLAYLIST_URL_{i}') for i in range(1, 11)]
     
-    # 1. Output file name updated
-    output_file = 'SHAHRIYAR-LIVE-TV.M3U8'
-    include_credits = True  
+    # Updated output file extension to .m3u
+    output_file = 'SHAHRIYAR-LIVE-TV.m3u'
 
     combined_playlist = combine_playlists(playlist_sources, priority_order)
 
@@ -124,6 +124,6 @@ if __name__ == "__main__":
         'url': 'https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/raw/refs/heads/main/assest/shahriyarlivetv.m3u8'
     }
 
-    write_to_file(combined_playlist, output_file, include_credits, promo_channel)
+    write_to_file(combined_playlist, output_file, promo_channel)
 
     print("Combined and filtered playlist written to", output_file)

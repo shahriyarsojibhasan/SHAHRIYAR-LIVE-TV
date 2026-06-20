@@ -12,18 +12,46 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      # --- Normal Playlist Sources (Slots 1 to 20) ---
       PLAYLIST_SOURCE_URL_1: ${{ secrets.PLAYLIST_SOURCE_URL_1 }}
       PLAYLIST_SOURCE_URL_2: ${{ secrets.PLAYLIST_SOURCE_URL_2 }}
       PLAYLIST_SOURCE_URL_3: ${{ secrets.PLAYLIST_SOURCE_URL_3 }}
+      PLAYLIST_SOURCE_URL_4: ${{ secrets.PLAYLIST_SOURCE_URL_4 }}
+      PLAYLIST_SOURCE_URL_5: ${{ secrets.PLAYLIST_SOURCE_URL_5 }}
+      PLAYLIST_SOURCE_URL_6: ${{ secrets.PLAYLIST_SOURCE_URL_6 }}
+      PLAYLIST_SOURCE_URL_7: ${{ secrets.PLAYLIST_SOURCE_URL_7 }}
+      PLAYLIST_SOURCE_URL_8: ${{ secrets.PLAYLIST_SOURCE_URL_8 }}
+      PLAYLIST_SOURCE_URL_9: ${{ secrets.PLAYLIST_SOURCE_URL_9 }}
+      PLAYLIST_SOURCE_URL_10: ${{ secrets.PLAYLIST_SOURCE_URL_10 }}
+      PLAYLIST_SOURCE_URL_11: ${{ secrets.PLAYLIST_SOURCE_URL_11 }}
+      PLAYLIST_SOURCE_URL_12: ${{ secrets.PLAYLIST_SOURCE_URL_12 }}
+      PLAYLIST_SOURCE_URL_13: ${{ secrets.PLAYLIST_SOURCE_URL_13 }}
+      PLAYLIST_SOURCE_URL_14: ${{ secrets.PLAYLIST_SOURCE_URL_14 }}
+      PLAYLIST_SOURCE_URL_15: ${{ secrets.PLAYLIST_SOURCE_URL_15 }}
+      PLAYLIST_SOURCE_URL_16: ${{ secrets.PLAYLIST_SOURCE_URL_16 }}
+      PLAYLIST_SOURCE_URL_17: ${{ secrets.PLAYLIST_SOURCE_URL_17 }}
+      PLAYLIST_SOURCE_URL_18: ${{ secrets.PLAYLIST_SOURCE_URL_18 }}
+      PLAYLIST_SOURCE_URL_19: ${{ secrets.PLAYLIST_SOURCE_URL_19 }}
+      PLAYLIST_SOURCE_URL_20: ${{ secrets.PLAYLIST_SOURCE_URL_20 }}
+
+      # --- Priority Playlist Sources (Slots 1 to 10) ---
       PRIORITY_PLAYLIST_URL_1: ${{ secrets.PRIORITY_PLAYLIST_URL_1 }}
       PRIORITY_PLAYLIST_URL_2: ${{ secrets.PRIORITY_PLAYLIST_URL_2 }}
       PRIORITY_PLAYLIST_URL_3: ${{ secrets.PRIORITY_PLAYLIST_URL_3 }}
+      PRIORITY_PLAYLIST_URL_4: ${{ secrets.PRIORITY_PLAYLIST_URL_4 }}
+      PRIORITY_PLAYLIST_URL_5: ${{ secrets.PRIORITY_PLAYLIST_URL_5 }}
+      PRIORITY_PLAYLIST_URL_6: ${{ secrets.PRIORITY_PLAYLIST_URL_6 }}
+      PRIORITY_PLAYLIST_URL_7: ${{ secrets.PRIORITY_PLAYLIST_URL_7 }}
+      PRIORITY_PLAYLIST_URL_8: ${{ secrets.PRIORITY_PLAYLIST_URL_8 }}
+      PRIORITY_PLAYLIST_URL_9: ${{ secrets.PRIORITY_PLAYLIST_URL_9 }}
+      PRIORITY_PLAYLIST_URL_10: ${{ secrets.PRIORITY_PLAYLIST_URL_10 }}
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 

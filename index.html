@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAHRIYAR LIVE TV - Web Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --sidebar-bg: #1e293b;
+            --primary-color: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --hover-bg: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); display: flex; height: 100vh; overflow: hidden; }
+        
+        /* Sidebar (Channel List) */
+        .sidebar { width: 320px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; border-right: 1px solid #334155; }
+        .header { padding: 20px; text-align: center; background: #0b1120; border-bottom: 2px solid var(--primary-color); }
+        .header h1 { font-size: 20px; font-weight: bold; color: var(--text-main); }
+        .header span { color: var(--primary-color); }
+        
+        .channel-list { flex: 1; overflow-y: auto; padding: 10px; }
+        .category-title { font-size: 14px; color: var(--text-muted); text-transform: uppercase; margin: 15px 10px 5px; font-weight: bold; border-bottom: 1px solid var(--hover-bg); padding-bottom: 5px; }
+        
+        .channel-item { display: flex; align-items: center; padding: 10px; cursor: pointer; border-radius: 8px; transition: background 0.2s; margin-bottom: 5px; }
+        .channel-item:hover, .channel-item.active { background-color: var(--hover-bg); }
+        .channel-item.active { border-left: 4px solid var(--primary-color); }
+        .channel-logo { width: 40px; height: 40px; border-radius: 5px; object-fit: contain; margin-right: 15px; background: #000; padding: 2px; }
+        .channel-name { font-size: 15px; font-weight: 500; }
+
+        /* Main Content (Player) */
+        .main-content { flex: 1; display: flex; flex-direction: column; }
+        .player-wrapper { flex: 1; background-color: #000; display: flex; align-items: center; justify-content: center; position: relative; }
+        video { width: 100%; height: 100%; max-height: 100vh; object-fit: contain; outline: none; }
+        
+        .now-playing { padding: 20px; background-color: var(--sidebar-bg); display: flex; align-items: center; border-top: 1px solid #334155; }
+        .now-playing img { width: 60px; height: 60px; border-radius: 8px; margin-right: 20px; object-fit: contain; background: #000; }
+        .now-playing-info h2 { font-size: 24px; margin-bottom: 5px; }
+        .now-playing-info p { color: var(--text-muted); font-size: 14px; }
+
+        /* Loader */
+        .loader { display: none; position: absolute; color: white; font-size: 20px; }
+
+        /* Responsive for Mobile */
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; height: 40vh; order: 2; border-right: none; border-top: 1px solid #334155; }
+            .main-content { height: 60vh; order: 1; }
+            .now-playing { display: none; } /* Hide on mobile to save space */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="header">
+            <h1>SHAHRIYAR <span>LIVE TV</span></h1>
+        </div>
+        <div class="channel-list" id="channelList">
+            <div style="text-align:center; padding:20px; color: #94a3b8;">Loading channels...</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="player-wrapper">
+            <div class="loader" id="loader">Loading stream...</div>
+            <video id="videoPlayer" controls autoplay></video>
+        </div>
+        <div class="now-playing" id="nowPlayingSection" style="display: none;">
+            <img id="npLogo" src="" alt="Logo">
+            <div class="now-playing-info">
+                <h2 id="npName">Select a channel</h2>
+                <p id="npCategory">Category</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // আপনার গিটহাবের র ফাইল লিংক বা লোকাল ফাইলের নাম (যেহেতু একই রিপোতে থাকবে, ফাইলের নাম দিলেই হবে)
+        const M3U_URL = 'SHAHRIYAR-LIVE-TV.m3u'; 
+        
+        let hls;
+        const video = document.getElementById('videoPlayer');
+        const loader = document.getElementById('loader');
+
+        // Parse M3U File
+        async function fetchAndParseM3U() {
+            try {
+                // ব্রাউজার ক্যাশ এড়াতে টাইমস্ট্যাম্প যোগ করা হয়েছে
+                const response = await fetch(`${M3U_URL}?t=${new Date().getTime()}`); 
+                const data = await response.text();
+                
+                const lines = data.split('\n');
+                const channels = [];
+                let currentChannel = {};
+
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    
+                    if (line.startsWith('#EXTINF:')) {
+                        // Extract Name
+                        const nameMatch = line.split(',');
+                        currentChannel.name = nameMatch.length > 1 ? nameMatch[1].trim() : 'Unknown Channel';
+                        
+                        // Extract Logo
+                        const logoMatch = line.match(/tvg-logo="(.*?)"/);
+                        currentChannel.logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/150x150/000000/FFFFFF/?text=TV';
+                        
+                        // Extract Group/Category
+                        const groupMatch = line.match(/group-title="(.*?)"/);
+                        currentChannel.group = groupMatch && groupMatch[1] ? groupMatch[1] : 'Uncategorized';
+                        
+                    } else if (line.startsWith('http')) {
+                        currentChannel.url = line;
+                        channels.push(currentChannel);
+                        currentChannel = {}; // Reset for next
+                    }
+                }
+                
+                renderChannels(channels);
+            } catch (error) {
+                console.error("Error loading playlist:", error);
+                document.getElementById('channelList').innerHTML = '<div style="color:red; text-align:center; padding:20px;">Failed to load playlist.</div>';
+            }
+        }
+
+        // Render Channels in Sidebar grouped by Category
+        function renderChannels(channels) {
+            const listContainer = document.getElementById('channelList');
+            listContainer.innerHTML = '';
+
+            // Group channels by category
+            const grouped = channels.reduce((acc, channel) => {
+                if (!acc[channel.group]) acc[channel.group] = [];
+                acc[channel.group].push(channel);
+                return acc;
+            }, {});
+
+            // First render Promo group if exists, then the rest
+            const groups = Object.keys(grouped).sort((a, b) => {
+                if (a.toLowerCase() === 'promo') return -1;
+                if (b.toLowerCase() === 'promo') return 1;
+                return a.localeCompare(b);
+            });
+
+            groups.forEach(group => {
+                // Category Title
+                const catDiv = document.createElement('div');
+                catDiv.className = 'category-title';
+                catDiv.textContent = group;
+                listContainer.appendChild(catDiv);
+
+                // Channels in this category
+                grouped[group].forEach(channel => {
+                    const item = document.createElement('div');
+                    item.className = 'channel-item';
+                    item.innerHTML = `
+                        <img src="${channel.logo}" class="channel-logo" alt="${channel.name}" onerror="this.src='https://via.placeholder.com/150x150/000000/FFFFFF/?text=TV'">
+                        <div class="channel-name">${channel.name.replace(' | SHAHRIYAR LIVE TV', '')}</div>
+                    `;
+                    
+                    item.onclick = () => {
+                        // Remove active class from all
+                        document.querySelectorAll('.channel-item').forEach(el => el.classList.remove('active'));
+                        item.classList.add('active');
+                        playStream(channel);
+                    };
+                    
+                    listContainer.appendChild(item);
+                });
+            });
+
+            // Auto play first channel (Promo)
+            if (channels.length > 0) {
+                document.querySelector('.channel-item').classList.add('active');
+                playStream(channels[0]);
+            }
+        }
+
+        // Play HLS Stream
+        function playStream(channel) {
+            loader.style.display = 'block';
+            
+            // Update Now Playing Info
+            document.getElementById('nowPlayingSection').style.display = 'flex';
+            document.getElementById('npLogo').src = channel.logo;
+            document.getElementById('npName').innerText = channel.name.replace(' | SHAHRIYAR LIVE TV', '');
+            document.getElementById('npCategory').innerText = channel.group;
+
+            if (Hls.isSupported()) {
+                if (hls) {
+                    hls.destroy();
+                }
+                hls = new Hls();
+                hls.loadSource(channel.url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                    loader.style.display = 'none';
+                    video.play().catch(e => console.log("Auto-play prevented by browser"));
+                });
+                hls.on(Hls.Events.ERROR, function (event, data) {
+                    if (data.fatal) {
+                        loader.style.display = 'none';
+                        alert('Error playing this stream. It might be offline.');
+                    }
+                });
+            } 
+            // For Safari (Native HLS support)
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = channel.url;
+                video.addEventListener('loadedmetadata', function () {
+                    loader.style.display = 'none';
+                    video.play();
+                });
+            }
+        }
+
+        // Initialize
+        window.onload = fetchAndParseM3U;
+    </script>
+</body>
+</html>
