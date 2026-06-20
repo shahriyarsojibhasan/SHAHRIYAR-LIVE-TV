@@ -1,7 +1,7 @@
 #EXTM3U
 # By SHAHRIYAR SOJIB HASAN
 # TELEGRAM @SHAHRIAYRTVBOT
-# Update on 2026-06-21 00:21:12 (BD Time)
+# Update on 2026-06-21 01:15:56 (BD Time)
 # Note: Please Don't Use Without Credits
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 
@@ -25,8 +25,6 @@ http://starhub.pro/live/farhat-3379/67897-913379/744524.ts
 http://starhub.pro/live/farhat-3379/67897-913379/744527.ts
 #EXTINF:-1 tvg-logo="https://carboncredits.com/wp-content/uploads/2025/09/shutterstock_2306088965-e1757112807302.jpg" group-title="Football World Cup 2026",Football World Cup 2026 4K | SHAHRIYAR LIVE TV
 http://starhub.pro/live/farhat-3379/67897-913379/745269.ts
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPCvTmUhiKDs4ehoVpFLh7xwdCNK2-N_gNFqnaOM4YRQ&s=10" group-title="Live Sports",Live Sports | SHAHRIYAR LIVE TV
-https://stream.snexus.co/live/SHARQ_GAME_TV/main_stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/ATN%20Bangla.png" group-title="Bangla",ATN Bangla UK | SHAHRIYAR LIVE TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Ekushey%20TV.png" group-title="Bangla",Ekushay TV | SHAHRIYAR LIVE TV
@@ -69,8 +67,6 @@ https://cdn-4.pishow.tv/live/1231/1231_1.m3u8
 https://cdn-4.pishow.tv/live/969/master.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Kolkata Bangla Movies",Bangla Movies | SHAHRIYAR LIVE TV
 https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Zee%20Bangla%20Cinema%20.png" group-title="Kolkata Bangla Movies",Zee Bangla Cinema | SHAHRIYAR LIVE TV
-https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Sangeet%20Bangla.jpeg" group-title="Kolkata Bangla Music",Sangeet Bangla | SHAHRIYAR LIVE TV
 https://cdn-4.pishow.tv/live/1143/master.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Kolkata Bangla Music",Dhoom Music | SHAHRIYAR LIVE TV
@@ -191,6 +187,8 @@ https://d39chvnxm26pgp.cloudfront.net/v1/master/72588bff830dec7b26d7cbbf5f3c2492
 http://103.175.73.12:8080/live/417/417_0.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/31/Deepto_TV_logo.png" group-title="Akash Go",Deepto TV | SHAHRIYAR LIVE TV
 https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/739539785304281088/zMwNO936_400x400.jpg" group-title="BANGLA",Deshe Bideshe | SHAHRIYAR LIVE TV
+https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/188500190395c4de0e506d518925dcc4" group-title="Sports",DD Sports | SHAHRIYAR LIVE TV
 https://cdn-6.pishow.tv/live/13/master.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Unknown",Deshi TV (720p) | SHAHRIYAR LIVE TV
@@ -299,7 +297,5 @@ https://cdn-3.pishow.tv/live/1253/master.m3u8
 https://ml-pull-dvc-myco.io:2096/8XM_MUSIC/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="FIFA World Cup 2026",Somoy TV | SHAHRIYAR LIVE TV
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Hindi | 24/7",Hindi Movies | SHAHRIYAR LIVE TV
-https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg" group-title="LIVE",T Sports HD (5) | SHAHRIYAR LIVE TV
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/130714.ts
