@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
     <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
     <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
     
     <style>
-        /* ------------------ UI Styles ------------------ */
+        /* UI Styles */
         :root { --bg-color: #0b1121; --sidebar-bg: #111827; --primary-color: #00b3ff; --text-main: #f8fafc; --text-muted: #94a3b8; --hover-bg: #1f2937; --border-color: #1f2937; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif; }
         body { background-color: var(--bg-color); color: var(--text-main); display: flex; height: 100vh; overflow: hidden; }
@@ -40,7 +41,7 @@
         .channel-list { flex: 1; overflow-y: auto; padding: 10px; scroll-behavior: smooth;}
         .channel-list::-webkit-scrollbar { width: 6px; }
         .channel-list::-webkit-scrollbar-thumb { background-color: var(--hover-bg); border-radius: 4px; }
-        .category-title { font-size: 13px; color: var(--primary-color); text-transform: uppercase; margin: 15px 5px 10px; font-weight: bold; }
+        .category-title { font-size: 12px; color: var(--primary-color); text-transform: uppercase; margin: 15px 5px 10px; font-weight: bold; }
         .channel-item { display: flex; align-items: center; padding: 10px; cursor: pointer; border-radius: 8px; transition: all 0.2s; margin-bottom: 5px; background-color: transparent;}
         .channel-item:hover { background-color: var(--hover-bg); }
         .channel-item.active { background-color: var(--hover-bg); border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0; }
@@ -57,7 +58,7 @@
         }
         
         .loading { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 99; display: flex; align-items: center; justify-content: center; }
-        .loading-text span { display: inline-block; margin: 0 4px; color: var(--primary-color); font-size: 26px; font-weight: bold; letter-spacing: 2px; }
+        .loading-text span { display: inline-block; margin: 0 3px; color: var(--primary-color); font-size: 20px; font-weight: bold; letter-spacing: 1px; }
         .loading-text span:nth-child(1) { animation: blur-text 0.8s 0s infinite linear alternate; }
         .loading-text span:nth-child(2) { animation: blur-text 0.8s 0.1s infinite linear alternate; }
         .loading-text span:nth-child(3) { animation: blur-text 0.8s 0.2s infinite linear alternate; }
@@ -67,17 +68,17 @@
         .loading-text span:nth-child(7) { animation: blur-text 0.8s 0.6s infinite linear alternate; }
         .loading-text span:nth-child(8) { animation: blur-text 0.8s 0.7s infinite linear alternate; }
         .loading-text span:nth-child(9) { animation: blur-text 0.8s 0.8s infinite linear alternate; }
-        @keyframes blur-text { 0% { filter: blur(0px); } 100% { filter: blur(5px); opacity: 0.5; } }
+        @keyframes blur-text { 0% { filter: blur(0px); } 100% { filter: blur(4px); opacity: 0.6; } }
         
         .footer { padding: 12px 20px; background-color: var(--sidebar-bg); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); flex-shrink: 0;}
         .now-playing { display: flex; align-items: center; }
         .now-playing img { width: 45px; height: 45px; border-radius: 6px; margin-right: 15px; object-fit: contain; background: #fff; padding: 2px;}
-        .now-playing-info h2 { font-size: 16px; margin-bottom: 2px; color: var(--text-main); font-weight: 600;}
-        .now-playing-info p { color: var(--text-muted); font-size: 12px; }
+        .now-playing-info h2 { font-size: 15px; margin-bottom: 2px; color: var(--text-main); font-weight: 600;}
+        .now-playing-info p { color: var(--text-muted); font-size: 11px; }
         .copyright { font-size: 12px; color: var(--text-muted); text-align: right; line-height: 1.4; }
         .copyright a { color: var(--primary-color); text-decoration: none; font-weight: 500;}
         
-        #toast { visibility: hidden; min-width: 250px; background-color: #ef4444; color: #fff; text-align: center; border-radius: 6px; padding: 12px 20px; position: fixed; z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 14px; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s, bottom 0.3s; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #ef4444; color: #fff; text-align: center; border-radius: 6px; padding: 12px 20px; position: fixed; z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 13px; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s, bottom 0.3s; }
         #toast.show { visibility: visible; opacity: 1; bottom: 40px; }
         #toast.proxy { background-color: #eab308; color: #000; }
         #toast.info { background-color: #00b3ff; color: #000; }
@@ -99,15 +100,15 @@
             .header { order: 1; padding: 10px 15px; background: var(--sidebar-bg); z-index: 10; border-bottom: none; flex: none; }
             .search-box { order: 2; padding: 0 15px 10px 15px; background: var(--sidebar-bg); display: none; z-index: 10; border-bottom: none; flex: none; }
             .search-box.show { display: block; }
-            .player-wrapper { order: 3; flex: none; height: 32vh; min-height: 220px; z-index: 10; background: #000; }
+            .player-wrapper { order: 3; flex: none; height: 35vh; min-height: 240px; z-index: 10; background: #000; }
             .footer { order: 4; flex: none; padding: 12px 15px; background: var(--sidebar-bg); border-bottom: 1px solid var(--border-color); z-index: 10; justify-content: flex-start; }
             .channel-list { order: 5; flex: 1 1 auto; overflow-y: auto; padding: 10px; background: var(--bg-color); z-index: 1; }
             .mobile-copyright { order: 6; flex: none; display: block; text-align: center; padding: 12px; font-size: 11px; color: var(--text-muted); background: var(--sidebar-bg); border-top: 1px solid var(--border-color); z-index: 10;}
             .mobile-copyright a { color: var(--primary-color); text-decoration: none; }
             .copyright { display: none; } 
-            .now-playing-info h2 { font-size: 14px; }
-            .now-playing img { width: 40px; height: 40px; }
-            .loading-text span { font-size: 20px; }
+            .now-playing-info h2 { font-size: 13px; }
+            .now-playing img { width: 38px; height: 38px; }
+            .loading-text span { font-size: 16px; }
         }
     </style>
 </head>
@@ -163,7 +164,7 @@
                 <img id="npLogo" src="" alt="Logo">
                 <div class="now-playing-info">
                     <h2 id="npName">Select a channel</h2>
-                    <p id="npCategory">Engine: Auto</p>
+                    <p id="npCategory">Category | Engine: Auto</p>
                 </div>
             </div>
             <div class="copyright">
@@ -179,7 +180,7 @@
     </div>
 
     <script>
-        // PWA App Installation
+        // PWA Installation
         if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -220,29 +221,53 @@
         let allChannels = [];
         let groupsMap = new Map(); 
         let currentChannelIndex = -1;
-        let retryCount = 0;
-        const MAX_RETRIES = 2;
+        let playQueue = []; // Sequential queue for failed channels
+        let queueIndex = 0;
+        let isQueueMode = false;
 
         const videoElement = document.getElementById('player');
         const loadingOverlay = document.getElementById('loading');
         
         const player = new Plyr(videoElement, {
             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'pip', 'settings', 'fullscreen'],
-            quality: { default: 720, options: [1080, 720, 480, 360] },
+            quality: { default: 720, options: [2160, 1440, 1080, 720, 480, 360] },
             keyboard: { focused: true, global: true } 
         });
 
-        // ================= Multi-Engine System Instances =================
+        // Multi-Engine Instances
         let hlsInstance = null;
         let dashInstance = null;
         let tsInstance = null;
+        let currentEngine = "Loading";
 
         function cleanupEngines() {
-            if (hlsInstance) { hlsInstance.destroy(); hlsInstance = null; }
-            if (dashInstance) { dashInstance.reset(); dashInstance = null; }
-            if (tsInstance) { tsInstance.destroy(); tsInstance = null; }
-            videoElement.removeAttribute('src');
-            videoElement.load();
+            if (hlsInstance) { 
+                try { hlsInstance.destroy(); } catch(e) {}
+                hlsInstance = null; 
+            }
+            if (dashInstance) { 
+                try { dashInstance.reset(); } catch(e) {}
+                dashInstance = null; 
+            }
+            if (tsInstance) { 
+                try { tsInstance.destroy(); } catch(e) {}
+                tsInstance = null; 
+            }
+            try {
+                videoElement.removeAttribute('src');
+                videoElement.load();
+            } catch(e) {}
+        }
+
+        // Save current channel to session storage for tab persistence
+        function saveCurrentChannel(channel) {
+            sessionStorage.setItem('lastChannel', JSON.stringify(channel));
+        }
+
+        // Get saved channel from tab/session
+        function getSavedChannel() {
+            const saved = sessionStorage.getItem('lastChannel');
+            return saved ? JSON.parse(saved) : null;
         }
 
         function playNextChannel() {
@@ -272,14 +297,13 @@
             }
         }
 
-        // --- Core Smart Routing System ---
-        function playStream(originalUrl, channelName, channelLogo, channelCategory, useProxy = false, isRetry = false) {
+        // Core Engine Detection & Playback
+        function playStream(originalUrl, channelName, channelLogo, channelCategory) {
             loadingOverlay.style.display = 'flex'; 
+            currentChannelIndex = allChannels.findIndex(c => c.url === originalUrl);
             
-            if(!isRetry) {
-                retryCount = 0;
-                currentChannelIndex = allChannels.findIndex(c => c.url === originalUrl);
-            }
+            // Save current channel
+            saveCurrentChannel({ url: originalUrl, name: channelName, logo: channelLogo, group: channelCategory });
 
             document.getElementById('nowPlayingSection').style.visibility = 'visible';
             document.getElementById('npName').innerText = channelName;
@@ -289,115 +313,138 @@
 
             let playUrl = originalUrl;
 
-            // GitHub Direct URL bypass
+            // GitHub URL conversion
             if (playUrl.includes('github.com') && playUrl.includes('/raw/')) {
                 playUrl = playUrl.replace('https://github.com/', 'https://cdn.jsdelivr.net/gh/');
                 playUrl = playUrl.replace('/raw/refs/heads/', '@');
                 playUrl = playUrl.replace('/raw/', '@');
             }
 
-            // CORS Proxy Bypass
-            if (useProxy) playUrl = "https://corsproxy.io/?" + encodeURIComponent(playUrl);
-
-            // Smart Extension Detection
+            // Detect stream type
             const urlLower = playUrl.split('?')[0].toLowerCase();
             const isM3U8 = urlLower.includes('.m3u8') || urlLower.includes('.m3u');
             const isDASH = urlLower.includes('.mpd');
-            const isTS = urlLower.includes('.ts') || urlLower.includes('.flv');
+            const isTS = urlLower.includes('.ts');
+            const isFLV = urlLower.includes('.flv');
+            const isMP4 = urlLower.includes('.mp4');
 
-            let currentEngine = "Native";
-
+            // Play with appropriate engine
             if (isDASH) {
-                currentEngine = "DASH.js";
-                dashInstance = dashjs.MediaPlayer().create();
-                dashInstance.initialize(videoElement, playUrl, true);
-                dashInstance.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, () => {
-                    retryCount = 0;
-                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 500);
-                });
-                dashInstance.on(dashjs.MediaPlayer.events.ERROR, () => {
-                    handlePlaybackError(originalUrl, channelName, channelLogo, channelCategory, useProxy);
-                });
+                playDASH(playUrl, channelName, channelLogo, channelCategory, originalUrl);
+            } else if ((isTS || isFLV) && mpegts.getFeatureList().mseLivePlayback) {
+                playTS(playUrl, channelName, channelLogo, channelCategory, originalUrl);
+            } else if (isM3U8) {
+                playHLS(playUrl, channelName, channelLogo, channelCategory, originalUrl);
+            } else if (isMP4 || (!isM3U8 && !isDASH && !isTS && !isFLV)) {
+                playNativeMP4(playUrl, channelName, channelLogo, channelCategory, originalUrl);
+            }
+        }
 
-            } else if (isTS && mpegts.getFeatureList().mseLivePlayback) {
-                currentEngine = "MPEGTS.js";
-                tsInstance = mpegts.createPlayer({ type: 'mse', isLive: true, url: playUrl });
-                tsInstance.attachMediaElement(videoElement);
-                tsInstance.load();
-                tsInstance.play().then(() => {
-                    retryCount = 0;
-                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 500);
-                }).catch(() => {
-                    handlePlaybackError(originalUrl, channelName, channelLogo, channelCategory, useProxy);
+        function playHLS(playUrl, channelName, channelLogo, channelCategory, originalUrl) {
+            currentEngine = "HLS";
+            if (Hls.isSupported()) {
+                hlsInstance = new Hls({ 
+                    maxMaxBufferLength: 100, 
+                    maxBufferSize: 60 * 1000 * 1000,
+                    maxBackBufferLength: 90
                 });
-                tsInstance.on(mpegts.Events.ERROR, () => {
-                    handlePlaybackError(originalUrl, channelName, channelLogo, channelCategory, useProxy);
+                hlsInstance.loadSource(playUrl);
+                hlsInstance.attachMedia(videoElement);
+                hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
+                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 300);
+                    player.play().catch(() => {});
                 });
-
-            } else if (isM3U8 || (!isM3U8 && !isDASH && !isTS && useProxy)) {
-                currentEngine = "HLS.js";
-                if (Hls.isSupported()) {
-                    hlsInstance = new Hls({ maxMaxBufferLength: 100, maxBufferSize: 60 * 1000 * 1000 });
-                    hlsInstance.loadSource(playUrl);
-                    hlsInstance.attachMedia(videoElement);
-                    hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
-                        retryCount = 0;
-                        setTimeout(() => { loadingOverlay.style.display = 'none'; }, 500);
-                        player.play().catch(() => {});
-                    });
-                    hlsInstance.on(Hls.Events.ERROR, function(e, data) {
-                        if (data.fatal) {
-                            handlePlaybackError(originalUrl, channelName, channelLogo, channelCategory, useProxy, data);
-                        }
-                    });
-                } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                    videoElement.src = playUrl;
-                    videoElement.addEventListener('loadedmetadata', function() {
-                        setTimeout(() => { loadingOverlay.style.display = 'none'; }, 500);
-                        player.play();
-                    });
-                }
-            } else {
-                currentEngine = "HTML5 Native";
+                hlsInstance.on(Hls.Events.ERROR, function(e, data) {
+                    if (data.fatal) {
+                        handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+                    }
+                });
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
                 videoElement.src = playUrl;
-                videoElement.addEventListener('loadeddata', function() {
-                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 500);
+                videoElement.addEventListener('loadedmetadata', function() {
+                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 300);
                     player.play();
                 });
                 videoElement.addEventListener('error', function() {
-                    handlePlaybackError(originalUrl, channelName, channelLogo, channelCategory, useProxy);
+                    handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
                 });
-            }
-
-            document.getElementById('npCategory').innerText = `${channelCategory} | Engine: ${currentEngine}`;
-        }
-
-        // Unified Error Handling for Retries and Proxy
-        function handlePlaybackError(originalUrl, channelName, channelLogo, channelCategory, useProxy, data = null) {
-            let isNetworkError = data && data.type === Hls.ErrorTypes.NETWORK_ERROR;
-            
-            if ((isNetworkError || !data) && !useProxy && !originalUrl.includes('cdn.jsdelivr.net')) {
-                showToast(`🔄 Connecting via Proxy...`, "info");
-                playStream(originalUrl, channelName, channelLogo, channelCategory, true, true);
             } else {
-                if (retryCount < MAX_RETRIES) {
-                    retryCount++;
-                    showToast(`🔄 Retrying... (${retryCount}/${MAX_RETRIES})`, "info");
-                    
-                    // Engine Reload Logic
-                    if(hlsInstance) { hlsInstance.loadSource(videoElement.src); }
-                    else if(dashInstance) { dashInstance.play(); }
-                    else if(tsInstance) { tsInstance.unload(); tsInstance.load(); tsInstance.play(); }
-                    else { videoElement.load(); videoElement.play(); }
-
-                } else {
-                    showToast("⚠️ Stream Unplayable. Auto-switching..."); 
-                    setTimeout(playNextChannel, 1500);
-                }
+                handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
             }
+            updateEngineDisplay(channelCategory);
         }
 
-        videoElement.addEventListener('ended', () => { setTimeout(playNextChannel, 1500); });
+        function playDASH(playUrl, channelName, channelLogo, channelCategory, originalUrl) {
+            currentEngine = "DASH";
+            try {
+                dashInstance = dashjs.MediaPlayer().create();
+                dashInstance.initialize(videoElement, playUrl, true);
+                dashInstance.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, () => {
+                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 300);
+                });
+                dashInstance.on(dashjs.MediaPlayer.events.ERROR, () => {
+                    handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+                });
+            } catch(e) {
+                handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+            }
+            updateEngineDisplay(channelCategory);
+        }
+
+        function playTS(playUrl, channelName, channelLogo, channelCategory, originalUrl) {
+            currentEngine = "TS";
+            try {
+                tsInstance = mpegts.createPlayer({ 
+                    type: 'mse', 
+                    isLive: true, 
+                    url: playUrl,
+                    hasAudio: true,
+                    hasVideo: true
+                });
+                tsInstance.attachMediaElement(videoElement);
+                tsInstance.load();
+                tsInstance.play().then(() => {
+                    setTimeout(() => { loadingOverlay.style.display = 'none'; }, 300);
+                }).catch(() => {
+                    handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+                });
+                tsInstance.on(mpegts.Events.ERROR, () => {
+                    handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+                });
+            } catch(e) {
+                handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+            }
+            updateEngineDisplay(channelCategory);
+        }
+
+        function playNativeMP4(playUrl, channelName, channelLogo, channelCategory, originalUrl) {
+            currentEngine = "MP4";
+            videoElement.src = playUrl;
+            videoElement.addEventListener('loadeddata', function() {
+                setTimeout(() => { loadingOverlay.style.display = 'none'; }, 300);
+                player.play();
+            }, { once: true });
+            videoElement.addEventListener('error', function() {
+                handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory);
+            }, { once: true });
+            updateEngineDisplay(channelCategory);
+        }
+
+        function updateEngineDisplay(category) {
+            document.getElementById('npCategory').innerText = `${category} | Engine: ${currentEngine}`;
+        }
+
+        // Sequential failure handling - moves to next channel in queue
+        function handleEngineFailure(originalUrl, channelName, channelLogo, channelCategory) {
+            showToast(`${currentEngine} failed, switching...`);
+            setTimeout(() => {
+                playNextChannel();
+            }, 1000);
+        }
+
+        videoElement.addEventListener('ended', () => { 
+            setTimeout(playNextChannel, 1500); 
+        });
 
         document.addEventListener('keydown', (e) => {
             if (document.activeElement.id === 'searchInput') return;
@@ -405,6 +452,7 @@
             else if (e.key === 'ArrowDown') { e.preventDefault(); playNextChannel(); }
         });
 
+        // M3U Parsing with default logo fallback
         async function fetchAndParseM3U() {
             try {
                 const response = await fetch(`${M3U_URL}?t=${new Date().getTime()}`); 
@@ -413,6 +461,7 @@
                 const lines = data.split('\n');
                 let currentChannel = {};
                 allChannels = [];
+                const defaultLogo = 'https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU';
 
                 for (let i = 0; i < lines.length; i++) {
                     const line = lines[i].trim();
@@ -421,10 +470,10 @@
                         currentChannel.name = nameMatch.length > 1 ? nameMatch[1].trim().replace(' | SHAHRIYAR LIVE TV', '') : 'Unknown';
                         
                         const logoMatch = line.match(/tvg-logo="(.*?)"/);
-                        currentChannel.logo = logoMatch && logoMatch[1] ? logoMatch[1] : 'https://via.placeholder.com/150/ffffff/000000?text=TV';
+                        currentChannel.logo = (logoMatch && logoMatch[1]) ? logoMatch[1] : defaultLogo;
                         
                         const groupMatch = line.match(/group-title="(.*?)"/);
-                        currentChannel.group = groupMatch && groupMatch[1] ? groupMatch[1] : 'Uncategorized';
+                        currentChannel.group = (groupMatch && groupMatch[1]) ? groupMatch[1] : 'Uncategorized';
                     } else if (line.startsWith('http')) {
                         currentChannel.url = line;
                         allChannels.push(currentChannel);
@@ -436,11 +485,22 @@
                 processAndRenderGroups(allChannels);
 
                 if(allChannels.length > 0) {
+                    // Try to restore last watched channel
+                    const savedChannel = getSavedChannel();
+                    if (savedChannel) {
+                        const savedIdx = allChannels.findIndex(c => c.url === savedChannel.url);
+                        if (savedIdx !== -1) {
+                            highlightSidebar(savedChannel.url);
+                            playStream(savedChannel.url, savedChannel.name, savedChannel.logo, savedChannel.group);
+                            return;
+                        }
+                    }
+                    // Play first channel if nothing saved
                     highlightSidebar(allChannels[0].url);
                     playStream(allChannels[0].url, allChannels[0].name, allChannels[0].logo, allChannels[0].group);
                 }
             } catch (error) {
-                document.getElementById('channelList').innerHTML = '<div style="color:#ef4444; text-align:center;">Failed to load live data!</div>';
+                document.getElementById('channelList').innerHTML = '<div style="color:#ef4444; text-align:center; padding:20px;">Failed to load!</div>';
             }
         }
 
@@ -463,9 +523,11 @@
             listContainer.innerHTML = '';
 
             if(mapData.size === 0) {
-                listContainer.innerHTML = '<div style="text-align:center; color:#94a3b8; padding: 20px;">No channels found!</div>';
+                listContainer.innerHTML = '<div style="text-align:center; color:#94a3b8; padding: 20px;">No channels!</div>';
                 return;
             }
+
+            const defaultLogo = 'https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU';
 
             mapData.forEach((channels, groupName) => {
                 const catDiv = document.createElement('div');
@@ -477,7 +539,8 @@
                     const item = document.createElement('div');
                     item.className = 'channel-item';
                     item.setAttribute('data-url', channel.url);
-                    item.innerHTML = `<img src="${channel.logo}" class="channel-logo" onerror="this.src='https://via.placeholder.com/150/ffffff/000000?text=TV'"><div class="channel-name">${channel.name}</div>`;
+                    const logo = channel.logo && channel.logo.trim() ? channel.logo : defaultLogo;
+                    item.innerHTML = `<img src="${logo}" class="channel-logo" onerror="this.src='${defaultLogo}'"><div class="channel-name">${channel.name}</div>`;
                     
                     item.onclick = () => {
                         highlightSidebar(channel.url);
