@@ -1,7 +1,7 @@
 #EXTM3U
 # By SHAHRIYAR SOJIB HASAN
 # TELEGRAM @SHAHRIAYRTVBOT
-# Update on 2026-06-20 22:09:24 (BD Time)
+# Update on 2026-06-20 22:12:00 (BD Time)
 # Note: Auto-filtered to strictly contain Live TV only. No VODs/Movies.
 # Enhanced with multiple user-agents, CORS support, and robust verification
 
@@ -41,8 +41,6 @@ https://byphdgllyk.gpcdn.net/hls/banglatveurope/index.m3u8
 https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="://tplay.live/originals/bengali-beats/bengali-beats.png" group-title="Bangla Music",Bengla Beats | SHAHRIYAR LIVE TV
 https://tplay.live/originals/bengali-beats/index.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Bangla Music",Channel-16 | SHAHRIYAR LIVE TV
-https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Gfw89mC/20240804-033102.png" group-title="Relagion Channel",Peace TV Bangla | SHAHRIYAR LIVE TV
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v2a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/598TYnC/20240827-092020.png" group-title="Relagion Channel",Peace TV English | SHAHRIYAR LIVE TV
@@ -303,13 +301,13 @@ https://cdn-4.pishow.tv/live/1231/1231_2.m3u8
 http://119.156.228.231:9983/stream/channelid/679185749?ticket=DED82FB8AE85893524A1035AAE7CD187020FFA04&profile=pass
 #EXTINF:-1 tvg-logo="" group-title="Hindi",MK Six | SHAHRIYAR LIVE TV
 https://cdn-3.pishow.tv/live/1253/master.m3u8
-#EXTINF:-1 tvg-logo="" group-title="MUSIC",8X music | SHAHRIYAR LIVE TV
-https://ml-pull-dvc-myco.io:2096/8XM_MUSIC/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Indian-Bangla",Akash Aath | SHAHRIYAR LIVE TV
 https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="NEWS INTERNASIONAL",RT NEWS USA | SHAHRIYAR LIVE TV
 https://rt-glb.rttv.com/live/rtnews/playlist.m3u8?v=1
 #EXTINF:-1 tvg-logo="" group-title="Hindi | 24/7",Hindi Movies | SHAHRIYAR LIVE TV
 https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Hindi | 24/7",South Movies | SHAHRIYAR LIVE TV
+https://live20.bozztv.com/giatvplayout7/giatv-209593/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg" group-title="LIVE",T Sports HD (5) | SHAHRIYAR LIVE TV
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/130714.ts
