@@ -1,0 +1,8 @@
+{
+  "name": "stv",
+  "main": "worker.js",
+  "compatibility_date": "2026-06-20",
+  "assets": {
+    "directory": "."
+  }
+}
