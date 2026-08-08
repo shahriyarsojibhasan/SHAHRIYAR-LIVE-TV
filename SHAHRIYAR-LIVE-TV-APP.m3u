@@ -1,6 +1,6 @@
 #EXTM3U
 # By SHAHRIYAR SOJIB HASAN
-# Update on 2026-08-08 17:07:39
+# Update on 2026-08-08 17:56:47
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/TFSssmW/image.png" group-title="Promo",SHAHRIYAR LIVE TV
 https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/raw/refs/heads/main/assest/shahriyarlivetv.m3u8
@@ -204,6 +204,12 @@ https://otte-qw.live.pv-cdn.net/pdx-nitro/live/clients/dash/enc/ffwqzsa0zr/out/v
 https://otte-qw.live.pv-cdn.net/gru-nitro/live/clients/dash/enc/cizlveblk4/out/v1/e5c36c41621e4384b80427d87199433a/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",BINGE+ BD - AQ | SHAHRIYAR LIVE TV
 https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/main.m3u8|referer=https://iscreen.com.bd/
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",VIX MUNDIAL FHD | SHAHRIYAR LIVE TV
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=36a78e9664836d8d1b882c7772ef2119:4911f93d4a347873b3c2f187793dffb0
+https://cun-live1-ott.izzigo.tv/11/out/u/dash/VIX-MUNDIAL-91-HD/default.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",FUSSBALL TV 4K | SHAHRIYAR LIVE TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -228,12 +234,6 @@ https://otte-qw.live.pv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b09d157d18ab51b9923a3d5abdeefd52:5a29bb3c705edea6941a5b1d575ac316
 https://director.streaming.telia.com/tvm-packager-prod/group2/61a4859b79019af4abf1009d/manifest.mpd?adap=default
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",ITV ENGLISH - AQ | SHAHRIYAR LIVE TV
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=30089c52924f037b225b82c616fee2a5:f55dc8b66ed4fc6753d6035ae7e17144
-https://otte-qw.live.pv-cdn.net/pdx-nitro/live/clients/dash/enc/0eiyyz8qzm/out/v1/dd17af8835fe4bd087d1a4e359b635d7/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",CAZE TV BR - AQ | SHAHRIYAR LIVE TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -254,12 +254,12 @@ https://otte-qw.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/x0srg3jjpz/out/v
 https://otte-qw.live.pv-cdn.net/pdx-nitro/live/clients/dash/enc/ajfoeddkbz/out/v1/b78800b9b2304879b15843f455836829/cenc.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",ISCREEN BD - AQ | SHAHRIYAR LIVE TV
 https://m3u-tvb.pages.dev/ics.m3u8|referer=https://iscreen.com.bd/
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",FOOTBOLL RUSSIA | SHAHRIYAR LIVE TV
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",TELEMUNDO FHD | SHAHRIYAR LIVE TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9145a6e0f778e61866f573d4944dd533:d02173d40515fea5c83944f21d0f3114
-https://video.beeline.tv/live/d/channel319.isml/manifest-stb.mpd
+#KODIPROP:inputstream.adaptive.license_key=1efe4add8fdf327c5f8d2a1c195e5c71:4f50e6f011e60ca01ee561f27187e78f
+https://cun-live1-ott.izzigo.tv/out/u/dash/NOG1/TELEMUNDO-ARIZONA-USA-TCS-HD/default.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",Match TV HD | SHAHRIYAR LIVE TV
 https://bl.video.matchtv.ru/media/playlist/free_d46d0cf1712c0542ec7fd4f0808f600a_hd/17_89756005/1080/e6bef86de8a133cd7b27deb040758a00/4796141934.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="FIFA WC 2026",TELEMUNDO ES USA | SHAHRIYAR LIVE TV
@@ -319,165 +319,167 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/enc/jkib0oinbi/out/v1/b788
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/16-by-xfireflix.png" group-title="Uncategorized",Star Sports 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/star1in.m3u8?md5=G2TSqtTUvDiELPfiGlIxMQ&expires=1786188979
+https://cdn7.zohanayaan.com:1686/hls/star1in.m3u8?md5=KKoEs3uXmTQyntv2Y18rSQ&expires=1786191614
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1-by-xfireflix.png" group-title="Uncategorized",Star Sports 1 Hindi | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/starhindi.m3u8?md5=lpcDpT71u3FvLgAwbYIf6w&expires=1786188980
+https://cdn10.zohanayaan.com:1686/hls/starhindi.m3u8?md5=uZubk2veNj3_yuvucXyMgg&expires=1786191614
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/20-by-xfireflix.png" group-title="Uncategorized",PTV Sports | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=eXbeZtbZsLP40Jz_aolhZQ&expires=1786188980
+https://cdn10.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=IrLmL6MhkPx6p8CHk73RIQ&expires=1786191614
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/38-by-xfireflix.png" group-title="Uncategorized",Willow HD | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/willowusa.m3u8?md5=ZkiZeAKkWqn_uql6re_cVw&expires=1786188980
+https://cdn2.zohanayaan.com:1686/hls/willowusa.m3u8?md5=i047BFpIeEYkvswx1znpaQ&expires=1786191614
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/8-by-xfireflix.png" group-title="Uncategorized",Willow HD 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/willowextra.m3u8?md5=L9RuGOl20nxmuuyWVn8jww&expires=1786188980
+https://cdn3.zohanayaan.com:1686/hls/willowextra.m3u8?md5=SR9gYqN5RsvVzv5ptp1Q4g&expires=1786191614
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/10-by-xfireflix.png" group-title="Uncategorized",Ten Sports | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/tenspk.m3u8?md5=Sp2TDWr709iNSQB4X9WNbA&expires=1786188980
+https://cdn9.zohanayaan.com:1686/hls/tenspk.m3u8?md5=tPJCv1_w-tE2CsHo-YqqsA&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/12-by-xfireflix.png" group-title="Uncategorized",A Sports HD | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/asportshd.m3u8?md5=T40yVjIiyVXr7LooaG2Kbg&expires=1786188981
+https://cdn9.zohanayaan.com:1686/hls/asportshd.m3u8?md5=g4jC1Kok1MZMXTzRkCX9Hg&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/9-by-xfireflix.png" group-title="Uncategorized",Sky Sports Cricket | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/skyscric.m3u8?md5=p8Wyn0Q2Cm6-Q5uUxUvgTw&expires=1786188981
+https://cdn2.zohanayaan.com:1686/hls/skyscric.m3u8?md5=gb3i_ySmwQhtQE9FNKhLkQ&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/18-by-xfireflix.png" group-title="Uncategorized",Sky Sports Main Event | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/skysme.m3u8?md5=4IEaU0p_I6t2FI6NeluKNA&expires=1786188981
+https://cdn10.zohanayaan.com:1686/hls/skysme.m3u8?md5=yrzL1KqJwMTF0UxTHnW0tg&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=wsfz7cd9Mbr7_LYUOJsIBw&expires=1786188981
+https://cdn4.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=G46FXTYKjJKQ8HeVJViNqQ&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=xWPvAMqzPM7saFICLYuASA&expires=1786188981
+https://cdn5.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=xer75r5pCAgaOouR16DGAA&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 3 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=wXLQCYJ5_M6UynbZAepjNQ&expires=1786188981
+https://cdn5.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=iFnSgQIdkhM3xsLt8RyLAg&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 4 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=4IcRm2MXr8rgZK_Apeo7Jg&expires=1786188981
+https://cdn3.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=ErgDyNYBHow8P6HrtC5GKw&expires=1786191615
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=XtdfBi5H5eeQe2BoBCH0tw&expires=1786188982
+https://cdn3.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=-dXEF13g9HmSASS_IyvLuA&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=d5KukuxJREmkDZa-y0zASQ&expires=1786188982
+https://cdn6.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=g51vGNYFQXQRikhfll9UoQ&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 3 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn1.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=YEj1Oa9PN0grQ3Me38Qgog&expires=1786188982
+https://cdn10.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=ybPGmsva7W628aHvzsvAYA&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 4 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=CFuIKUkTXs74mEHQFOa8Nw&expires=1786188982
+https://cdn1.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=tbV53vxMxjRH_dJ8-3f2BQ&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 5 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=pQ6m3t9yM85fiRVB5HL3TQ&expires=1786188982
+https://cdn4.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=LRo5ayLHCUDeYOTeUi7a0g&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport 6 Nz | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn8.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=tUCC5RU6hZTr5kV2oB4h2g&expires=1786188982
+https://cdn7.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=2oPdDnZCi8PGK9QWq8VFVg&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 7 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn8.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=lqt40HiFpzc5tvlqYeEwsw&expires=1786188983
+https://cdn10.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=D2WcMT3lboqfAXbb-02sUw&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 8 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=GARA5wS_K7qFJQW78DgGIw&expires=1786188983
+https://cdn7.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=oWcenm4ouUia_0yoj_Eggw&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 9 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=ruwMeFIPbUdIQlGPKWZIcA&expires=1786188983
+https://cdn8.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=XLm7KCwnbwgKocs4C4CmqQ&expires=1786191616
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829332.png" group-title="Uncategorized",Sky Sports Action | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/skysact.m3u8?md5=yQaymTPaA86_4biaiecsOw&expires=1786188983
+https://cdn1.zohanayaan.com:1686/hls/skysact.m3u8?md5=mNm_WPWZJDx8KDzQplKekw&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008055327.png" group-title="Uncategorized",Sky Sports Golf | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/skysgol.m3u8?md5=hBCGbd3EsF0qV4nVXN3FTA&expires=1786188983
+https://cdn4.zohanayaan.com:1686/hls/skysgol.m3u8?md5=lJrJXAFvONklL-kPof5nBQ&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/43-by-xfireflix.png" group-title="Uncategorized",Sky Sports Premier League | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/skysprem.m3u8?md5=hzJgEiEXomqx9Z2uUd4EkA&expires=1786188983
+https://cdn2.zohanayaan.com:1686/hls/skysprem.m3u8?md5=WvPzy9ZIv8qIkTT8fehmZw&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/44-by-xfireflix.png" group-title="Uncategorized",Sky Sports Football | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn8.zohanayaan.com:1686/hls/skysfott.m3u8?md5=jUKoZycSjNklK41KQxGf8w&expires=1786188983
+https://cdn5.zohanayaan.com:1686/hls/skysfott.m3u8?md5=soj6o4NNvPT7G-1Qz1fCyA&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008347584.png" group-title="Uncategorized",Sky Sports Plus | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/skysare.m3u8?md5=ZBSnzHgYLDuSryn17ITGDg&expires=1786188984
+https://cdn1.zohanayaan.com:1686/hls/skysare.m3u8?md5=hSYlpGKJL83iCBEcrvPINQ&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008468637.png" group-title="Uncategorized",Sky Sports F1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn1.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=IbaA7RPAJ10R2_d8TWUtEw&expires=1786188984
+https://cdn5.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=DVgOvmU5C2qCJdRO1PEn_Q&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/19-by-xfireflix.png" group-title="Uncategorized",LaLiGA | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn10.zohanayaan.com:1686/hls/laligauk.m3u8?md5=LheVNYcKNqHMRhh_I9bTvw&expires=1786188984
+https://cdn2.zohanayaan.com:1686/hls/laligauk.m3u8?md5=i8bpB2ahK_SF-o6s_3yriQ&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png" group-title="Uncategorized",Premier Sports 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/premieruk.m3u8?md5=ZfFbhhFjO6O8zdAPek99dQ&expires=1786188984
+https://cdn10.zohanayaan.com:1686/hls/premieruk.m3u8?md5=n23PQOpTn7FLD9JvFlRrhw&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png" group-title="Uncategorized",Premier Sports 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=7-N3l4rdxZsquqEZvNWT4g&expires=1786188984
+https://cdn8.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=28LHqk_eOZk71uxK-wKdyw&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/34-by-xfireflix.png" group-title="Uncategorized",Super Football | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn8.zohanayaan.com:1686/hls/superfotball.m3u8?md5=i0JM73lMpft5PCHWHJTAbA&expires=1786188984
+https://cdn2.zohanayaan.com:1686/hls/superfotball.m3u8?md5=q6ivpuLg8WHXClMKI7S6Jw&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008781606.png" group-title="Uncategorized",Super Premier League | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/superpremier.m3u8?md5=0hhBwViqCN8hur5MgnuZ2A&expires=1786188984
+https://cdn1.zohanayaan.com:1686/hls/superpremier.m3u8?md5=lIy3glEbwlz1pQjj9iTDLQ&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008895589.png" group-title="Uncategorized",Astro Cricket | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/fox501.m3u8?md5=MSZ9azxHd74A1nKrQNZbNQ&expires=1786188985
+https://cdn1.zohanayaan.com:1686/hls/fox501.m3u8?md5=-yc3bV0MsaQd8Pnijf7Jfg&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png" group-title="Uncategorized",ESPN 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/espnusa.m3u8?md5=coTiQ_zoXpKC_yPg8mnL2w&expires=1786188985
+https://cdn8.zohanayaan.com:1686/hls/espnusa.m3u8?md5=xWENF5Jl8nS_BexBL1Z5kg&expires=1786191617
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png" group-title="Uncategorized",ESPN 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/espn2.m3u8?md5=7ebt4Gn8bDTGvWZ0xSiHOA&expires=1786188985
+https://cdn6.zohanayaan.com:1686/hls/espn2.m3u8?md5=6Yk6ZaiwpnmzFuWrsOXUbg&expires=1786191618
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/13-by-xfireflix.png" group-title="Uncategorized",Sky Sports Mix | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=s36bSyNJiZHXQGMv9AL73w&expires=1786188985
+https://cdn9.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=4mwkORv1ylHBrGqbwYjvYg&expires=1786191618
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745009085794.png" group-title="Uncategorized",Sky Sports Tennis | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/skystennis.m3u8?md5=_JM349752c2qhZbPbKfl3A&expires=1786188985
+https://cdn3.zohanayaan.com:1686/hls/skystennis.m3u8?md5=z4lYOZxtfYtDjYpSCvvXiQ&expires=1786191618
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1000173192-modified.png" group-title="Uncategorized",Sony Sports3 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn10.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=2Yj94Nk9GeKTqeqUJ-6NrA&expires=1786188985
+https://cdn3.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=hx68Kbxc4J2NjuCvEeXeCw&expires=1786191618
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/4247977_53005_PD_SDS_fc-Web.png" group-title="Fancode-Cricket",tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/4247977_53005_PD_SDS_fc-Web.png" group-title="Fancode-Cricket", Purani Dilli-6 vs South Delhi Superstarz (Delhi Premier League- 2026) | SHAHRIYAR LIVE TV
 https://bd-mc-flive.fancode.com/mumbai/4247977_english_hls_79752a5a0567797_1ta-di_h264/1080p.m3u8?hdntl=Expires=1786261700~_GO=Generated~acl=/mumbai/4247977_english_hls_79752a5a0567797_1ta-di_h264/*~Signature=AYCJ36SpXHWEYuRWlhQVE6hNOq59URMZO0FIFq4bU3MhvEyfQm77mOMaoGTBEu9nSYFqylLfmCRxUHAdZYIN4xOJlEcH
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini_Match_Card_1785824451782.png" group-title="Fancode-Cricket",tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini_Match_Card_1785824451782.png" group-title="Fancode-Cricket", Uganda vs Tanzania (ICC CWC Challenge League B 2026) | SHAHRIYAR LIVE TV
 https://bd-mc-flive.fancode.com/mumbai/4248250_english_hls_604dbbc6e537886_1ta-di_h264/1080p.m3u8?hdntl=Expires=1786250774~_GO=Generated~acl=/mumbai/4248250_english_hls_604dbbc6e537886_1ta-di_h264/*~Signature=AYCJ36Q0C4-P3tV5FqdO5SsOXJfYEdVR3FTAlrRMPPSI1gMmh2UfnPmZxmayOA06zMvccJRIph85utzDNS3sB_rgDNEG
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/MiniMatchCard1080x8103.png" group-title="Fancode-MotoGP",tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/MiniMatchCard1080x8103.png" group-title="Fancode-MotoGP", Day 2 vs Silverstone Circuit (QATAR AIRWAYS GRAND PRIX OF GREAT BRITAIN 2026) | SHAHRIYAR LIVE TV
 https://bd-mc-flive.fancode.com/mumbai/139961_english_hls_ccb7fef4ab54419_1ta-di_h264/1080p5.m3u8?hdntl=Expires=1786264740~_GO=Generated~acl=/mumbai/139961_english_hls_ccb7fef4ab54419_1ta-di_h264/*~Signature=AYCJ36RBz7siHeJdbq5Cy8FG8Vpgm3Pd3exEGZU4e4ukeP-W-Q4aDa-RqHY74eAXJoWV7f-dq1PwMmO5MetpN6XwUmMK
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini_Match_Card.png" group-title="Fancode-Golf",tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini_Match_Card.png" group-title="Fancode-Golf", Day 3 - Main Feed vs Sedgefield Country Club - Greensboro- NC (Wyndham Championship 2026) | SHAHRIYAR LIVE TV
+https://bd-mc-flive.fancode.com/mumbai/4248187_english_hls_0094d4e29731691_1ta-di_h264/1080p.m3u8?hdntl=Expires=1786272631~_GO=Generated~acl=/mumbai/4248187_english_hls_0094d4e29731691_1ta-di_h264/*~Signature=AYCJ36TrmJ7oNO1DRNjDTA1Acw8KL6JiKvT8wgMC2t6dAY7xKooveA78_U7zff35XsoMwHNbgHiNckmi0Qvnpwfl8wEH
 #EXTINF:-1 tvg-logo="https://origin-staticv2.sonyliv.com/videoasset_images/manage_file/1000021747/1785707491192385_DC26_Nongkseh_SSCC_vs_Langsning_FC_landscape_thumb.jpg" group-title="Live Event",Nongkseh SS&CC vs Langsning FC - 6 Aug 2026 [ENG] - IndianOil Durand Cup 2026 | SHAHRIYAR LIVE TV
 https://sonydaimenew.akamaized.net/hls/live/20000292/football0608/ENG/std_lrh-800300010.m3u8?hdnea=exp=1786065499~acl=/*~id=91391884091374325471911646703021~hmac=1f6c7744fc392267e8d1a62c0c6069eb44f8efeddc3588bfb9c42972f177aad3
 #EXTINF:-1 tvg-logo="https://s4.gifyu.com/images/image534fa27d7683f33d.png" group-title="Akash Go",Ekushey TV | SHAHRIYAR LIVE TV
@@ -730,10 +732,10 @@ http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ananda_tv&format=.m3u8
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_world&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/b994ae24dd627fb8b680e5cd654d1e9c.jpg" group-title="Uncategorized",BTV CTG | SHAHRIYAR LIVE TV
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_ctg&format=.m3u8
-#EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_0ec7deccac559ad2e22206dae03454e1_playmist_r_plus_400x400.jpg" group-title="Uncategorized",R Plus | SHAHRIYAR LIVE TV
-http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=r_plus&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_454ca4e52d414605814d0f4778fd8137_playmist_rupshi_bangla400x400.jpg" group-title="Uncategorized",Rupshi Bangla | SHAHRIYAR LIVE TV
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=rupshi_bangla&format=.m3u8
+#EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-13/images_68b8c3bbc8b629bbc2c00880b4546d74_playmist_sangeet_bangla400x400.jpg" group-title="Uncategorized",Sangeet Bangla | SHAHRIYAR LIVE TV
+http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sangeet_bangla&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_bea6d56aa19a59e2bc272736880a97f3_playmist_bbc_news_400x400.jpg" group-title="Uncategorized",BBC News | SHAHRIYAR LIVE TV
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bbc_news&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_e9cbcb0f33668b33e4b5dd06143aa1c6_playmist_dw400x400.jpg" group-title="Uncategorized",DW News | SHAHRIYAR LIVE TV
@@ -764,6 +766,10 @@ http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=india_today&format=.m3u8
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=republic_tv_bharat&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_3f07da3fcbcf0b957c04c18d17bd612b_playmist_hindi_khabar_400x400.jpg" group-title="Uncategorized",Hindi Khabar | SHAHRIYAR LIVE TV
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=hindi_khabar&format=.m3u8
+#EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_d52623f16135dea6bd76f7bdacd4b886_playmist_bharat_samachar_500x296.jpg" group-title="Uncategorized",Bharat Samachar | SHAHRIYAR LIVE TV
+http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bharat_samachar&format=.m3u8
+#EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_86e9d3e52b45d2bb9c321b8168aa01e9_playmist_anb_news_400x400.jpg" group-title="Uncategorized",ANB News | SHAHRIYAR LIVE TV
+http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=anb_news&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_292f3cc412bf05a14544657749e4a0be_playmist_news_1_india_400x400.jpg" group-title="Uncategorized",News 1 India | SHAHRIYAR LIVE TV
 http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=news_1_india&format=.m3u8
 #EXTINF:-1 tvg-logo="https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_ad482966b8ccc41fc9bd98dd9382ff0d_playmist_sadhna_prime_news_400x400.jpg" group-title="Uncategorized",Sadhna Prime News | SHAHRIYAR LIVE TV
@@ -1122,159 +1128,159 @@ https://rt-glb.rttv.com/live/rtnews/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/16-by-xfireflix.png" group-title="Uncategorized",Star Sports 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/star1in.m3u8?md5=oNpZnTrKaSyWBE-vwHNKvw&expires=1786189814
+https://cdn6.zohanayaan.com:1686/hls/star1in.m3u8?md5=s3F0X3jwtl2NghOT4d9gPA&expires=1786193526
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1-by-xfireflix.png" group-title="Uncategorized",Star Sports 1 Hindi | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/starhindi.m3u8?md5=Y34t5SzjLgM00Ey9-NEE4g&expires=1786189814
+https://cdn2.zohanayaan.com:1686/hls/starhindi.m3u8?md5=yi3_XMn_U0uR2TUayPtkQQ&expires=1786193526
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/20-by-xfireflix.png" group-title="Uncategorized",PTV Sports | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=Uoh-0G1GOiJx2arCMiukBQ&expires=1786189814
+https://cdn6.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=OXUS-YHYoq7f7ZaibVE7uQ&expires=1786193527
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/38-by-xfireflix.png" group-title="Uncategorized",Willow HD | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/willowusa.m3u8?md5=AgEjIPqo6Vubj8kh31YKAA&expires=1786189815
+https://cdn6.zohanayaan.com:1686/hls/willowusa.m3u8?md5=LbgBv-vYH0pZqIM3pfONyQ&expires=1786193527
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/8-by-xfireflix.png" group-title="Uncategorized",Willow HD 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn1.zohanayaan.com:1686/hls/willowextra.m3u8?md5=-1iwKH_7n599cvaFUmnHvw&expires=1786189815
+https://cdn7.zohanayaan.com:1686/hls/willowextra.m3u8?md5=1aow5uK8EyGsaxiAhcFdWQ&expires=1786193527
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/10-by-xfireflix.png" group-title="Uncategorized",Ten Sports | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn1.zohanayaan.com:1686/hls/tenspk.m3u8?md5=pPfQsou5y0w-QAWLuFQjMw&expires=1786189815
+https://cdn2.zohanayaan.com:1686/hls/tenspk.m3u8?md5=HmgRCo6BngnwwTD1dV_XQg&expires=1786193527
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/12-by-xfireflix.png" group-title="Uncategorized",A Sports HD | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/asportshd.m3u8?md5=Jb1hORKIZU3D9082Bzv1nw&expires=1786189815
+https://cdn4.zohanayaan.com:1686/hls/asportshd.m3u8?md5=iphZXzqAtWYpnfFsotx47g&expires=1786193527
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/9-by-xfireflix.png" group-title="Uncategorized",Sky Sports Cricket | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn8.zohanayaan.com:1686/hls/skyscric.m3u8?md5=SgprdPrmcTfYlKNjCBd5mw&expires=1786189815
+https://cdn9.zohanayaan.com:1686/hls/skyscric.m3u8?md5=MMUx84Hxp8QuYH00BoA6XA&expires=1786193527
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/18-by-xfireflix.png" group-title="Uncategorized",Sky Sports Main Event | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/skysme.m3u8?md5=r4llflgcg1JF_Vw13PPZQg&expires=1786189815
+https://cdn8.zohanayaan.com:1686/hls/skysme.m3u8?md5=gBpZ4E8k7uSc97rSLvuAog&expires=1786193528
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=qg3V7-TWaKgauVuu5NsXzg&expires=1786189815
+https://cdn1.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=pQMJuH--k61JvLbxgS59mA&expires=1786193528
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn8.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=0zkHAXrO-VA-yBADNiiY5A&expires=1786189815
+https://cdn8.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=Is8WF_HDMtASdp-JLo0P4w&expires=1786193528
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 3 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=cmYdyeVur6PBJYAMg1gR2g&expires=1786189815
+https://cdn9.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=blmyWUtm-aco_9CbhQbhGg&expires=1786193528
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="Uncategorized",TNT 4 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=fXvtjdNMgVDtiHsbZTObLA&expires=1786189815
+https://cdn2.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=WAH6FJ_Soyhdhr60tjj1VA&expires=1786193528
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=hI0iPMemrUuDIYhHGgyuOw&expires=1786189816
+https://cdn6.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=wdy8rHUWl8que3WB1qlFgw&expires=1786193528
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=MMbG5rGwSfvR_P47udlfqw&expires=1786189816
+https://cdn1.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=B1sF1gx10MUAytmDK4PmHg&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 3 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=6y0vNF63G-gfrcZZ72wNxA&expires=1786189816
+https://cdn9.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=5W80UgcUjhbgKJ_fwGopkw&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 4 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn10.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=QLHqY4VUQnU9Euo-zqxHSg&expires=1786189816
+https://cdn3.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=QEYSuya93s7h4UarS6MszQ&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 5 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=j0vPge9uQe7unRva2UUpnA&expires=1786189816
+https://cdn3.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=i2vkSrcUXjEyaTzABATnbA&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport 6 Nz | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=ovuUsU6Auc104IRAPW-wdg&expires=1786189816
+https://cdn10.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=r9DFsIt7hhU3Vw0T61lzPA&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 7 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn9.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=Pt0VpZNfSLAvuo8nczWs-g&expires=1786189816
+https://cdn4.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=eRRl2QZDiHtNDC8Y0s1qFg&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 8 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=laU0OhPQfOKy7coEtB5fYQ&expires=1786189816
+https://cdn9.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=XB_Pj1STv4wltRyCUSq19A&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="Uncategorized",Sky Sport Nz 9 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=-q6ldeGcVRKkGuYyifkUWQ&expires=1786189817
+https://cdn8.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=MOTguBNQSr5VeEa-4WqLNw&expires=1786193529
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829332.png" group-title="Uncategorized",Sky Sports Action | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn1.zohanayaan.com:1686/hls/skysact.m3u8?md5=DX6j4tiA7s9-IuCr3VGdxA&expires=1786189817
+https://cdn10.zohanayaan.com:1686/hls/skysact.m3u8?md5=SfzvxHDseP2FZAZJhmed5Q&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008055327.png" group-title="Uncategorized",Sky Sports Golf | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn10.zohanayaan.com:1686/hls/skysgol.m3u8?md5=KsBhqzhUSgET3Fhv5TLzGQ&expires=1786189817
+https://cdn7.zohanayaan.com:1686/hls/skysgol.m3u8?md5=H6mwLIUMC_ynAJpCy4YnAQ&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/43-by-xfireflix.png" group-title="Uncategorized",Sky Sports Premier League | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/skysprem.m3u8?md5=Ii9qpCvMwFy1EeV2Rs3gYw&expires=1786189817
+https://cdn10.zohanayaan.com:1686/hls/skysprem.m3u8?md5=1Rvti8cpNhVNWtxmIi6cuw&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/44-by-xfireflix.png" group-title="Uncategorized",Sky Sports Football | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/skysfott.m3u8?md5=ffvTTSDYQBosi942SFEGxQ&expires=1786189817
+https://cdn8.zohanayaan.com:1686/hls/skysfott.m3u8?md5=sLcW5MAlrOPXr9IkTjTTuQ&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008347584.png" group-title="Uncategorized",Sky Sports Plus | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/skysare.m3u8?md5=Lp9b-YijhcucUka_DI4izA&expires=1786189817
+https://cdn2.zohanayaan.com:1686/hls/skysare.m3u8?md5=P2D3Be2kKrJrY8pG74f-ag&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008468637.png" group-title="Uncategorized",Sky Sports F1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=Hl6Cv7C7gs5eHtkjZC1TTQ&expires=1786189817
+https://cdn4.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=rtC82nfPPruU9oADTwGnwA&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/19-by-xfireflix.png" group-title="Uncategorized",LaLiGA | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn10.zohanayaan.com:1686/hls/laligauk.m3u8?md5=eyoMYnq125k7gBRK2W5gvw&expires=1786189817
+https://cdn10.zohanayaan.com:1686/hls/laligauk.m3u8?md5=QRwdtD1QSXpuOUvXvWgPEg&expires=1786193530
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png" group-title="Uncategorized",Premier Sports 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/premieruk.m3u8?md5=JlV-AbTwbqoxNYgqo5GE7g&expires=1786189817
+https://cdn10.zohanayaan.com:1686/hls/premieruk.m3u8?md5=h7wsPreMQ495ntJAkpJi6g&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png" group-title="Uncategorized",Premier Sports 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn10.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=oyHdtDXMXJgkH7W70GHyLg&expires=1786189817
+https://cdn6.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=c_vCE-p5Un5RwPjH19F7XQ&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/34-by-xfireflix.png" group-title="Uncategorized",Super Football | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn4.zohanayaan.com:1686/hls/superfotball.m3u8?md5=f0l7HlyXhk833uKXfWMH6A&expires=1786189818
+https://cdn2.zohanayaan.com:1686/hls/superfotball.m3u8?md5=YQkdCsdSCYKtWmfbJslLUQ&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008781606.png" group-title="Uncategorized",Super Premier League | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn7.zohanayaan.com:1686/hls/superpremier.m3u8?md5=RR-Oigc_ZnjHlu1y_7ku4w&expires=1786189818
+https://cdn6.zohanayaan.com:1686/hls/superpremier.m3u8?md5=9_4CvW3MQT1OPb3jqPWmVQ&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008895589.png" group-title="Uncategorized",Astro Cricket | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/fox501.m3u8?md5=9J-EbcxHKeHuBm1lwhP5nA&expires=1786189818
+https://cdn6.zohanayaan.com:1686/hls/fox501.m3u8?md5=UpviN0MqZVWI6Xbnmn-6oQ&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png" group-title="Uncategorized",ESPN 1 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/espnusa.m3u8?md5=4FOCammEMasFvk6Us52xLg&expires=1786189818
+https://cdn5.zohanayaan.com:1686/hls/espnusa.m3u8?md5=O_lPG7BJ7kH04AnH_FC7fQ&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png" group-title="Uncategorized",ESPN 2 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn5.zohanayaan.com:1686/hls/espn2.m3u8?md5=_i0GaVBJU8Ljxu2nI7iKSw&expires=1786189818
+https://cdn7.zohanayaan.com:1686/hls/espn2.m3u8?md5=EvawFk3GC8Ohkn2wVUzcVw&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/13-by-xfireflix.png" group-title="Uncategorized",Sky Sports Mix | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn3.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=5RiPmP8cM_fOaKxEEMmScw&expires=1786189818
+https://cdn3.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=5I9ZUcTHHHh1P19kcrvDqQ&expires=1786193531
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745009085794.png" group-title="Uncategorized",Sky Sports Tennis | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn2.zohanayaan.com:1686/hls/skystennis.m3u8?md5=rIWwGfvpHd4O3CHYf1w7zw&expires=1786189818
+https://cdn9.zohanayaan.com:1686/hls/skystennis.m3u8?md5=VAWiNFqVqwBiB6rCHYaa0w&expires=1786193532
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1000173192-modified.png" group-title="Uncategorized",Sony Sports3 | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://cdn6.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=iBDU9EWYtBBKGj9-LA0C5w&expires=1786189818
+https://cdn6.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=ZCopZJlkSjStqLW7ctLCTg&expires=1786193532
 #EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/usnsgu.png" group-title="News",Republic TV | SHAHRIYAR LIVE TV
 #EXTVLCOPT:http-user-agent=YuppTV/7.18.1 (Linux;Android 16) ExoPlayerLib/2.19.1
 #KODIPROP:inputstream=inputstream.adaptive
@@ -2562,8 +2568,8 @@ http://103.157.248.140:8000/play/a00c/index.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/K1HmMRz.png" group-title="General",ATN Bangla (720p) | SHAHRIYAR LIVE TV
 https://tvsen5.aynaott.com/atnbangla/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/hJxFLvF.png" group-title="Culture",Channel S (576p) | SHAHRIYAR LIVE TV
-https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/7oTsfQ4.png" group-title="News",Probashi TV News (1080p) | SHAHRIYAR LIVE TV
+http://158.69.24.53:8080/probashi_tv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1ztVXUi.png" group-title="Religious",Peace TV Bangla (1080p) | SHAHRIYAR LIVE TV
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/szAGBCU.png" group-title="General",Vokta TV (720p) | SHAHRIYAR LIVE TV
@@ -2708,8 +2714,6 @@ https://30a-tv.com/loomer.m3u8
 https://30a-tv.com/feeds/vidaa/luxelife.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gNWg9tl.png" group-title="Music",30A Music (720p) | SHAHRIYAR LIVE TV
 https://30a-tv.com/music.m3u8
-#EXTINF:-1 tvg-logo="https://30a.media/wp-content/uploads/2023/08/pzaz-30atv-2-230x366-ridiculous.jpg" group-title="Comedy",30A Ridiculous TV (720p) | SHAHRIYAR LIVE TV
-https://30a-tv.com/feeds/720p/63.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/HSdwqZN.png" group-title="Entertainment",30A Sidewalks (720p) | SHAHRIYAR LIVE TV
 https://30a-tv.com/sidewalks.m3u8
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHiYfIB01K44LIBG81aEGAmDuIWw8MA0f2w&s" group-title="Entertainment",30A Television Channel (720p) | SHAHRIYAR LIVE TV
@@ -2968,8 +2972,6 @@ https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae0
 https://tdameritrade-vizio.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/m5Anun9.png" group-title="Family",AMG TV (1080p) | SHAHRIYAR LIVE TV
 https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/NTlC6e7.png" group-title="General",Amga TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
-https://streamer1.connectto.com/AMGA_WEB_1202/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/odwRbRk.png" group-title="News",ANC (480p) | SHAHRIYAR LIVE TV
 https://streams.comclark.com/pknsd/anc/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6ot2lmd.png" group-title="Series",Andromeda | SHAHRIYAR LIVE TV
@@ -3026,6 +3028,8 @@ https://stream.hydeinnovations.com/arktv-international/index.fmp4.m3u8
 https://cdn01.setar.aw/Canal49/canal49/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9s6LZJZ.png" group-title="Entertainment",ArubaTV + | SHAHRIYAR LIVE TV
 https://rtmpcontrol.com:1936/atvplus/ngrp:atvplus_all/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/o1icKZu.png" group-title="General",Asian Culture TV (1080p) | SHAHRIYAR LIVE TV
+https://cdn.vegasplus.us/vegas/actv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/hW6z1RG.png" group-title="Entertainment",AsianCrush (1080p) | SHAHRIYAR LIVE TV
 https://linear-900.frequency.stream/dist/cineverse/900/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6lklsyN.png" group-title="General;Religious",AssyriaSat (720p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -3104,8 +3108,6 @@ https://bbc-classicdrwho-1-us.roku.wurl.tv/playlist.m3u8
 http://starcius-cinema.com/11586/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nGSsUd4.png" group-title="Documentary",BBC Earth (1080p) | SHAHRIYAR LIVE TV
 https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/nGSsUd4.png" group-title="Documentary",BBC Earth Asia (720p) | SHAHRIYAR LIVE TV
-https://thinkkast.dpdns.org/thinkkast/cg_bbcearth_hd1/versiglia/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nGSsUd4.png" group-title="Documentary",BBC Earth Greece (1080p) | SHAHRIYAR LIVE TV
 http://185.102.171.218/BBCEarth/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nGSsUd4.png" group-title="Documentary",BBC Earth Turkiye (720p) | SHAHRIYAR LIVE TV
@@ -3120,6 +3122,8 @@ https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bb
 http://193.46.58.239:8080/CbeebiesHD/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/rC0pi1D.png" group-title="Lifestyle",BBC Home & Garden (1080p) | SHAHRIYAR LIVE TV
 https://d11r33s5i066xh.cloudfront.net/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9mzJJ3y.png" group-title="Lifestyle",BBC Lifestyle Philippines (720p) | SHAHRIYAR LIVE TV
+https://thinkkast.dpdns.org/thinkkast/bbc_lstylehd/versiglia/index.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png" group-title="News",BBC News (1080p) | SHAHRIYAR LIVE TV
 https://xemzi.short.gy/1000015
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png" group-title="News",BBC News (1080p) (HEVC) (1080p) | SHAHRIYAR LIVE TV
@@ -3374,8 +3378,6 @@ https://bloomberg.com/media-manifest/streams/qt.m3u8
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV Asia (720p) | SHAHRIYAR LIVE TV
 https://bloomberg.com/media-manifest/streams/asia.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV Asia Live Event (720p) | SHAHRIYAR LIVE TV
-https://bloomberg.com/media-manifest/streams/asia-event.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV Australia (270p) | SHAHRIYAR LIVE TV
 https://bloomberg.com/media-manifest/streams/aus.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV EMEA Live Event (720p) | SHAHRIYAR LIVE TV
@@ -3384,6 +3386,8 @@ https://bloomberg.com/media-manifest/streams/eu-event.m3u8
 https://bloomberg.com/media-manifest/streams/eu.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV US Live Event (720p) | SHAHRIYAR LIVE TV
 https://bloomberg.com/media-manifest/streams/us-event.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV US Politics Live Event (720p) | SHAHRIYAR LIVE TV
+https://bloomberg.com/media-manifest/streams/politics.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="Business",Bloomberg TV+ (2160p) | SHAHRIYAR LIVE TV
 https://d8975dc3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9CbG9vbWJlcmdUVlBsdXNfSExT/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VPGIfVh.png" group-title="Legislative",Bloomfield Access Government TV (480p) | SHAHRIYAR LIVE TV
@@ -4158,10 +4162,14 @@ http://185.102.171.218/Entertainment/index.m3u8
 https://xumo-xumoent-vc-117-a3ga4.fast.nbcuni.com/live/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TWFDkap.png" group-title="Entertainment",E! West (1080p) | SHAHRIYAR LIVE TV
 https://gpuserver3.tier1streams.com/E_ENTERTAINMENT_WEST/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/DIIRPNN.png" group-title="Legislative",EBS (1080p) | SHAHRIYAR LIVE TV
+https://streams.prd.commavservices.eu/live/ebs/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/5wLJzb0.png" group-title="Education",EBS E (400p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/zqbK2IB.png" group-title="Culture",EBS HD (1080p) | SHAHRIYAR LIVE TV
 https://rpn.bozztv.com/ebstv/ebstv/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/7V012zQ.png" group-title="Legislative",EBS Plus (1080p) | SHAHRIYAR LIVE TV
+https://streams.prd.commavservices.eu/live/ebsplus/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/pllIMGi.png" group-title="Education",EBS+ 2 (400p) | SHAHRIYAR LIVE TV
 https://ebsonair.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/rntSEDZ.png" group-title="Culture",EET TV (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -4284,6 +4292,8 @@ https://d21x3vavxu7p2x.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d2
 https://securestream11.champds.com/LIVE/FultonCoGALIVE/FultonCoGALIVE.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mRsnztA.png" group-title="Sports",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Sports",FightBox | SHAHRIYAR LIVE TV
 https://webtvstream.bhtelecom.ba/fightbox.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/nRiApdI.png" group-title="General",FilAmTV Network (1080p) | SHAHRIYAR LIVE TV
+https://cdn.vegasplus.us/vegas/ftv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/3wqeGXM.png" group-title="Animation",FilmRise Anime (720p) | SHAHRIYAR LIVE TV
 https://dvu7aia8rjlfm.cloudfront.net/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8j2npVc.png" group-title="Classic",FilmRise Classic TV (720p) | SHAHRIYAR LIVE TV
@@ -4570,10 +4580,14 @@ https://reflect-hudsonctv.cablecast.tv/live-26/live/stream-2/live.m3u8
 https://reflect-hudsonctv.cablecast.tv/live-26/live/stream-5/live.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MKZCskA.png" group-title="Music",Heart Radio Aruba | SHAHRIYAR LIVE TV
 https://live2.tensila.com/heart-v-1.heartar/hls/live/mystream.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/djCq2Z5.png" group-title="Entertainment",Heartland (720p) | SHAHRIYAR LIVE TV
+https://2-fss-2.streamhoster.com/pl_120/201950-2724904-1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/djCq2Z5.png" group-title="Entertainment",Heartland | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-61f07513227feb00073ee6bc.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/P9eT0O9.png" group-title="Series",Hell's Kitchen (1080p) | SHAHRIYAR LIVE TV
 https://amg00654-itv-amg00654c1-samsung-au-1072.playouts.now.amagi.tv/itv-hellskitchen-samsung/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/0aIH6V5.png" group-title="General",HGPTV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/8424fb7f-99a9-87ae-3861-f0620849d11c/source/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/HGTV_US_Logo_2015.svg/960px-HGTV_US_Logo_2015.svg.png" group-title="Lifestyle",HGTV (1080p) | SHAHRIYAR LIVE TV
 https://i.mjh.nz/.r/sky-hgtv.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Hi_Dost.png" group-title="Entertainment",Hi Dost! (720p) | SHAHRIYAR LIVE TV
@@ -4700,6 +4714,8 @@ https://live-onesignal.royalmedia.co.ke/live/T-MxRsFebq6zx7k2QFMbLw.m3u8
 https://stream8.cinerama.uz/1416/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/wvQYWsj.png" group-title="Series",Inside Crime (1080p) | SHAHRIYAR LIVE TV
 https://aenetworks-insidecrime-rakuten.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/YgOC51j.png" group-title="Entertainment",INSP (720p) | SHAHRIYAR LIVE TV
+http://40.160.24.53/INSP/index.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png" group-title="Travel",InTravel (1080p) | SHAHRIYAR LIVE TV
 https://amg00861-amg00861c10-rakuten-uk-3152.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/a40chFI.png" group-title="Auto;Outdoor;Sports",INTROUBLE (1080p) | SHAHRIYAR LIVE TV
@@ -5284,6 +5300,8 @@ https://shift03.isp.bg/MTVEurope/index.m3u8
 https://stream.mtvgy.com/mtvguyana/index.fmp4.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/68b9b0dbf9cf3d7cb9f56d88/colorLogoPNG_1757455543454.png" group-title="Entertainment",MTV Jersey Shore | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-68b9b0dbf9cf3d7cb9f56d88.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/3UByLqb.png" group-title="Music",MTV Live (1080p) | SHAHRIYAR LIVE TV
+http://40.160.24.53/MTV_LIVE/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png" group-title="Entertainment",MTV Pluto TV | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-5ca672f515a62078d2ec0ad2.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/685137f4a1e091e16f2dd471/colorLogoPNG_1780301718240.png" group-title="General",MTV Reality (720p) | SHAHRIYAR LIVE TV
@@ -5470,20 +5488,10 @@ https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_027/Stream/playlist.m3u
 https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/News9.png" group-title="News",News9Live (1080p) | SHAHRIYAR LIVE TV
 https://amg01106-amg01106c3-amgplt0844.playout.now3.amagi.tv/ts-ap-s1-n1/playlist/amg01106-amg01106c3-amgplt0844/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" group-title="News",News12+ Connecticut (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/tThKYM09/news12plus-NYC.jpg" group-title="News",News12+ New York (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_NYC_A1/index_new.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/fvcOzzK.png" group-title="News",News12 Brooklyn [Geo-blocked] | SHAHRIYAR LIVE TV
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/index_new.m3u8?omap=https
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 Conneticut [Geo-blocked] | SHAHRIYAR LIVE TV
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12CH_FFLD_MILF_A1/index_new.m3u8?omap=https
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 Hudson Valley [Geo-blocked] | SHAHRIYAR LIVE TV
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?omap=https
+#EXTINF:-1 tvg-logo="https://i.ibb.co/qYCVcWDV/news12plus-NJ.jpg" group-title="News",News12+ New Jersey (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_NJ_A1/index_new.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Ez7qAZP.png" group-title="News",News 12 New York (1080p) | SHAHRIYAR LIVE TV
 https://aegis-cloudfront-1.tubi.video/97fbb992-c212-4164-8406-abb6f731e517/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 Westchester [Geo-blocked] | SHAHRIYAR LIVE TV
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/index_new.m3u8?omap=https
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS18_ASSAM_NORTHSYMHYPEAST/images/LOGO_HD/image.png" group-title="News",News18 Assam North-East (1080p) | SHAHRIYAR LIVE TV
 https://n18syndication.akamaized.net/bpk-tv/News18_Assam_North_East_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-logo="https://cf-images.ap-southeast-2.prod.boltdns.net/v1/static/5647924203001/8e3eba6d-3ed7-4687-8793-ce06bebb0f37/4f567b79-c56c-426c-91c3-0b277e41879e/1920x1080/match/image.jpg" group-title="News",News24 (1080p) | SHAHRIYAR LIVE TV
@@ -5494,6 +5502,8 @@ https://wf.newscentral.ng:8443/hls/stream.m3u8
 https://amg00217-newsmax-newsmax-zeasn-022k9.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/960px-Newsmax_logo.svg.png" group-title="News",Newsmax TV (720p) | SHAHRIYAR LIVE TV
 http://40.160.24.53/NEWSMAX/index.m3u8
+#EXTINF:-1 tvg-logo="https://thehill.com/wp-content/uploads/sites/2/2025/08/NN-Stacked-Logo_Blue_1400x787.png" group-title="News",NewsNation (720p) | SHAHRIYAR LIVE TV
+http://40.160.24.58/NEWSNATION/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/NewsNetLogo2022.png" group-title="News",NewsNet (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://2-fss-2.streamhoster.com/pl_138/amlst:201950-1311088/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/2e3bf0d9-3ca6-4f65-b1d4-f180ef725d96/NewsWorld_logo_dark_-_Angela_Chan.png" group-title="News",NewsWorld (1080p) | SHAHRIYAR LIVE TV
@@ -5770,6 +5780,8 @@ https://jmp2.uk/plu-61c09a3894aa450007814aea.m3u8
 https://cdn3.wowza.com/5/cXdyRHF0Z3kxN0k2/pinole/G0032_004/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/WahZg3L.png" group-title="General",Pinole Community Television (PCTV) Channel 28 (Pinole CA) (480p) | SHAHRIYAR LIVE TV
 https://cdn3.wowza.com/5/cXdyRHF0Z3kxN0k2/pinole/G0032_002/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/ysRh3Nl.png" group-title="Undefined",PixL TV (720p) | SHAHRIYAR LIVE TV
+http://40.160.24.55/PIXL/index.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikitide.net/indietvwiki/0/03/Placid_(2026).svg" group-title="Animation",Placid (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://toy.vcdn.fyi/placid/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OSet4en.png" group-title="Lifestyle",Plous TV (1080p) | SHAHRIYAR LIVE TV
@@ -6050,6 +6062,8 @@ https://amg00378-mavtv-amg00378c2-samsung-au-1790.playouts.now.amagi.tv/playlist
 https://amg00378-amg00378c4-freelivesports-emea-5637.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rada_TV_%282021%29.svg/960px-Rada_TV_%282021%29.svg.png" group-title="Legislative",Rada TV (1080p) | SHAHRIYAR LIVE TV
 https://lowa8026-cmyk.github.io/Ukraine/Edyni_Novyny/RADA.m3u8
+#EXTINF:-1 tvg-logo="https://radiofxnet.ro/wp-content/uploads/2021/03/cropped-cropped-cropped-cropped-Radio_FX_Net_logo-1-1.png" group-title="Music",Radio Fx Net (720p) | SHAHRIYAR LIVE TV
+https://streamlov.alsolnet.com/radiofxnet/live/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ZLPwJug.png" group-title="Religious",Radio Tele Puissance | SHAHRIYAR LIVE TV
 https://video1.getstreamhosting.com:1936/8560/8560/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1nN4rEP.png" group-title="Undefined",like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Undefined",Rai Italia (1080p) | SHAHRIYAR LIVE TV
@@ -6510,6 +6524,8 @@ http://103.175.73.12:8080/live/151/151_0.m3u8
 http://tvsen7.aynascope.net/ssport2hd/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5efbd39f8c4ce900075d7698/colorLogoPNG.png" group-title="Series",Star Trek | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-5efbd39f8c4ce900075d7698.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Start_TV_logo.svg/960px-Start_TV_logo.svg.png" group-title="Series",Start TV (720p) | SHAHRIYAR LIVE TV
+http://40.160.24.55/START_TV/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/N7oSm4d.png" group-title="Undefined",Starz (1080p) | SHAHRIYAR LIVE TV
 http://23.237.104.106:8080/USA_STARZ/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JpKvjZe.png" group-title="Comedy",Starz Comedy (1080p) | SHAHRIYAR LIVE TV
@@ -6748,6 +6764,8 @@ https://amg00426-littledotstudio-thechatshow-samsungnz-uqmtt.amagi.tv/playlist/a
 https://amg00353-amg00353c36-xumo-us-3803.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/dd/The_Country_Network_Logo.png" group-title="Music",The Country Network (1080p) | SHAHRIYAR LIVE TV
 https://amg00600-amg00600c1-thecountrynetwork-us-5497.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/0F1c7x4.png" group-title="Undefined",The Cowboy Channel (1080p) | SHAHRIYAR LIVE TV
+https://gpuserver3.tier1streams.com/THE_COWBOY_CHANNEL/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/65c096d23ba51e0008305a75/colorLogoPNG.png" group-title="Entertainment",The Daily Show | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-65c096d23ba51e0008305a75.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/65c096d23ba51e0008305a75/colorLogoPNG.png" group-title="Entertainment",The Daily Show | SHAHRIYAR LIVE TV
@@ -7580,6 +7598,8 @@ https://cdn-4.pishow.tv/live/1007/master.m3u8
 https://d3qg1liq0unuxm.cloudfront.net/4UV.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",5-Minute Craft (1080p) | SHAHRIYAR LIVE TV
 https://soul-5mincrafteng-rakuten.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/jrGrfof.png" group-title="Entertainment",5AAB TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+http://158.69.124.9:1935/5aabtv/5aabtv/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",5 Emergency Rescue | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-63c1384e829c850007922ca4.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",5 Exploring Britain | SHAHRIYAR LIVE TV
@@ -7692,6 +7712,8 @@ https://streaming.28kanala.eus/hls/z.m3u8
 http://stream.mcquack.net/388/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/F4NZM3s.jpeg" group-title="General",36 TV Huacho (720p) | SHAHRIYAR LIVE TV
 https://live-evg10.tv360.bitel.com.pe/bitel/36tvSRT/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/D3OTRzf.png" group-title="General",50 Canale | SHAHRIYAR LIVE TV
+https://load-balancer.azotosolutions.com/cdnedge37/canale50/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://www.51news.it/images/loghi/logo_tv_radio_51news.png" group-title="Music",51 Radio TV (480p) [Geo-blocked] | SHAHRIYAR LIVE TV
 http://wms.shared.streamshow.it/canale51/canale51/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",60 Days in Jail (720p) | SHAHRIYAR LIVE TV
@@ -8182,8 +8204,6 @@ https://aegis-cloudfront-1.tubi.video/baa32c24-e707-4bf8-9f81-d26eb6baa3dc/playl
 https://627bb251f23c7.streamlock.net:444/Alientoenvivo/Alientoenvivo/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://alikhbariah.com/wp-content/themes/alekhbariah-custom-theme/img/logo.webp" group-title="News",Alikhbaria Syria (1080p) | SHAHRIYAR LIVE TV
 http://185.9.2.18/chid_423/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4WKQppG.png" group-title="Religious",Aliman TV (240p) [Not 24/7] | SHAHRIYAR LIVE TV
-https://svs.itworkscdn.net/alimanlive/imantv.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/90ykspa.png" group-title="Religious",Alkarma TV Australia (1080p) | SHAHRIYAR LIVE TV
 https://5a8308add0b31.streamlock.net/alkarmatv.com/alkarmaau.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/yUEuQA2.png" group-title="Religious",Alkarma TV Family (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -8286,6 +8306,8 @@ https://lb1-live-mv.v2h-cdn.com/hls/ffad/vibomi/vibomi.m3u8
 https://amarujala.ottlive.co.in/amarujala/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Amasia (720p) | SHAHRIYAR LIVE TV
 https://splendid-film-amasia-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/sSW7d8e.png" group-title="General",Amazonia TV | SHAHRIYAR LIVE TV
+https://servilive.com:3199/live/amazoniatvlive.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/yj8RNnG.png" group-title="Music",AMC (1080p) | SHAHRIYAR LIVE TV
 https://amchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",AMC Cupid (1080p) | SHAHRIYAR LIVE TV
@@ -8412,6 +8434,8 @@ https://janya-digimix.akamaized.net/vglive-sk-109639/nepali/ngrp:angelnepali_all
 https://janya-digimix.akamaized.net/vglive-sk-382409/portuese/ngrp:angelportuguese_all/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/qKLEGU7.png" group-title="Religious",Angel TV Russian (720p) | SHAHRIYAR LIVE TV
 https://janya-digimix.akamaized.net/vglive-sk-955415/russia/ngrp:angelrussia_all/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/qKLEGU7.png" group-title="Religious",Angel TV Spanish (720p) | SHAHRIYAR LIVE TV
+https://janya-digimix.akamaized.net/vglive-sk-351398/spanish/ngrp:angelspanish_all/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/12/Angelus_TV.svg/revision/latest/scale-to-width-down/512" group-title="Religious",Angelus TV (1080p) | SHAHRIYAR LIVE TV
 https://video.angelustv.ro/hls/angelustv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gDn101f.png" group-title="Undefined",Anhui TV | SHAHRIYAR LIVE TV
@@ -8492,6 +8516,8 @@ https://ncdn.telewebion.ir/ara/live/playlist.m3u8
 https://streamtv2.elitecomunicacion.cloud:3628/live/arabitv2025live.m3u8
 #EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/s142649_ld_h9_aa.png?lock=720x540" group-title="Religious",Aradana TV (576p) | SHAHRIYAR LIVE TV
 https://cdn-1.pishow.tv/live/961/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/12/Arag%C3%B3n_Internacional.png/revision/latest/scale-to-width-down/512" group-title="General;Public",Aragon TV Internacional (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://cartv.streaming.aranova.es/hls/live/aragontv_canal1.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/jl39ula.png" group-title="General",Araruna TV | SHAHRIYAR LIVE TV
 https://video05.logicahost.com.br/ararunatv/ararunatv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="General",ARAS TV (576p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -8804,6 +8830,8 @@ https://jmp2.uk/plu-660e7404e8fba8000853abc0.m3u8
 https://jmp2.uk/plu-660e7488aec9680008fabcf1.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",AWSN | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-66fd37885049580008d295b6.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/2tdMyef.png" group-title="Classic;Series",AWTV (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
+https://awtv.nuvemplay.live/hls/stream.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Ax Men (720p) | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-6540fe4bbdf3cf0008aa2cdd.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Ax Men (720p) | SHAHRIYAR LIVE TV
@@ -8896,6 +8924,8 @@ https://fox.hostlagarto.com:8081/bajotechotv/tracks-v1a1/mono.m3u8
 https://cdn-dvr.ntv.ru/Balabol/index.m3u8
 #EXTINF:-1 tvg-logo="https://vote.rtrk.kz/img/balapan-logo.png" group-title="Kids",Balapan HD (1080p) | SHAHRIYAR LIVE TV
 https://balapantv-stream.qazcdn.com/balapantv/balapantv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://otv.server-img.lfstrm.tv/images/channel_logos/logo_638108d82e47243302bc81f1.png" group-title="Kids",Balapan International (1080p) | SHAHRIYAR LIVE TV
+https://live-3.otcnet.ru/Balapan/index.m3u8
 #EXTINF:-1 tvg-logo="https://balatontelevizio.hu/wp-content/uploads/2020/05/balaton_tv_logo.png" group-title="Undefined",Balaton TV (432p) | SHAHRIYAR LIVE TV
 https://stream.iptvservice.eu/hls/balatontv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XlCaZvF.png" group-title="Culture",Balchi TV | SHAHRIYAR LIVE TV
@@ -9034,6 +9064,8 @@ https://live.beitolabbas.tv/live/beitolabbastv.m3u8
 https://64b16f23efbee.streamlock.net/bejoy/bejoy/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/sUD9t5j.png" group-title="General",Belarus-1 (1080p) | SHAHRIYAR LIVE TV
 https://ngtrk.dc.beltelecom.by/ngtrk/_definst_/smil:belarus1.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/sUD9t5j.png" group-title="General",Belarus-1 HD (1080p) | SHAHRIYAR LIVE TV
+https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus1.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JkcDycn.png" group-title="Culture",Belarus-3 HD (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus3.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XNkQrMr.png" group-title="General",Belarus-4 Vitebsk (1080p) | SHAHRIYAR LIVE TV
@@ -9376,6 +9408,8 @@ http://go.bkpcp.top/mg/bjws
 https://rds3.desdeparaguay.net/brunomasitv/brunomasitv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OYlYidF.png" group-title="Undefined",Bruzz (720p) | SHAHRIYAR LIVE TV
 https://hls-origin01-bruzz.cdn02.rambla.be/main/adliveorigin-bruzz/_definst_/V3n5YY.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.vivalivetv.com/public/files/shows/0/1/3953-640x360-FFFFFF.jpg" group-title="General",BS Film (576p) | SHAHRIYAR LIVE TV
+https://live20.bozztv.com/akamaissh101/ssh101/bsfilm/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg" group-title="General",BSTV (576p) | SHAHRIYAR LIVE TV
 https://lbgo.bozztv.com/ssh101/ssh101/bstv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/vygOosC.png" group-title="Music",BTA TV (720p) | SHAHRIYAR LIVE TV
@@ -9398,6 +9432,8 @@ http://stream.mcquack.net/35/index.m3u8
 http://213.91.179.28:8000/play/a04k
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6klhXxp.png" group-title="Undefined",Bucovina TV (576i) | SHAHRIYAR LIVE TV
 https://www.bucovinatv.ro/proxy/video/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/CqqWtzo.png" group-title="General",Budapest Európa Televízió (576p) | SHAHRIYAR LIVE TV
+https://cloudfront44.lexanetwork.com:1344/freerelay/bpetv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/tsajuxi.png" group-title="Entertainment",Buena TV (1080p) | SHAHRIYAR LIVE TV
 https://59825a54e4454.streamlock.net:8443/papo351/papo351/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/m5hNyNE.png" group-title="News",Buendia TV | SHAHRIYAR LIVE TV
@@ -9568,8 +9604,12 @@ https://stmvideo6.livecastv.com/canal4/canal4/playlist.m3u8
 https://stmvideo3.livecastv.com/canal4vd/canal4vd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/uZdVSoW.png" group-title="General",Canal 5 (1080p) | SHAHRIYAR LIVE TV
 http://45.181.87.106/CANAL5HD/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/IpYxSr1.png" group-title="General",Canal 5 (720p) | SHAHRIYAR LIVE TV
+https://tinyurl.com/canal5uy
 #EXTINF:-1 tvg-logo="https://i.ibb.co/XzcYYMc/Canal-5-alcorta-ver.jpg" group-title="General",Canal 5 Del Pueblo [Not 24/7] | SHAHRIYAR LIVE TV
 https://stmv4.voxtvhd.com.br/canal5pueblo/canal5pueblo/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/4hEYFa9.png" group-title="General",Canal 5 El Líder (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://mdstrm.com/live-stream-playlist/6287fda8ea3b8b397d1ca2ed.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/pLobTRW.png" group-title="General",Canal 5 Puerto Montt | SHAHRIYAR LIVE TV
 https://5ff3d9babae13.streamlock.net/aufymdjpjf/aufymdjpjf/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/WX0esjQ.png" group-title="Undefined",Canal 5 Santa Fe (240p) | SHAHRIYAR LIVE TV
@@ -9646,6 +9686,8 @@ http://190.11.225.124:5000/live/canal11_hd/playlist.m3u8
 https://stream.giostreaming.app/canal11/canal11.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/WMv3yEf.png" group-title="General",Canal 12 (480i) | SHAHRIYAR LIVE TV
 https://d2b5h5wyivfnfl.cloudfront.net/live/53108ffe-0b7e-46ab-bc14-3a9c30010939/ts:abr.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/lmKLiJ3.jpg" group-title="Religious",Canal 13 Jujuy TV (720p) | SHAHRIYAR LIVE TV
+https://genexservicios.com:19360/canal13jujuy/canal13jujuy.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OI97Sgq.png" group-title="Undefined",Canal 13 La Rioja (480p) | SHAHRIYAR LIVE TV
 http://arcast.net:1935/mp/mp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/NcfMC29.png" group-title="Undefined",Canal 13 San Luis | SHAHRIYAR LIVE TV
@@ -9714,6 +9756,8 @@ https://live.cn51hn.com/live/cn51.m3u8
 https://videos.canal56.com/directe/stream/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/l9kDNld.jpeg" group-title="General",Canal 56 Quiero TV (720p) | SHAHRIYAR LIVE TV
 http://45.5.118.152:8000/play/a08z/index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/LfcHA2d.jpg" group-title="General",Canal 70 (720p) | SHAHRIYAR LIVE TV
+https://183.bozztv.com/giatv/giatv-cnal70tv/cnal70tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/HYuSqJy.png" group-title="Undefined",Canal 79 La Costa (240p) | SHAHRIYAR LIVE TV
 https://streamconex.com:19360/lacosta/lacosta.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/I93ypGY.png" group-title="Undefined",Canal 79 Mar del Plata | SHAHRIYAR LIVE TV
@@ -9780,8 +9824,6 @@ https://unlimited1-us.dps.live/perfiltv/perfiltv.smil/playlist.m3u8
 http://45.162.64.114/CANAL_EDUCACAO/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/huBxZpP.png" group-title="Education",Canal Educativo (480p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://tv.picta.cu/educativo/educativo_0.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/nOl3H5X.png" group-title="Education",Canal Educativo 2 (480p) [Not 24/7] | SHAHRIYAR LIVE TV
-https://tv.picta.cu/educativo2/educativo2_0.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7SE4CkE.png" group-title="Education;General",Canal FDR | SHAHRIYAR LIVE TV
 https://v-us-01.wisestream.io/memfs/e4ade538-7924-4359-81ef-b9d4dd229e91.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/LgynEBC.png" group-title="Education",Canal Futura (720p) | SHAHRIYAR LIVE TV
@@ -10180,8 +10222,6 @@ https://jmp2.uk/plu-60afbad343e3840007164348.m3u8
 https://amg26277-amg26277c7-samsung-gb-11285.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Chaos on Cam (720p) | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-68c8202f5ec82769fdfcd0a2.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/tFRmMkf.png" group-title="General",Charapa TV (720p) | SHAHRIYAR LIVE TV
-https://live-evg10.tv360.bitel.com.pe/bitel/charapatvSRT/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/NXD8CPq.png" group-title="News",Chardikla Gurbaani TV (1080p) | SHAHRIYAR LIVE TV
 https://chardikalatimestv.gigabitcdn.net/in-chardikala/chardikala-gurbani-tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CHARDIKLA_TIME_TV/images/LOGO_HD/image.png" group-title="News",Chardikla Time TV (1080p) | SHAHRIYAR LIVE TV
@@ -10546,6 +10586,8 @@ https://amg00376-magellan-amg00376c14-rakuten-uk-1694.playouts.now.amagi.tv/play
 https://video.hostingcaaguazu.com:19360/cosmostv/cosmostv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QlvYfEJ.png" group-title="General",Cosmovision (720p) | SHAHRIYAR LIVE TV
 https://lbgo.bozztv.com/ssh101/ssh101/Cosmovisión/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/iM9AN6Z.png" group-title="General",Costa Noroeste TV (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://limited31.todostreaming.es/live/noroestetv-livestream.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/N4pFVVF.png" group-title="Culture;Travel",Costa Rica Channel (576p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://video0.rogohosting.com:19360/8006/8006.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/vJZqrFY/a4ed367c69c23110d458a332af95be0be64566f288ccb5f261689344e6ba5e0d.png" group-title="General",Coto Brus TV (720p) | SHAHRIYAR LIVE TV
@@ -11468,8 +11510,6 @@ https://ncdn.telewebion.ir/baenergy/live/playlist.m3u8
 https://5eaccbab48461.streamlock.net:1936/8074/8074/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",English TV (1080p) | SHAHRIYAR LIVE TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a5e9aebd-1df4-4e56-be4f-33a891756f9b/manifest.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/GfpPQ5D.png" group-title="Religious",Enlace Juvenil | SHAHRIYAR LIVE TV
-https://livecdnusa.enlace.plus/ejtv/smil:ejtv-hd.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nePOFZW.png" group-title="General",Enntivision (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://edge.essastream.com/enntivision/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Enquêtes Criminelles (720p) | SHAHRIYAR LIVE TV
@@ -11524,8 +11564,6 @@ https://hls.erfanhalgheh.live/hls/stream.m3u8
 https://prod-runn.cdn.runn.tv/eros/stream/blywcm/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Eros Universe Entertainment | SHAHRIYAR LIVE TV
 https://prod-runn.cdn.runn.tv/eros/stream/ersent/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ERT_Cosmos_Logo_2026.svg/960px-ERT_Cosmos_Logo_2026.svg.png" group-title="General",ERT Cosmos (1080p) | SHAHRIYAR LIVE TV
-https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTCosmos/default/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/HXbsPfB.png" group-title="News",ERT News HD (1080p) | SHAHRIYAR LIVE TV
 https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTNews/default/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/tghMiwW.png" group-title="General",Ertis (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -11814,8 +11852,6 @@ http://stream.mcquack.net/401/index.m3u8
 http://185.81.240.65:15000/udp/233.233.233.39:12000
 #EXTINF:-1 tvg-logo="https://i.imgur.com/qvs1BKr.png" group-title="Undefined",Feel Good TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://58c04fb1d143f.streamlock.net/feel_good_radio_1/feel_good_radio_1/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://www.fehervartv.hu/css/img/icon-1-2.png" group-title="General",Fehérvár TV (360p) | SHAHRIYAR LIVE TV
-https://cloudfront44.lexanetwork.com:1344/freerelay/fehervartv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://www.vivalivetv.com/public/files/shows/0/1/3802-294x165-FFFFFF.jpg" group-title="General",Femenina TV | SHAHRIYAR LIVE TV
 https://streamunoapp.com:3511/live/femeninatvlive.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Undefined",FEVA MUSIC (1080p) | SHAHRIYAR LIVE TV
@@ -12520,8 +12556,6 @@ https://eu1.servers10.com:8081/8178/index.m3u8
 https://hellskitchengermany-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Hell's Kitchen Italy (1080p) | SHAHRIYAR LIVE TV
 https://amg00654-itv-amg00654c20-rakuten-it-3615.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/o2cvqv3.png" group-title="Legislative",Hellenic Parliament TV (1080p) | SHAHRIYAR LIVE TV
-https://ert-ucdn.broadpeak-aas.com/bpk-tv/VOULITV/default/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/NE7ddhC.png" group-title="Undefined",Hellenic TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://l5.cloudskep.com/hellenictv/htv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TdKO0er.png" group-title="Cooking",Hello Taste (720p) | SHAHRIYAR LIVE TV
@@ -12928,6 +12962,8 @@ https://online.tvimpact.live/hls/impact_tv.m3u8
 https://cloudvideo.servers10.com:8081/impactotv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9dW3AUQ.png" group-title="Religious",IMPD TV Worldwide (1080p) | SHAHRIYAR LIVE TV
 https://igrejamundial.nuvemplay.live/hls/stream.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/8XHSVWY/IMG-20210613-153444.png" group-title="General",Imperial TV (720p) | SHAHRIYAR LIVE TV
+https://tv.centaurychile.com/imperial/streams/EnCyCiwNLsqEQ2kv2852222720686498.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",In Depth with Graham Bensinger (1080p) | SHAHRIYAR LIVE TV
 https://d3l6x4fdwxv0np.cloudfront.net/In_Depth_With_Graham_Bensinger.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",In The Black Network (720p) | SHAHRIYAR LIVE TV
@@ -13248,8 +13284,6 @@ https://fujitv4.mov3.co/hls/fujitv.m3u8
 https://linear-860.frequency.stream/dist/xumo/860/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/YCqB5Kj.png" group-title="General",JOEX-DTV (540p) | SHAHRIYAR LIVE TV
 https://tvasahi.mov3.co/hls/tvasahi.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/VEqQfTu.png" group-title="General",Jogja Istimewa TV (720p) | SHAHRIYAR LIVE TV
-http://103.255.15.222:1935/tv/jitv_720p/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/40/Jogjatvnew.png" group-title="General",Jogja TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",JoJo's Bizarre Adventure (1080p) | SHAHRIYAR LIVE TV
@@ -13768,8 +13802,6 @@ http://145.239.5.177/330/index.m3u8
 http://193.111.198.85:8589/stream/mstv/rtbflaunelive26/master.m3u8?p=967e33767f592e1aaf3d4019f38f380bf784e113b193d89c412d047059d6300d&u=Oleg
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Zv8CxZX.png" group-title="Religious",La Voz de Maria (720p) | SHAHRIYAR LIVE TV
 https://live.lavozdemaria.com:3436/live/lavozdemarialive.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/DKDFpHt.png" group-title="Music",La Voz del Tropico (480p) [Geo-blocked] | SHAHRIYAR LIVE TV
-https://ss2.tvrdomi.com:1936/lavozdeltropico/lavozdeltropico/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/i2GnQTq.png" group-title="Music",La-X (720p) | SHAHRIYAR LIVE TV
 https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://static.telewebion.com/channelsLogo/ZDVlODRiYjI3NWUyOTFmOGJmYjIwOTQyMDAyMzRkMmUzYjVmOGUyMTBhNTE0MGI5ZDAyOTMzZDdmZDQyNDM5OA/default" group-title="Undefined",Labbayk TV | SHAHRIYAR LIVE TV
@@ -14012,8 +14044,6 @@ https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8
 https://lingkartv.my.id/hls/lingkartv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/bLutjkf.png" group-title="News",Linieros TV (480p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://soportedvb.click:3017/live/linierostvlive.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/ncYZY6T/logo-3.png" group-title="General",Link TV | SHAHRIYAR LIVE TV
-https://linktv.b-cdn.net/linktv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0DgP3vu.png" group-title="General",LINQ TV (480p) | SHAHRIYAR LIVE TV
 https://ms7.mx-cd.net/dtv-09/246-2090022/Linq_Media_TV.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Lionsgate Play | SHAHRIYAR LIVE TV
@@ -15042,6 +15072,8 @@ http://45.190.28.50/MUSIC_BOX_HD/index.m3u8
 http://193.24.244.60:1001/udp/239.254.4.237:6060
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OUPGCWG.png" group-title="Music",Music Information Channel (720p) | SHAHRIYAR LIVE TV
 https://mic.siar.us/mic/live/mic.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Swd9NP7n/music-tv-granada.png" group-title="Music",Music TV Granada (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://cloudvideo.servers10.com:8081/8032/index.m3u8
 #EXTINF:-1 tvg-logo="https://s8.vcdn.biz/static/f/6010782281/image.jpg" group-title="Music",Muz TV Uzbekistan | SHAHRIYAR LIVE TV
 https://stream8.cinerama.uz/1063/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/fBeaJoS.png" group-title="Music",Muzangala TV (1080p) | SHAHRIYAR LIVE TV
@@ -15566,8 +15598,6 @@ http://stream.mcquack.net/389/index.m3u8
 https://stream4.xdevel.com/video0s975955-782/stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/AmyCNJv.png" group-title="General",NTN (1080i) | SHAHRIYAR LIVE TV
 https://cdn15.live-tv.cloud/ua_infinitas_tv/ntn-abr/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/UoKmSAP.png" group-title="News",NTN24 (576p) | SHAHRIYAR LIVE TV
-http://181.78.8.199:8000/play/a0a6/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/qqLXdHz.png" group-title="General",NTV Afrique (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://strhlslb01.streamakaci.tv/str_ntv_ntv/str_ntv_ntv_multi/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9r1BKzK.png" group-title="General",NTV HD (1080p) | SHAHRIYAR LIVE TV
@@ -15910,6 +15940,8 @@ https://streamunoapp.com:3520/live/oxitvcanal36live.m3u8
 https://oxygenmusic.hu:2443/hls/oxygenmusic.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Oxygen True Crime Archives (720p) | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-654930a8346f420008d3b0b8.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/t0Aq3UD.png" group-title="General",Ózdi Városi TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+http://stream.nmih.hu:7980/live.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/eSNF9qt.png" group-title="Science",like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Science",Ozone TV | SHAHRIYAR LIVE TV
 http://88.212.15.19/live/ozone/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TrecSeG.png" group-title="Music",P2M TV (720p) | SHAHRIYAR LIVE TV
@@ -15942,6 +15974,8 @@ https://live.paltodaytv.com/paltv/live/playlist.m3u8
 https://live.palitranews.ge/hls/palitratv/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.vivalivetv.com/public/files/shows/0/1/3328-294x165-FFFFFF.jpg" group-title="General",Palmar TV [Not 24/7] | SHAHRIYAR LIVE TV
 https://streamunoapp.com:3255/live/palmartvlive.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/wneSSYM.png" group-title="News",Panafrican Media TV | SHAHRIYAR LIVE TV
+https://live20.bozztv.com/giatv/giatv-pmtv/pmtv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/uQhEDES.png" group-title="General",Panamericana TV (1080p) | SHAHRIYAR LIVE TV
 http://45.171.108.253:8888/PANAMERICANA/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/BJVlOVA.jpeg" group-title="General",Panche Television | SHAHRIYAR LIVE TV
@@ -16074,8 +16108,6 @@ https://cdn-dvr.ntv.ru/Perviy_otdel/index.m3u8
 https://cdn-dvr.ntv.ru/Pes/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ykPNNwQ.png" group-title="Entertainment",Pet Club TV (1080p) | SHAHRIYAR LIVE TV
 https://petclub-samsungaus.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/qeaD5Az.png" group-title="General",Pétange Info TV (720p) | SHAHRIYAR LIVE TV
-https://streamer20.multimedia.blue/Eltrona/PetangeTV/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://petloverstv.com.br/storage/357/config/yqP4nOugWRxRFCmgLqXF4gRKyM9ybsAOfHgUaqPt.png" group-title="Entertainment",Petlovers TV | SHAHRIYAR LIVE TV
 https://video04.logicahost.com.br/petloverstv/petloverstv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/T1532t9.png" group-title="Undefined",Phoenix (720p) [Geo-blocked] | SHAHRIYAR LIVE TV
@@ -16930,8 +16962,8 @@ https://eu1.servers10.com:8081/8116/index.m3u8
 https://streamlov.alsolnet.com/grupocentrobo/live/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9A6DBG7.png" group-title="Music",Radio Chalaca | SHAHRIYAR LIVE TV
 https://servilive.com:3414/hybrid/play.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/LaSLZwR.jpg" group-title="Music",Radio Ciudad 98.9 FM TV | SHAHRIYAR LIVE TV
-https://video.wilohosting.com:19360/radiociudadtv/radiociudadtv.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.m3u.cl/logo/409_Radio_Chiloe.png" group-title="General",Radio Chiloe (720p) | SHAHRIYAR LIVE TV
+https://videostream.chileservidores.com:8081/chiloe1/index.m3u8
 #EXTINF:-1 tvg-logo="https://radioclasicapotosi.com/players/nexoplayer/assets/logo.png" group-title="Music",Radio Clasica TV (720p) | SHAHRIYAR LIVE TV
 https://ares.disfrutaenlared.com:1936/clasica/clasica/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/569xc5o.png" group-title="General",Radio Coatan Canal 21 | SHAHRIYAR LIVE TV
@@ -17096,6 +17128,8 @@ https://scl.edge.grupoz.cl/uniaccastream/live/playlist.m3u8
 https://videostream.chileservidores.com:8081/universal/index.m3u8
 #EXTINF:-1 tvg-logo="https://tvu.umsa.bo/documents/780216/0/LogoRUSA+%283%29.jpg" group-title="Culture;Education;Entertainment",Radio Universitaria San Andres (720p) | SHAHRIYAR LIVE TV
 https://edge.enhdtv.com/8054/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PswowQP.png" group-title="News",Radio Uno Tacna (720p) | SHAHRIYAR LIVE TV
+https://live-evg7.tv360.bitel.com.pe/bitel/radiounotv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://radioup.com.ar/wp-content/uploads/2025/06/logo-radioup-footer.png" group-title="General",Radio UP | SHAHRIYAR LIVE TV
 https://iptv.ixfo.com.ar:30443/live/RadioUpTvStreaming/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/997/radio-udesantiago.75310738.jpg" group-title="General",Radio USACH (720p) | SHAHRIYAR LIVE TV
@@ -17376,6 +17410,8 @@ https://video.hostingcaaguazu.com:19360/reddigitalsanpedro/reddigitalsanpedro.m3
 http://15.204.246.24:8080/DTVHD/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/z89GLCw.png" group-title="General",Red Interior TV | SHAHRIYAR LIVE TV
 https://video.wilohosting.com:19360/redinteriortv/redinteriortv.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Y4KOypc.jpeg" group-title="General",Red Rubi (720p) | SHAHRIYAR LIVE TV
+https://59d39900ebfb8.streamlock.net/asiesmipueblo/asiesmipueblo/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Red Shoe Diaries | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-645a0ddfe1979c00086d83ff.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/bWwY885.png" group-title="News",Red TV Lebanon (1080p) | SHAHRIYAR LIVE TV
@@ -17384,8 +17420,6 @@ https://live.kwikmotion.com/redtvlive/redtv.smil/playlist.m3u8
 https://master.tucableip.com/redtvshop/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Pzf2ZAW.png" group-title="General",Red TVE Ventanas (432p) | SHAHRIYAR LIVE TV
 https://s2.tvdatta.com:3825/live/redtvelive.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/pqVzZQ9.png" group-title="General",Red Uno Santa Cruz (1080p) | SHAHRIYAR LIVE TV
-http://190.181.18.82:4111/play/a006/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/kuqkTMC.png" group-title="Entertainment;General;News",Red+ (1080p) | SHAHRIYAR LIVE TV
 https://inforedvos.lcdn.claro.net.co/Content/HLS_HLS_DIR/Live/channel(REDMASHDWEB)/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TXJKwzZ.png" group-title="General",Rede Brasil (1080p) | SHAHRIYAR LIVE TV
@@ -17554,8 +17588,6 @@ https://d3czphc6lk67kh.cloudfront.net/RIG_TV.m3u8
 https://buzzr-rigtv-xumo.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",RigTV (720p) | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-681b196b896dcc617f8558fe.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/dJRGDt2.png" group-title="Undefined",Riigikogu (720p) | SHAHRIYAR LIVE TV
-https://router.euddn.net/862366dd346d6b6392d5231546f3d179/smil:rk_live_1.smil/playlist.m3u8?c=8005
 #EXTINF:-1 tvg-logo="https://i.imgur.com/31eq4lS.png" group-title="Undefined",RIK 1 | SHAHRIYAR LIVE TV
 http://213.7.216.229:8888/udp/239.23.0.1:1234
 #EXTINF:-1 tvg-logo="https://i.imgur.com/EZUDmtI.png" group-title="Undefined",RIK 2 | SHAHRIYAR LIVE TV
@@ -17772,6 +17804,8 @@ https://media.neuquen.gov.ar/rtn/television/media.m3u8
 https://rtp.noxun.net/hls720/stream3.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/it/thumb/8/86/Logo_Radio_Televisione_Peloritana.svg/512px-Logo_Radio_Televisione_Peloritana.svg.png" group-title="Undefined",RTP (404p) | SHAHRIYAR LIVE TV
 https://flash2.xdevel.com/rtptv/rtptv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/nHMqAHn.jpeg" group-title="General",RTP (720p) | SHAHRIYAR LIVE TV
+https://live-evg7.tv360.bitel.com.pe/bitel/rtp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/rtp1_2026.png" group-title="General",RTP 1 (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://streaming-live.rtp.pt/liverepeater/rtp1HD.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/rtpacores_2026.png" group-title="General",RTP Açores (720p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -18008,6 +18042,8 @@ https://jmp2.uk/plu-66a7f0a78561260008c177f2.m3u8
 https://live.salira.tv/p/3870/hybrid/play.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Salon Line | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-66a7d0e0cd0d310008448610.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/3IhYd7G.jpg" group-title="Music",Salsa Gorda Television (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://live20.bozztv.com/akamaissh101/ssh101/qMUAZEy/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Y3FRF0g.png" group-title="Undefined",like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Undefined",Salt TV (1080p) | SHAHRIYAR LIVE TV
 http://stream.mcquack.net/398/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/hyubvS5.png" group-title="Entertainment",Salto 1 (720p) | SHAHRIYAR LIVE TV
@@ -18210,6 +18246,8 @@ https://live.dionelysterrero.com/senalestv/stream.m3u8
 https://senato-live.morescreens.com/SENATO_1_001/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Sender Neu Jerusalem (576p) | SHAHRIYAR LIVE TV
 https://bild-und-ton.stream/snj-de/snj-de.smil/.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/i9P2qjs.png" group-title="General",Seneweb TV [Geo-blocked] | SHAHRIYAR LIVE TV
+https://vdo2.pro-fhi.net:3297/stream/play.m3u8
 #EXTINF:-1 tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTrvk7gv0uCQ8QdGREqv6Rtzm4F6UMetdxKub6D=s400-c-k-c0x00ffffff-no-rj" group-title="Undefined",Senillosa TV | SHAHRIYAR LIVE TV
 https://player.videohost.click/senillosatv/senillosatv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MeCSPsI.jpg" group-title="General",SenJeunes TV (480p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -18642,12 +18680,6 @@ http://zntx.dyndns.org:8085/hls/stv7.m3u8
 http://znty.dyndns.org:5010/hls/sportv+.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0CJGGgd.png" group-title="Sports",Sportitalia (1080p) | SHAHRIYAR LIVE TV
 https://edge-001.streamup.eu/sportitalia/sihd_abr/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/RSwnoLn.png" group-title="Sports",Sportitalia 24 (720p) [Geo-blocked] | SHAHRIYAR LIVE TV
-https://di-yx2saj20.vo.lswcdn.net/sportitalia/smil:silive24.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",Sportitalia Live 24 | SHAHRIYAR LIVE TV
-https://di-g7ij0rwh.vo.lswcdn.net/sportitalia/silive24.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/hu56Ya5.png" group-title="Sports",Sportitalia Motori (720p) [Geo-blocked] | SHAHRIYAR LIVE TV
-https://di-yx2saj20.vo.lswcdn.net/sportitalia/smil:simotori.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/hu56Ya5.png" group-title="Sports",Sportitalia Solocalcio (1080p) | SHAHRIYAR LIVE TV
 https://distribution.sportitalialive.it/sportitalia/sisolocalcio_abr/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ujS6mMo.png" group-title="Sports",Sportivnyy (1080p) | SHAHRIYAR LIVE TV
@@ -18674,6 +18706,10 @@ http://highvolume155.streampartner.nl/adminsrc/adminsrc/playlist.m3u8
 https://sriwijayatv.siar.us/live/sriwijayatv.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Stand-up Comedy (720p) | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-663e09b341af640008c1b68c.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Q8ajPij.png" group-title="News",Star Bharat (576p) | SHAHRIYAR LIVE TV
+http://103.253.18.58:8000/play/a00u
+#EXTINF:-1 tvg-logo="https://i.imgur.com/5xeR7Ec.png" group-title="Entertainment",STAR Channel | SHAHRIYAR LIVE TV
+http://86.87.15.10:8003/play/a024/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png" group-title="Entertainment",like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Entertainment",Star Channel | SHAHRIYAR LIVE TV
 http://znty.dyndns.org:5010/hls/fox.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png" group-title="Undefined",STAR Channel (Finland) (720p) | SHAHRIYAR LIVE TV
@@ -19460,8 +19496,6 @@ https://livetr.teleromagna.it/teleromagna/live/playlist.m3u8
 https://dlgt0tdl2hpq3.cloudfront.net/rtbf/clr-rtbf/2f00284b/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/l52v9uv.png" group-title="Religious",TeleSanDomenico (1080p) | SHAHRIYAR LIVE TV
 https://stream.mariatvcdn.com/tsd/7c59373bfdb38201b9215ff86f0ce6af.sdp/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/27Pzdvw/cropped-TELESANGIL-LOGO-1.png" group-title="General",Telesangil (720p) | SHAHRIYAR LIVE TV
-https://live20.bozztv.com/akamaissh101/ssh101/telesangil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/cu7hTn8.png" group-title="Undefined",Teleselva (720p) | SHAHRIYAR LIVE TV
 https://live-evg7.tv360.bitel.com.pe/bitel/teleselva/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://www.vivalivetv.com/public/files/shows/0/1/2195-294x165-FFFFFF.jpg" group-title="General",TELESIGLO (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -19762,8 +19796,6 @@ https://stream.ads.ottera.tv/playlist.m3u8?content_livestream=1&network_id=11083
 http://45.170.130.224:8000/play/a04i/index.m3u8
 #EXTINF:-1 tvg-logo="https://dominicanchannels.com/wp-content/uploads/tigueritos-tv.jpg" group-title="Animation;Kids",Tiguerito TV (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://ss2.tvrdomi.com:1936/tigueritostv/tigueritostv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/QCOUJ30.png" group-title="Kids",TiJi (576p) | SHAHRIYAR LIVE TV
-https://live-3.otcnet.ru/Tiji/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",TikTok Radio | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-69445a9a78c0c45b6c9aa8b9.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/f/f4/TikTok_Radio.svg" group-title="Music",TikTok Radio Brasil (1080p) | SHAHRIYAR LIVE TV
@@ -19838,6 +19870,8 @@ http://15.204.246.24:8080/TNTNovelasHD/index.m3u8
 http://45.162.64.114/TNT_NOVELAS/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/e5eVHam.png" group-title="General",TNTV (1080p) | SHAHRIYAR LIVE TV
 https://tntv-samsung-fr.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/58u9TQT.png" group-title="Undefined",TNV-Tatarstan (720p) | SHAHRIYAR LIVE TV
+https://user91229.clients-cdnnow.ru/hls/user91229_1.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/tKgmhxh.png" group-title="Documentary;Travel",Tochka RF (1080p) | SHAHRIYAR LIVE TV
 http://stream.mcquack.net/161/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Todo Cine (1080p) | SHAHRIYAR LIVE TV
@@ -20046,6 +20080,8 @@ https://amg00654-itv-amg00654c7-rakuten-uk-1282.playouts.now.amagi.tv/playlist/a
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/728c02aa-8bf4-4711-a911-30c6d1ad8570/manifest.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/34RINpb.png" group-title="Religious",Tsargrad TV (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
 https://bl.rutube.ru/livestream/91815da4edb167b5bd617bae490e57da/index.m3u8?e=2070278263&s=is_mLq_kjPYLsOJ4qj85tw&scheme=https
+#EXTINF:-1 tvg-logo="https://i.imgur.com/GEyxDnf.png" group-title="News",TSi (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://mdstrm.com/live-stream-playlist/6287fdc9303e3008289ab711.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6p4weSK.png" group-title="General",TSV (1080p) | SHAHRIYAR LIVE TV
 https://tsv.md/stream/hls/tsv-online/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OBEmXQF.png" group-title="General",Tu TV (720p) | SHAHRIYAR LIVE TV
@@ -20070,12 +20106,8 @@ https://tvturf4.janus.cl/playlist/stream.m3u8?d=w&id=
 https://streamunoapp.com:3086/live/telemileniolive.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4ixl8Px.png" group-title="Travel",Turismo Travel TV | SHAHRIYAR LIVE TV
 https://stmv3.voxtvhd.com.br/turismotraveltv/turismotraveltv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/g9j0ze8.png" group-title="Travel",Turistik TV (720p) | SHAHRIYAR LIVE TV
-https://cdn1.cef-technology.com/stream_web/turistik/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/2AcRKdL.png" group-title="News",TürkHaber (720p) | SHAHRIYAR LIVE TV
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Ap7l2jC.png" group-title="Music",Türkmen Owazy (406p) [Not 24/7] | SHAHRIYAR LIVE TV
-https://alpha.tv.online.tm/hls/ch005.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/n6vITLu.png" group-title="Sports",Türkmenistan Sport (406p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://alpha.tv.online.tm/hls/ch004.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nrvPPrW.png" group-title="Kids",Turma da Mônica (720p) | SHAHRIYAR LIVE TV
@@ -20206,6 +20238,8 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee2
 https://hls-live-tv2000.akamaized.net/hls/live/2028510/tv2000/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/j51rBro.png" group-title="Undefined",TV A Critica | SHAHRIYAR LIVE TV
 https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/I7XGMhj.png" group-title="News",TV A Folha (720p) | SHAHRIYAR LIVE TV
+https://video01.logicahost.com.br/tvafolha/tvafolha/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://storage.googleapis.com/soultv-prod-media/media/brand/Logo_Adorar_100x100_s5tW1gW.png" group-title="General",TV Adorar (720p) | SHAHRIYAR LIVE TV
 https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/tvadorar/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7gHFKPZ.png" group-title="General",TV Aire | SHAHRIYAR LIVE TV
@@ -20242,6 +20276,8 @@ https://liveingesta318.cdnmedia.tv/berguedatvlive/smil:migracion.smil/playlist.m
 https://amg00437-amg00437c3-firetv-us-5409.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/960px-TvBrasil2023.png" group-title="Undefined",TV Brasil (720p) | SHAHRIYAR LIVE TV
 http://45.162.64.114/TV_BRASIL/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/noqGfuy.png" group-title="General",TV Brasil Oeste (720p) | SHAHRIYAR LIVE TV
+https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/O8W4yhn.png" group-title="Undefined",TV Breizh (1080p) | SHAHRIYAR LIVE TV
 http://145.239.5.177/318/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/896132Z.png" group-title="General",TV BRICS Chinese (1080p) | SHAHRIYAR LIVE TV
@@ -20254,10 +20290,14 @@ https://rusbrics.mediacdn.ru/cdn/brics/russian/playlist.m3u8
 https://espbrics.mediacdn.ru/cdn/brics/spanish/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8Xm3WSn.png" group-title="General",TV Brno 1 (1080p) | SHAHRIYAR LIVE TV
 https://stream.polar.cz/tvbrno1/tvbrno1live-1/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/J2EAZPS.png" group-title="News",TV Brusque (720p) | SHAHRIYAR LIVE TV
+https://5ad482a77183d.streamlock.net/rodrigotvbrusque.com.br/5d880199c902eb4a1e8df00d/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/hHrIn0r.png" group-title="Education",TV BUAP (1080p) | SHAHRIYAR LIVE TV
 https://tvenvivo.buap.mx/livestream/stream/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GhFmUVO.png" group-title="General",TV Buzau (576p) | SHAHRIYAR LIVE TV
 http://78.96.33.89:8080
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Sdou1Ab.png" group-title="Legislative",TV Câmara (1080p) | SHAHRIYAR LIVE TV
+https://stream3.camara.gov.br/tv1/manifest.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GsdVpll.png" group-title="General",TV Campane 1 (720p) | SHAHRIYAR LIVE TV
 https://eu1.servers10.com:8081/8032/index.m3u8
 #EXTINF:-1 tvg-logo="https://tvcanal72.com.ar/wp-content/uploads/2022/08/LOGO-CANAL-72-1-1024x256.png" group-title="General",TV Canal 72 | SHAHRIYAR LIVE TV
@@ -20348,6 +20388,8 @@ https://tvfronteira.brasilstream.com.br/hls/tvfronteira/index.m3u8
 https://tv02.zas.media:1936/tvfuturo/tvfuturo/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0sksWse.png" group-title="Undefined",TV Gazeta (720p) | SHAHRIYAR LIVE TV
 http://45.162.64.114/GAZETA/index.m3u8
+#EXTINF:-1 tvg-logo="https://tvgazin.com.br/wp-content/uploads/2024/03/logo.png" group-title="General",TV Gazin (720p) | SHAHRIYAR LIVE TV
+https://cdn-tiva-video09-logicahost-com-br.smartbit.co/tvgazin/tvgazin/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/C9SJCcE.jpg" group-title="Religious",TV Getsemaní (720p) | SHAHRIYAR LIVE TV
 https://serversv.com:8080/hls/tvgetsemani.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",TV Globo Rio de Janeiro (720p) | SHAHRIYAR LIVE TV
@@ -20356,6 +20398,8 @@ http://45.190.28.50/GLOBO_HD/index.m3u8
 https://stmv7.voxtvhd.com.br/golfo/golfo/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MTuErdw.png" group-title="Entertainment",TV Grande Natal (1080p) | SHAHRIYAR LIVE TV
 http://tvgrandenatalhd.duckdns.org:8080/hls/live.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/8PErNBT.png" group-title="Undefined",TV Guará (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://video02.logicahost.com.br/tvguara23/tvguara23/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ptQyOMi.png" group-title="General",TV Higuey Digital (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://host.streamingnation.live/p/3467/live/tvhigueylive.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/eThe0io.png" group-title="General",TV Hispanic [Not 24/7] | SHAHRIYAR LIVE TV
@@ -20390,6 +20434,8 @@ https://6110f70ea8d0e.streamlock.net/1838/1838/playlist.m3u8
 https://streaming.cloudecast.com/hls/tvlifeamerica/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/CkvB3af.png" group-title="General",TV Liptov (1080p) | SHAHRIYAR LIVE TV
 http://95.105.255.137:1935/tvturiec/tvliptov.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3e/TV_LITORAL_RN.jpg" group-title="General",TV Litoral RN (720p) | SHAHRIYAR LIVE TV
+https://5ad482a77183d.streamlock.net/tvnordesteegmail.com/tvnordesteegmail.com/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/q9p1Spj.png" group-title="Undefined",TV Lobo Durango (720p) | SHAHRIYAR LIVE TV
 https://5ca9af4645e15.streamlock.net/lobodurango/videolobodurango/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/xN1CJol.png" group-title="Undefined",TV LocAll (406p) | SHAHRIYAR LIVE TV
@@ -20474,10 +20520,14 @@ https://linear-593.frequency.stream/dist/xumo/593/hls/master/playlist.m3u8
 http://ip.opoja.tv:1935/tvopoja/tvopoja/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/HHxGQGD/TVO-kanalbanner-page-0002-1-removebg-preview-300x94.png" group-title="General",TV Østfold (1080p) | SHAHRIYAR LIVE TV
 https://streamnorge.com:8088/hls/tvo.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Y7b29VG.png" group-title="Religious",TV Padre Cicero (720p) | SHAHRIYAR LIVE TV
+https://video01.logicahost.com.br/tvpadrecicero/tvpadrecicero/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0YtCG4Y.png" group-title="General",TV Panorama | SHAHRIYAR LIVE TV
 https://public.live.rebit.tv/live/20750f0b-e12d-4915-a4c3-47c5db9ccbf6/main.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0FOmktl.png" group-title="Undefined",TV Pantanal MS (360p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://5a2b083e9f360.streamlock.net/tvpantanal/tvpantanal.sdp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://duckduckgo.com/i/e408ea02.png" group-title="Entertainment;Family;General;News",TV Paraense (720p) | SHAHRIYAR LIVE TV
+https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u
 #EXTINF:-1 tvg-logo="https://i.imgur.com/I6pKoBd.png" group-title="Travel",TV Paraná Turismo (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 http://200.189.113.201/hls/tve.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QFE6TiV.png" group-title="General",TV Passo Fundo (720p) | SHAHRIYAR LIVE TV
@@ -20488,6 +20538,8 @@ http://181.119.93.83:8000/play/a25t/index.m3u8
 http://190.93.224.42/TV-PERU-NOTICIAS/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/m50qAVY.png" group-title="Music",TV Peruanisima (720p) | SHAHRIYAR LIVE TV
 https://k20.usastreams.com:8081/tvperuanisima/index.m3u8
+#EXTINF:-1 tvg-logo="https://web2.petropolis.rj.gov.br/imc/film-commission/uploads/profissional/perfil/785b645d9c574b4d88504a85dbd6ef37.png" group-title="General",TV Petropolis (720p) | SHAHRIYAR LIVE TV
+https://video02.logicahost.com.br/tvpetropolis/tvpetropolis/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8ugnFa3.png" group-title="Undefined",TV Pi Kanal (576p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://stream.pikanal.rs/pikanal/pgm.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/cGHsM1x.png" group-title="General",TV Pirveli | SHAHRIYAR LIVE TV
@@ -20498,6 +20550,10 @@ https://ss2.tvrdomi.com:1936/tvplata/tvplata/playlist.m3u8
 https://live.mariatvcdn.com/tvprato/2db0dd5674586686a867ec52c3aa8e06.sdp/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/sbuSefI.png" group-title="Undefined",TV PRO | SHAHRIYAR LIVE TV
 http://rtmp.tvpro-online.ru/hls/ch1.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/c33suOT.png" group-title="Undefined",TV Profissao | SHAHRIYAR LIVE TV
+https://stmv.webtvninjas.com.br/tvprofissao/tvprofissao/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Undefined",TV Publica (1080p) | SHAHRIYAR LIVE TV
+http://playcom.trapemn.tv:1935/transcoderip/tvpublica.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4dUvFqa.png" group-title="Undefined",TV Publica Fueguina (1080p) | SHAHRIYAR LIVE TV
 https://nd106.republicaservers.com/hls/c8094/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/CRmY4Oi.png" group-title="General",TV Publica Marcos Paz | SHAHRIYAR LIVE TV
@@ -20510,6 +20566,8 @@ https://932y483pdjv8-hls-live.5centscdn.com/stream/deb10bae362f810630ec3abedcae5
 https://pantera1-100gb-cl-movistar.dps.live/tvquellon/tvquellon.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/YfMVNDE.png" group-title="Undefined",TV Qui (Modena) (480p) | SHAHRIYAR LIVE TV
 https://59d7d6f47d7fc.streamlock.net/tvqui/tvqui/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/G7X4LQI.png" group-title="General",TV QUISQUEYA (720p) | SHAHRIYAR LIVE TV
+https://cloud5.livescast.com:19360/canaltvquisqueya/canaltvquisqueya.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JIQwz0w.png" group-title="Undefined",TV Ra Tim Bum (720p) | SHAHRIYAR LIVE TV
 http://45.190.28.50/RATIMBUM/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/2WVNt3f.png" group-title="Undefined",TV Regionalna Lubin (1080p) | SHAHRIYAR LIVE TV
@@ -20538,8 +20596,6 @@ http://45.162.64.114/TV_SENADO/index.m3u8
 https://janus-tv-ply.senado.cl/playlist/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Ff5mj0o.png" group-title="Series",TV Series 1 As Panteras (480p) | SHAHRIYAR LIVE TV
 https://stmv1.srvif.com/tvserie/tvserie/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://static.wixstatic.com/media/9af6b8_e963e864c8fb40d3954f5c1c8cab1b40~mv2.png" group-title="General",TV Show Fortaleza (720p) | SHAHRIYAR LIVE TV
-https://stmv8.samcast.com.br/raimundoanselmolimamororo1908/raimundoanselmolimamororo1908/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/nnsYJCq/IMG-20210731-094609.png" group-title="General",TV Show Oruro (720p) | SHAHRIYAR LIVE TV
 http://tv.istbolivia.com:1935/tvshow/tvshow/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/t5oUK3C.png" group-title="News",TV Sim Cachoeiro (720p) | SHAHRIYAR LIVE TV
@@ -20682,6 +20738,8 @@ https://raw.githubusercontent.com/thomraider12/canaistvpt/main/m3u8s/tvi.m3u8
 https://raw.githubusercontent.com/thomraider12/canaistvpt/main/m3u8s/tvificcao.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/C9rxqA5.png" group-title="Entertainment",TVI Reality (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 https://raw.githubusercontent.com/thomraider12/canaistvpt/main/m3u8s/tvireality.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/vstHOYx.png" group-title="News",TVídeoNews (720p) [Not 24/7] | SHAHRIYAR LIVE TV
+https://video01.logicahost.com.br/tvideonews/tvideonews/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XeqcwKe.png" group-title="General",TVitapé (720p) | SHAHRIYAR LIVE TV
 https://stream01.msolutionbrasil.com.br/hls/tvitape/live.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tviy_Serial.svg/250px-Tviy_Serial.svg.png" group-title="Series",like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Series",Tviy serial (1080p) | SHAHRIYAR LIVE TV
@@ -20804,8 +20862,6 @@ https://ott-balancer.tvri.go.id/live/eds/DKI/hls/DKI.m3u8
 https://ott-balancer.tvri.go.id/live/eds/Jambi/hls/Jambi.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/TVRILogo2019.svg/960px-TVRILogo2019.svg.png" group-title="General",TVRI Jawa Barat (480p) | SHAHRIYAR LIVE TV
 https://ott-balancer.tvri.go.id/live/eds/Jabar/hls/Jabar.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/TVRILogo2019.svg/960px-TVRILogo2019.svg.png" group-title="General",TVRI Jawa Tengah (720p) | SHAHRIYAR LIVE TV
-https://ott-balancer.tvri.go.id/live/eds/Jateng/hls/Jateng.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/TVRILogo2019.svg/960px-TVRILogo2019.svg.png" group-title="General",TVRI Jawa Timur (720p) | SHAHRIYAR LIVE TV
 https://ott-balancer.tvri.go.id/live/eds/Jatim/hls/Jatim.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/TVRILogo2019.svg/960px-TVRILogo2019.svg.png" group-title="General",TVRI Kalimantan Barat (480p) | SHAHRIYAR LIVE TV
@@ -20850,8 +20906,6 @@ https://ott-balancer.tvri.go.id/live/eds/Pabar/hls/Pabar.m3u8
 https://ott-balancer.tvri.go.id/live/eds/Jogjakarta/hls/Jogjakarta.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/2mJKi7g.png" group-title="Undefined",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Undefined",TVRUS | SHAHRIYAR LIVE TV
 http://213.91.179.28:8000/play/a082
-#EXTINF:-1 tvg-logo="https://www.lyngsat.com/logo/tv/tt/tv-rus-plus-de.png" group-title="Series",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Series",TVRUS+ | SHAHRIYAR LIVE TV
-http://83.228.75.166:8000/play/a0aq
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J8ztiAN.png" group-title="General",TVS (720p) | SHAHRIYAR LIVE TV
 https://vcp10.myplaytv.com/tvs/tvs/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",TVS Frontier Network (360p) | SHAHRIYAR LIVE TV
@@ -20960,8 +21014,6 @@ https://jmp2.uk/plu-679205a13de7c8cf941e7857.m3u8
 https://jmp2.uk/plu-677d9adfa9a51b0008497fa0.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/iEKDH26.png" group-title="Undefined",UGTV (720p) | SHAHRIYAR LIVE TV
 https://cdn.gunadarma.ac.id/streams/ugtv/ingestugtv.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/wdWR7Qk.png" group-title="Undefined",Ulke TV | SHAHRIYAR LIVE TV
-http://217.174.229.138:8000/play/a0el
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Ultimate Builds (720p) | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-656542ae4261ca00082154a8.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/utvtamil.png" group-title="Music",Ultimate TV (1080p) | SHAHRIYAR LIVE TV
@@ -21022,6 +21074,8 @@ https://tigocloud.desdeparaguay.net/800tv/800tv/playlist.m3u8
 https://mumt05.tangotv.in/87NeALx2UNIQUETV/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/cTSDB8O.png" group-title="Shop",Uniquely Thai (720p) | SHAHRIYAR LIVE TV
 https://livefta.malimarcdn.com/ftaedge00/uniquely.sdp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Co3YrU0.png" group-title="Undefined",UniRadio TV (1080p) | SHAHRIYAR LIVE TV
+https://video.hostingcaaguazu.com:19360/uniradiotv/uniradiotv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VEO6aos.png" group-title="General",Uniregion TV | SHAHRIYAR LIVE TV
 https://5ff3d9babae13.streamlock.net/ubyecbxnfd/ubyecbxnfd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7ixWRId.png" group-title="Education",Unison TV (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -21090,6 +21144,8 @@ https://d1si3n1st4nkgb.cloudfront.net/10502/88896052/hls/master.m3u8?ads.xumo_ch
 https://jmp2.uk/plu-678533155e0e6a000828cd48.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",UnXplained Zone | SHAHRIYAR LIVE TV
 https://jmp2.uk/plu-656538f8954b020008d389db.m3u8
+#EXTINF:-1 tvg-logo="https://tvadmin.upea.bo/storage/imagenes_institucion/imagen_institucion_66cd025754fcb.png" group-title="Undefined",UPEA TV (720p) | SHAHRIYAR LIVE TV
+https://tvstream.upea.bo/hls/oSs0jSWumTFIIVY97559.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/EeNpfIr.png" group-title="Undefined",Uranio TV (720p) | SHAHRIYAR LIVE TV
 https://live-evg8.tv360.bitel.com.pe/bitel/uranioyurimaguasSRT/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Urban Action TV (1080p) | SHAHRIYAR LIVE TV
@@ -21300,8 +21356,6 @@ https://stream.inliveserver.com:19360/8004/8004.m3u8
 https://copacogen.desdeparaguay.net/villaelisatv/villaelisatv/playlist.m3u8?admin=nacion
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mmEenTm.png" group-title="Undefined",Villa Mantero TV | SHAHRIYAR LIVE TV
 https://micanal.ovh/livestreams/515.AUTOOAAZ721F.m3u8
-#EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/VillageTV.png" group-title="Religious",Village TV (576p) | SHAHRIYAR LIVE TV
-https://villagetv.applelive.in/villagetv/villagetv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/iluoazf.png" group-title="Culture;Entertainment",Vinh Long TV 2 (1080p) | SHAHRIYAR LIVE TV
 https://1011154949.vnns.net/CDN-FPT02/THVL2-HD-1080p/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/F12VdKO.png" group-title="Culture;Entertainment;Music;News",Vĩnh Long TV5 (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
@@ -21432,6 +21486,8 @@ https://live.fptplay53.net/fnxhd1/vtvcantho_vhls.smil/chunklist.m3u8
 https://solo.disfrutaenlared.com:1936/vtvcanal/vtvcanal/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/qjm4B0J.png" group-title="General",VTV Canal 32 (1080p) | SHAHRIYAR LIVE TV
 https://cnn.livestreaminggroup.info:3507/live/vtv32live.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/x8jstsh.png" group-title="General",VTV Mór (360p) | SHAHRIYAR LIVE TV
+https://cloudfront44.lexanetwork.com:1344/freerelay/morvtv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4Wwptd3.png" group-title="Undefined",Východočeská TV (1080p) | SHAHRIYAR LIVE TV
 https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/reYeMuE.png" group-title="Entertainment",W9 (1080p) | SHAHRIYAR LIVE TV
@@ -21586,8 +21642,6 @@ https://stream.badinan.xyz/welat/tv/playlist.m3u8
 https://wdw.iptv-playoutcenter.de/wdw/wdw1/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",WeShort (1080p) | SHAHRIYAR LIVE TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/ea019bed-a45e-4dfe-a452-84f5f2f76ea9/manifest.m3u8
-#EXTINF:-1 tvg-logo="https://aptcperu.org/wp-content/uploads/2026/04/logoMesa-de-trabajo-1-copia-5.png" group-title="Entertainment",WEST (1080p) | SHAHRIYAR LIVE TV
-https://cablered.iptvperu.tv:1936/cablered/west/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Western Bound (1080p) | SHAHRIYAR LIVE TV
 https://ime-cw-stirr.otteravision.com/ime/cw/cw.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Western Bound (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
@@ -21632,8 +21686,6 @@ https://dhiy0zcig7ty1.cloudfront.net/scheduler/scheduleMaster/491.m3u8
 https://d1h8whhtg5u7om.cloudfront.net/WildPlanet_GB.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Wild TV (720p) | SHAHRIYAR LIVE TV
 https://a-cdn.klowdtv.com/live3/wildtv_720p/playlist.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",Wild West TV (1080p) | SHAHRIYAR LIVE TV
-https://linear-799.frequency.stream/dist/xumo/799/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Wild West TV (1080p) [Geo-blocked] | SHAHRIYAR LIVE TV
 https://pb-7m2kwpwgu3dqf.akamaized.net/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",Wildest Wish TV (1080p) | SHAHRIYAR LIVE TV
@@ -21954,8 +22006,6 @@ https://d3p8ecnk6t4t73.cloudfront.net/scheduler/scheduleMaster/316.m3u8
 https://stream8.cinerama.uz/1417/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/AmW9d6H.jpg" group-title="Undefined",Zougla TV (720p) | SHAHRIYAR LIVE TV
 https://zouglacam-mdc-secure.akamaized.net/zouglalive/backup/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/wPqCtwR.png" group-title="Entertainment",Zuglo TV (360p) | SHAHRIYAR LIVE TV
-https://cloudfront44.lexanetwork.com:1344/freerelay/zuglotv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/NsNytWD.jpeg" group-title="Business",Zuraca TV (720p) | SHAHRIYAR LIVE TV
 https://tv3.bitstreaming.net:3680/live/zuracatvlive.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XvktUBB.jpg" group-title="General",Zurquí TV (720p) | SHAHRIYAR LIVE TV
@@ -22174,6 +22224,8 @@ https://vgtrkregion-reg.cdnvideo.ru/vgtrk/3/russia1-hd/index.m3u8
 http://vgtrkregion-reg.cdnvideo.ru/vgtrk/maykop/russia1-hd/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Rossiya-24_Logo.svg/960px-Rossiya-24_Logo.svg.png" group-title="News",Россия 24 (Хабаровск) (1080p) | SHAHRIYAR LIVE TV
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/habarovsk/russia24-sd/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/T42cuYx.png" group-title="General",Россия-РТР | SHAHRIYAR LIVE TV
+https://streaming.televizor-24-tochka.ru/live/211.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/hJK7mOW.png" group-title="Sports",Русский Экстрим (576p) | SHAHRIYAR LIVE TV
 http://31.148.48.15/Russkiy_Ekstrim/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/chNBF5t.png" group-title="Undefined",С1 (Сургут) (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -22204,12 +22256,16 @@ https://cityeden.catcast.tv/content/34364/index.m3u8
 https://cityeden.catcast.tv/content/38354/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/l7BE8l6.png" group-title="Music",Сити Эдем Классическая Музыка [Not 24/7] | SHAHRIYAR LIVE TV
 https://cityeden.catcast.tv/content/47400/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/BM4E0Kr.png" group-title="Lifestyle",Сити Эдем МедЗдрав [Not 24/7] | SHAHRIYAR LIVE TV
+https://cityeden.catcast.tv/content/47519/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/wR0pvRc.png" group-title="Cooking",Сити Эдем Рецепты Гурмана [Not 24/7] | SHAHRIYAR LIVE TV
 https://cityeden.catcast.tv/content/47516/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/V3MTfyc.png" group-title="Music",Сити Эдем Сиртаки ТВ [Not 24/7] | SHAHRIYAR LIVE TV
 https://cityeden.catcast.tv/content/46421/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/X9kACKi.png" group-title="General;Religious",Сити Эдем ТВ Христианский [Not 24/7] | SHAHRIYAR LIVE TV
 https://cityeden.catcast.tv/content/34246/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/mT5liTh.png" group-title="Series",Сити Эдем ТелеНовелла [Not 24/7] | SHAHRIYAR LIVE TV
+https://cityeden.catcast.tv/content/46209/index.m3u8
 #EXTINF:-1 tvg-logo="https://cdn-st3.smotrim.ru/vh/pictures/svg/444/241/8.svg" group-title="Series",Смотрим Честный Детектив (1080p) | SHAHRIYAR LIVE TV
 https://live-vgtrksmotrim.cdnvideo.ru/vgtrksmotrim/smotrim-live-01.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/iBZVvtW.png" group-title="General",like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="General",Соён Гэгээрүүлэгч (1080p) | SHAHRIYAR LIVE TV
@@ -22322,12 +22378,6 @@ http://epg.112114.xyz/douyu/2516864
 https://stream2.jlntv.cn/qg/sd/live.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",华数 (720p) [Not 24/7] | SHAHRIYAR LIVE TV
 http://hls-ott-zhibo.wasu.tv/live/442/index.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",南阳新闻 (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
-http://30539.hlsplay.aodianyun.com/lms_30539/tv_channel_142.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",南陽公共頻道 (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
-http://30539.hlsplay.aodianyun.com/lms_30539/tv_channel_295.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",南陽科教頻道 (1080p) [Not 24/7] | SHAHRIYAR LIVE TV
-http://30539.hlsplay.aodianyun.com/lms_30539/tv_channel_296.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",博斯高球台 | SHAHRIYAR LIVE TV
 https://yeslivetv.com/twiptv/litv-longturn05/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",吉林市新闻综合 [Geo-blocked] | SHAHRIYAR LIVE TV
@@ -22454,22 +22504,6 @@ https://stream2.jlntv.cn/tonghua1/sd/live.m3u8
 http://35908.hlsplay.aodianyun.com/guangdianyun_35908/tv_channel_327.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",长春综合 [Geo-blocked] | SHAHRIYAR LIVE TV
 https://stream2.jlntv.cn/jlcc/sd/live.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",长沙地铁移动 [Geo-blocked] | SHAHRIYAR LIVE TV
-http://35848.hlsplay.aodianyun.com/guangdianyun_35848/tv_channel_356.m3u8
-#EXTINF:-1 tvg-logo="https://www.tvchinese.net/uploads/tv/csnxpd.jpg" group-title="Lifestyle",长沙女性 [Geo-blocked] | SHAHRIYAR LIVE TV
-http://35848.hlsplay.aodianyun.com/guangdianyun_35848/tv_channel_349.m3u8
-#EXTINF:-1 tvg-logo="https://www.tvchinese.net/uploads/tv/cszfpd.jpg" group-title="Legislative",长沙政法 [Geo-blocked] | SHAHRIYAR LIVE TV
-http://35848.hlsplay.aodianyun.com/guangdianyun_35848/tv_channel_348.m3u8
-#EXTINF:-1 tvg-logo="https://static.tvtropes.org/pmwiki/pub/images/hunantv_logo.png" group-title="News",长沙新闻 [Geo-blocked] | SHAHRIYAR LIVE TV
-http://35848.hlsplay.aodianyun.com/guangdianyun_35848/tv_channel_346.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",长沙经贸 [Geo-blocked] | SHAHRIYAR LIVE TV
-http://35848.hlsplay.aodianyun.com/guangdianyun_35848/tv_channel_350.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",长沙购物 [Geo-blocked] | SHAHRIYAR LIVE TV
-http://35848.hlsplay.aodianyun.com/guangdianyun_35848/tv_channel_354.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",隨州綜合 (720p) [Not 24/7] | SHAHRIYAR LIVE TV
-http://34766.hlsplay.aodianyun.com/guangdianyun_34766/tv_channel_304.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Undefined",隨州農村 (720p) [Not 24/7] | SHAHRIYAR LIVE TV
-http://34766.hlsplay.aodianyun.com/guangdianyun_34766/tv_channel_305.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",集安综合 [Geo-blocked] | SHAHRIYAR LIVE TV
 https://stream2.jlntv.cn/ja/sd/live.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Undefined",靖江新闻綜合 (480p) [Not 24/7] | SHAHRIYAR LIVE TV
@@ -22580,6 +22614,8 @@ https://stream2.rtvbn.tv:8080/live_1935/bnstream/index.m3u8
 https://www.youtube.com/watch?v=ABVQXgr2LW4
 #EXTINF:-1 tvg-logo="https://portal.rbc1.com.br/public/portal/img/layout/logorbc.png" group-title="Brazil",RBC Ⓨ | SHAHRIYAR LIVE TV
 https://www.youtube.com/watch?v=oUdd3CsxYaE
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d1/Marca_rede_brasil_rgb-color.png" group-title="Brazil",Rede Brasil | SHAHRIYAR LIVE TV
+https://video09.logicahost.com.br/redebrasiloficial/redebrasiloficial/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/82/Cultura_logo_2013.svg" group-title="Brazil",TV Cultura | SHAHRIYAR LIVE TV
 https://player-tvcultura.stream.uol.com.br/live/tvcultura.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/RrQVoOg.png" group-title="Bulgaria",Euronews Bulgaria Ⓨ | SHAHRIYAR LIVE TV
@@ -22652,14 +22688,12 @@ https://sktv.mxnticek.eu/new/stream.php?ch=NovaGold
 https://sktv.mxnticek.eu/new/stream.php?ch=NovaLady
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/nova-cz.png" group-title="Czech Republic",TN Live | SHAHRIYAR LIVE TV
 https://sktv.mxnticek.eu/new/stream.php?ch=Nova%20TN%20Live
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/prima-cz.png" group-title="Czech Republic",Prima | SHAHRIYAR LIVE TV
-https://sktv.mxnticek.eu/new/stream.php?ch=Prima
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/cnn-prima-news-cz.png" group-title="Czech Republic",CNN Prima News | SHAHRIYAR LIVE TV
 https://sktv.mxnticek.eu/new/stream.php?ch=PrimaNews
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/prima-zoom-cz.png" group-title="Czech Republic",Prima Zoom | SHAHRIYAR LIVE TV
+https://sktv.mxnticek.eu/new/stream.php?ch=PrimaZoom
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/prima-krimi-cz.png" group-title="Czech Republic",Prima Krimi | SHAHRIYAR LIVE TV
 https://sktv.mxnticek.eu/new/stream.php?ch=PrimaKrimi
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/prima-max-cz.png" group-title="Czech Republic",Prima MAX | SHAHRIYAR LIVE TV
-https://sktv.mxnticek.eu/new/stream.php?ch=PrimaMax
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/prima-cool-cz.png" group-title="Czech Republic",Prima Cool | SHAHRIYAR LIVE TV
 https://sktv.mxnticek.eu/new/stream.php?ch=PrimaCool
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/joj-family-cz.png" group-title="Czech Republic",JOJ Family Ⓢ | SHAHRIYAR LIVE TV
@@ -22698,8 +22732,6 @@ http://sb.err.ee/live/etv2.m3u8
 http://sb.err.ee/live/etvpluss.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JhrTB82.png" group-title="Estonia",Life TV Estonia | SHAHRIYAR LIVE TV
 https://lifetv.bitflip.ee/live/stream2.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JhrTB82.png" group-title="Estonia",Life TV Europe | SHAHRIYAR LIVE TV
-https://lifetv.bitflip.ee/live/stream1.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_-_L%C3%B8gting.png" group-title="Faroe Islands",Tingvarp | SHAHRIYAR LIVE TV
 https://play.kringvarp.fo/redirect/tingvarp/_definst_/smil:tingvarp.smil?type=m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6yXZwUL.png" group-title="Finland",Yle TV1 Ⓖ | SHAHRIYAR LIVE TV
@@ -22744,8 +22776,6 @@ https://www.youtube.com/@SundomTV/live
 https://www.youtube.com/@wor-tvr.f.4461/live
 #EXTINF:-1 tvg-logo="https://api-cdn.arte.tv/img/v2/image/j4EoSJjX26uySVWdmt3EmS/1920x1080" group-title="France",Arte Ⓖ | SHAHRIYAR LIVE TV
 https://artesimulcast.akamaized.net/hls/live/2031003/artelive_fr/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/6/6a/Logo_LCP-AN_-_Public_S%C3%A9nat_%282019%29.svg/53px-Logo_LCP-AN_-_Public_S%C3%A9nat_%282019%29.svg.png" group-title="France",LCP | SHAHRIYAR LIVE TV
-https://lcp.fr/le-live-lcp-tnt-5433
 #EXTINF:-1 tvg-logo="https://i.imgur.com/bJOdFT1.png" group-title="France",Public Sénat | SHAHRIYAR LIVE TV
 https://www.publicsenat.fr/direct
 #EXTINF:-1 tvg-logo="https://i.imgur.com/UMRGAHx.png" group-title="France",CNews Ⓓ | SHAHRIYAR LIVE TV
@@ -22802,6 +22832,8 @@ https://mdrtvsahls.akamaized.net/hls/live/2016879/mdrtvsa/master.m3u8
 https://mdrtvthhls.akamaized.net/hls/live/2016880/mdrtvth/master.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rbb_Fernsehen_Logo_2017.08.svg/640px-Rbb_Fernsehen_Logo_2017.08.svg.png" group-title="Germany",RBB Berlin Ⓖ | SHAHRIYAR LIVE TV
 https://rbb-hls-berlin.akamaized.net/hls/live/2017824/rbb_berlin/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/XkSR66q.png" group-title="Greece",ERT Kids Ⓖ | SHAHRIYAR LIVE TV
+https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTKids/default/index.mpd
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1vqW7lc.png" group-title="Greece",Vouli TV | SHAHRIYAR LIVE TV
 https://diavlos-cache.cnt.grnet.gr/parltv/webtv-1b.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Z3k7iA0.png" group-title="Greece",Mega News | SHAHRIYAR LIVE TV
@@ -22914,8 +22946,6 @@ https://ghaasiflu.online/Dijlah/tracks-v1a1/playlist.m3u8
 https://svs.itworkscdn.net/inewsiqlive/inewsiq.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/UjIuIQX.png" group-title="Iraq",Zagros TV | SHAHRIYAR LIVE TV
 https://5a3ed7a72ed4b.streamlock.net/zagrostv/SMIL:myStream.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/bf/Today_FM_Logo_2017.jpg" group-title="Ireland",Today FM | SHAHRIYAR LIVE TV
-https://stream.audioxi.com/TDAAC
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/98FM_2022.svg/1920px-98FM_2022.svg.png" group-title="Ireland",98FM | SHAHRIYAR LIVE TV
 https://stream.audioxi.com/98
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/cb/FM104_logo_tile.png" group-title="Ireland",FM104 | SHAHRIYAR LIVE TV
@@ -23048,8 +23078,6 @@ https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/pl
 https://stream.rdstv.radio/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0MgCm1n.png" group-title="Italy",Radio ZETA | SHAHRIYAR LIVE TV
 https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S9346184/XEx1LqlYbNic/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/hu56Ya5.png" group-title="Italy",Sportitalia SOLOCALCIO | SHAHRIYAR LIVE TV
-https://di-g7ij0rwh.vo.lswcdn.net/sportitalia/sisolocalcio.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/3TMMXmS.png" group-title="Italy",Radio Montecarlo TV Ⓖ | SHAHRIYAR LIVE TV
 https://live02-seg.msr.cdn.mediaset.net/live/ch-bb/bb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7Im3HI1.png" group-title="Italy",Virgin Radio TV Ⓖ | SHAHRIYAR LIVE TV
@@ -23082,6 +23110,8 @@ https://59d7d6f47d7fc.streamlock.net/canale8/canale8/playlist.m3u8
 https://ovp-live.akamaized.net/ac115_live/canale1.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/WL3SFTs.png" group-title="Italy",Casa Sanremo Tv | SHAHRIYAR LIVE TV
 https://router.xdevel.com/video0s975911-633/stream/playlist_dvr.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/V0kjYNG.png" group-title="Italy",Castrovillari Tv | SHAHRIYAR LIVE TV
+http://msh0062.stream.seeweb.it/live/flv:stream00.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9RVriNK.jpeg" group-title="Italy",Cittaceleste Tv | SHAHRIYAR LIVE TV
 https://sportitaliaamd.akamaized.net/live/Cittaceleste/hls/A990687F506536598442FC5CD12C97CB78873FBA/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/IbabUDd.png" group-title="Italy",Company Tv | SHAHRIYAR LIVE TV
@@ -23182,8 +23212,6 @@ https://tvd-piter.fluid.stream/RadioPiterpanTV/livestream/chunklist_w1866496033.
 https://200912.global.ssl.fastly.net/646b335e2291a2022444bb7c/live_22f84390fe1411ed919df3da85a483cc/rewind-14400.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8kqyxvz.png" group-title="Italy",Radio Radiosa Tv | SHAHRIYAR LIVE TV
 https://stream7.zivoli.it/radiosatv/radiosatv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/YNRWFOo.png" group-title="Italy",Rei Tv | SHAHRIYAR LIVE TV
-https://5f22d76e220e1.streamlock.net/reitv/reitv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/EsZn2cj.png" group-title="Italy",Rete 55 | SHAHRIYAR LIVE TV
 https://live1.giocabet.tv/stream/6/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/uUAjWlF.png" group-title="Italy",Rete 8 Sport | SHAHRIYAR LIVE TV
@@ -23212,8 +23240,6 @@ https://845d8509d2cb4f249dd0b2ae5755b6c2.msvdn.net/rtv38/rtv38_live_main/mainabr
 https://stream1.aswifi.it/settv/live/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/0B0S2gI.png" group-title="Italy",Sesta Rete | SHAHRIYAR LIVE TV
 https://stream10.xdevel.com/video0s977089-1792/stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/GhQX36O.png" group-title="Italy",Sicilia 24 Tv | SHAHRIYAR LIVE TV
-https://5f22d76e220e1.streamlock.net/sicilia24/sicilia24/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gcysky4.png" group-title="Italy",Sienatv | SHAHRIYAR LIVE TV
 https://router.xdevel.com/video0s976727-1441/stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ZP3cJi7.png" group-title="Italy",Stiletv | SHAHRIYAR LIVE TV
@@ -23364,6 +23390,8 @@ http://d34pj260kw1xmk.cloudfront.net/live/l1/tv/index.m3u8
 https://t2.tvmak.com/tv/TV21MK.m3u8?QScgsh2FfM
 #EXTINF:-1 tvg-logo="https://i.imgur.com/O26HEyC.png" group-title="North Macedonia",M»Net Info | SHAHRIYAR LIVE TV
 http://ares.mnet.mk/hls/mnet-info.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/yTR7A0d.png" group-title="North Macedonia",ЗОНА М1 ТВ | SHAHRIYAR LIVE TV
+https://zonam1.ddns.net/hls/stream1.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/xRw4Hmu.png" group-title="North Macedonia",Sky Folk | SHAHRIYAR LIVE TV
 https://skyfolk.mk/live.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/yb3xjOZ.png" group-title="North Macedonia",Хуго 2 | SHAHRIYAR LIVE TV
@@ -23730,6 +23758,8 @@ https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8
 https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/BrW7gk8.png" group-title="News",ABC News (AU) Ⓨ | SHAHRIYAR LIVE TV
 https://www.youtube.com/@abcnewsaustralia/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Wc5Z3iS.png" group-title="News",WION | SHAHRIYAR LIVE TV
+https://ythls.armelin.one/channel/UC_gUM8rL-Lrg6O3adPW9K1g.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/aiiinzg.png" group-title="News",Metro Globe Network | SHAHRIYAR LIVE TV
 https://edge.medcom.id/live-edge/smil:mgnch.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/LOGO_i24NEWS.png/512px-LOGO_i24NEWS.png" group-title="News",i24 News | SHAHRIYAR LIVE TV
@@ -23828,8 +23858,6 @@ https://amg01448-samsungin-cnnnow-samsungin-4npqg.amagi.tv/playlist/amg01448-sam
 https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678-b/ndtv24x7/masterb_720p@3.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/d3943796d7fe5962ca5385b656682b1a" group-title="News",Hindi Khabar | SHAHRIYAR LIVE TV
 https://tvsen7.aynaott.com/HindiKhabar/index.m3u8?e=1779283779&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=7b43f60b9dbb9fbf01ff5e9abeac579d
-#EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/c355110e9cbebd89649a95f0f0fd77da" group-title="Channels",kolkata TV | SHAHRIYAR LIVE TV
-https://tvsen6.aynaott.com/kolkatatv/index.m3u8?e=1779283837&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=8cc8bac4fecb91a1f2e5443bbc180545
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/5522b7ef736d7f4e7f80ac6325dce821" group-title="Channels",AMC TV | SHAHRIYAR LIVE TV
 https://tvsen6.aynaott.com/amc/index.m3u8?e=1779283842&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=021858f1b00e00e96d1c4781ed44da4c
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/294b72dc2ca7b74ab3312059728cab22" group-title="Channels",pix 11 | SHAHRIYAR LIVE TV
@@ -24062,6 +24090,8 @@ http://cdntv.online/low/9mlxywika2/55.m3u8
 http://cdntv.online/low/9mlxywika2/57.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Other",Sportdigital | SHAHRIYAR LIVE TV
 https://jmp2.uk/stvp-ATAJ0500433A
+#EXTINF:-1 tvg-logo="" group-title="Other",ORF+ | SHAHRIYAR LIVE TV
+http://212.186.45.34:9981/stream/channelid/906723447
 #EXTINF:-1 tvg-logo="" group-title="Other",ZIGGO SPORT 2 HD | SHAHRIYAR LIVE TV
 http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2561/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Other",ZIGGO SPORT 3 HD | SHAHRIYAR LIVE TV
@@ -24174,8 +24204,6 @@ https://news.cgtn.com/resource/live/arabic/cgtn-a.m3u8
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/nexustv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/rwd1rei.png" group-title="Bangladesh",Anirban | SHAHRIYAR LIVE TV
 https://live20.bozztv.com/giatvplayout7/giatv-209627/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-logo="https://www.jagobd.com/wp-content/uploads/2024/08/pran-RFL.png" group-title="Bangladesh",Jago News 24 | SHAHRIYAR LIVE TV
-https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRXM2J7y2LkoE63vv2He9SF1dMo3pS9hmEC23wzJv3maIccQ1e912eTGNSN74Riwx03whZi5tyKXHKEDSFl4AO1JrwjCIlMhglN-nOjmGhBHBnhp1EqdLB5hwV3jHgKUDlzNFW1Cv8qrMylfmiIosSwFmK72-h-LTinSr1bpDVfNm1p8SlrILxKesdgw/s1080/1000008187.png" group-title="Islamic",Islamic TV | SHAHRIYAR LIVE TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/colOISC.jpeg" group-title="Islamic",Makkah Live | SHAHRIYAR LIVE TV
@@ -24202,28 +24230,8 @@ https://app.ncare.live/live-orgin/timetvusa.stream/playlist.m3u8
 https://app.ncare.live/live-orgin/tvoneuksni.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/d5jBYxE.png" group-title="Others",NRB TV | SHAHRIYAR LIVE TV
 https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/ES4Aq69.png" group-title="Sports",Sony Sports2 HD | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/sonyten2/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Vv9IFfF.png" group-title="Sports",Star Sports 1 | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/sonyten5/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/yDunZA2.jpeg" group-title="Sports",Star Sports 2 | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/starsports2/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Uf9kaSQ.jpeg" group-title="Sports",Star Sports Select 1 | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/starselect1/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/H5wcIUZ.png" group-title="Sports",Star Sports Select 2 | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/starselect2/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/63/Colors_HD.svg" group-title="India",Colors HD | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/colorshd/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://www.setindia.com/assests/images/logo.png" group-title="India",Sony Enter TV | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/sonyentten/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://www.sonymax.tv/assests/images/logo.png" group-title="India",SONY MAX HD | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/sonymax/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://www.sonyaath.com/assets/media/images/AathLogo.png" group-title="India",Sony Ath HD | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/sonyaath/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/PqN0KF2M/20251202_090224.png" group-title="India",Star Gold HD | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/stargold/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/q7gWQZjw/20251202_090307.png" group-title="India",STAR Plus HD | SHAHRIYAR LIVE TV
-https://master-proxy.wispy-boat-fc77.workers.dev/?url=http://stvlive.net:8080/starplus/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/e8/Express_Entertainment.png" group-title="Pakistan",Express TV | SHAHRIYAR LIVE TV
+https://live.thebosstv.com:30443/dwlive/EXP-ENTERTAINMENT/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/P5yq7ncL/20250529_120144.png" group-title="Music",9XM | SHAHRIYAR LIVE TV
 https://d14c63magvk61v.cloudfront.net/strm/channels/9xm/m4.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/rEhhYpe.png" group-title="Music",Baraza Music TV | SHAHRIYAR LIVE TV
@@ -24366,6 +24374,8 @@ http://rbmn-live.akamaized.net:80/hls/live/590964/BoRB-AT/master_928.m3u8
 http://rmtvlive-lh.akamaihd.net/i/rmtv_1@154306/index_1000_av-p.m3u8?sd=10&rebase=on?iptvgratis?chile.m3u8
 #EXTINF:-1 tvg-logo="https://s8.gifyu.com/images/IPTV.png" group-title="Sports",Sharjah Sport | SHAHRIYAR LIVE TV
 https://svs.itworkscdn.net/smc4sportslive/smc4.smil/chunklist_b585000.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Plcqlr7.jpg" group-title="Sports",Jordan Sports ARB | SHAHRIYAR LIVE TV
+https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8
 #EXTINF:-1 tvg-logo="https://getvectorlogo.com/wp-content/uploads/2018/12/eurosport-vector-logo.png" group-title="Sports",Euro Sports 4K | SHAHRIYAR LIVE TV
 http://zabava-htlive.cdn.ngenix.net/hls/CH_EUROSPORT4K_HLS/bw6000000/variant.m3u8?version=2&offset=-3600&checkedby
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/RACING.COM_logo_2016.svg/200px-RACING.COM_logo_2016.svg.png" group-title="Sports",RACING.COM | SHAHRIYAR LIVE TV
@@ -24548,6 +24558,8 @@ https://yupppreview.akamaized.net/preview/wowkidztam/2500.m3u8
 http://95eryw39dwn4-hls-live.wmncdn.net/Ayushu/271ddf829afeece44d8732757fba1a66.sdp/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="INDIA (New)",Desi Plus | SHAHRIYAR LIVE TV
 http://cdn2.live247stream.com/desiplus/tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="INDIA (New)",PUNJAB TV | SHAHRIYAR LIVE TV
+http://158.69.124.9:1935/5aabtv/5aabtv/chunklist_w642807911.m3u8
 #EXTINF:-1 tvg-logo="" group-title="INDIA (New)",The Q India | SHAHRIYAR LIVE TV
 https://amg1-i.akamaihd.net/hls/live/784034/Q001/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/E71mShF.png" group-title="INDIA (New)",CNBC Bajar (New!) | SHAHRIYAR LIVE TV
@@ -24640,10 +24652,6 @@ http://z5amshls.akamaized.net/smileusa/tracks-v1a1/index.m3u8
 http://z5amshls.akamaized.net/andpicssd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://github.com/amarnettv/amarnettv.github.io/raw/master/logo/SJHD.jpg" group-title="Shows & Series",Star Jalsha HD [IN] (2) | SHAHRIYAR LIVE TV
 https://yuppcatchup.akamaized.net/preview/starjalsha/1800.m3u8
-#EXTINF:-1 tvg-logo="https://s8.gifyu.com/images/IPTV.png" group-title="Shows & Series",Zee bangla cinema | SHAHRIYAR LIVE TV
-http://z5amshls.akamaized.net/zbanglacnm/tracks-v1a1/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/WvrfVsv.jpg" group-title="Shows & Series",Zee Bangla Cinema | SHAHRIYAR LIVE TV
-http://z5amshls.akamaized.net/zbanglacnm/tracks-v1a1/index.m3u8?@IPTVSoltuion
 #EXTINF:-1 tvg-logo="https://s8.gifyu.com/images/IPTV.png" group-title="Shows & Series",Ztv HD | SHAHRIYAR LIVE TV
 http://z5amshls.akamaized.net/ztvme/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://assets.botallen.live/images/t/nsafMKpLvj.png" group-title="Kids",Baby TV HD | SHAHRIYAR LIVE TV
@@ -24898,6 +24906,8 @@ http://z5amshls.akamaized.net/zcinemahd/playlist.m3u8?@ShamimHossainOfficial
 https://yuppcatchup.akamaized.net/preview/bbo/2500.m3u8?@ShamimHossainOfficial
 #EXTINF:-1 tvg-logo="" group-title="ShamimHossainOfficial",BBO Classic | SHAHRIYAR LIVE TV
 https://yuppcatchup.akamaized.net/preview/bboclassic/2500.m3u8?@ShamimHossainOfficial
+#EXTINF:-1 tvg-logo="" group-title="ShamimHossainOfficial",WB | SHAHRIYAR LIVE TV
+https://www.livedoomovie.com/02_WarnerTVHD_720p/chunklist.m3u8?@ShamimHossainOfficial
 #EXTINF:-1 tvg-logo="" group-title="ShamimHossainOfficial",Channel 52 | SHAHRIYAR LIVE TV
 http://str24.l9574.com/503.stream/tracks-v1a1/index.m3u8?@ShamimHossainOfficial
 #EXTINF:-1 tvg-logo="" group-title="ShamimHossainOfficial",KTV | SHAHRIYAR LIVE TV
@@ -25032,28 +25042,24 @@ https://edge01.iptv.digijadoo.net/live/jamuna_tv/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/ekushey_tv/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Nick Sonic Bangla | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/sonic/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Nick JR. | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/nick_jr/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",National Geographic | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/nat_geo_in/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Banglavision | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/bangla_vision/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Boishakhi | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/boishakhi_tv/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",BTV World | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/btv_world/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Gaan Bangla | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/gaan_bangla/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",GTV | SHAHRIYAR LIVE TV
 http://edge01.iptv.digijadoo.net/live/gazi_tv/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Independent | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/independent_tv/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Maasranga | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/maasranga/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Maasranga | SHAHRIYAR LIVE TV
 http://pioneer.anytv.live:8080/masranga/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Maasranga | SHAHRIYAR LIVE TV
 http://pioneer.anytv.live:8080/masranga/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Uncategorized",SATV | SHAHRIYAR LIVE TV
+https://edge01.iptv.digijadoo.net/live/sa_tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Shomoy TV | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/somoy_news/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Zee Bangla | SHAHRIYAR LIVE TV
@@ -25062,20 +25068,12 @@ https://edge01.iptv.digijadoo.net/live/zee_bangla/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/colors_bangla_hd/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Colors Bangla SD | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/colors_bangla/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Ruposhi Bangla | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/ruposhi_bangla/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Tara Bangla | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/tara_bangla/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",SangeetBangla | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/sangeet_bangla/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",DD Sports | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/dd_sports/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",ZEE TV SD | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/zee_tv/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Zee Bollywood | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/zee_classic/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Zee Cinema | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/zee_cinema/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Star Plus | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/star_plus/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Star Plus HD | SHAHRIYAR LIVE TV
@@ -25086,8 +25084,6 @@ https://edge01.iptv.digijadoo.net/live/star_gold/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/star_gold_intl/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Star Bharat | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/star_bharat/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Star World | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/star_world/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Colors Rishtey | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/rishtey/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Colors HD | SHAHRIYAR LIVE TV
@@ -25098,8 +25094,6 @@ https://edge01.iptv.digijadoo.net/live/colors_infinity/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/fox_life/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",BBC Lifestyle | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/bbc_lifestyle/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",FYI TV18 | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/fyi_hd/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",TLC HD English | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/tlc_hd/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",History TV HD | SHAHRIYAR LIVE TV
@@ -25116,8 +25110,6 @@ https://edge01.iptv.digijadoo.net/live/nick_hd/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/cbeebies_asia/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Comedy Central | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/comedy_central/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Diva | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/diva/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Lotus Macaw | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/macau_lotus/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Rai Italia | SHAHRIYAR LIVE TV
@@ -25128,28 +25120,18 @@ https://edge01.iptv.digijadoo.net/live/nhk_world/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/ytn/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Arirang | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/arirang/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Enterr Ten | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/enter_ten/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",PTV Global | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/ptv_global/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",PTV Home | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/ptv_home/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",PTV News | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/ptv_news/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",PTV World | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/ptv_world/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Ary Asia | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/ary_asia/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Ary Zindigi | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/ary_zindigi/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Geo News | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/geo_news/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Zoom | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/zoom/playlist.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Zing | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/zing/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",MTV Beats India | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/mtv_beats/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",BBC World | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/bbc_world/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Al Jazeera | SHAHRIYAR LIVE TV
@@ -25160,8 +25142,6 @@ https://nbcnewshls-i.akamaihd.net/hls/live/1005170/nnn_live1/index.m3u8
 https://edge01.iptv.digijadoo.net/live/dw/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Euronews | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/euro_news/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",CNA | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/channel_news/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",CNN | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/cnn/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",ET Now | SHAHRIYAR LIVE TV
@@ -25170,6 +25150,10 @@ https://edge01.iptv.digijadoo.net/live/et_now/chunks.m3u8
 https://edge01.iptv.digijadoo.net/live/abp_news/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",CNBC18 | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/cnbc/chunks.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Uncategorized",APN | SHAHRIYAR LIVE TV
+https://edge01.iptv.digijadoo.net/live/apn_news/chunks.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Times Now | SHAHRIYAR LIVE TV
+https://edge01.iptv.digijadoo.net/live/times_now/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Bloomberg Australia | SHAHRIYAR LIVE TV
 https://liveprodapnortheast.akamaized.net/btv/desktop/aus_live.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",BFM TV | SHAHRIYAR LIVE TV
@@ -25184,12 +25168,8 @@ https://edge01.iptv.digijadoo.net/live/dd_bangla/chunks.m3u8
 http://z5amshls.akamaized.net/cinemauk/tracks-v1a1/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Unknown | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/star_jalsha_hd/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",131.Sonic | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net:443/live/sonic/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Unknown | SHAHRIYAR LIVE TV
 https://edge01.iptv.digijadoo.net/live/colors_bangla_hd/chunks.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Uncategorized",Unknown | SHAHRIYAR LIVE TV
-https://edge01.iptv.digijadoo.net/live/colors_asia/chunks.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",157.Bein Sports Xtra HD | SHAHRIYAR LIVE TV
 https://chostv.mobie.in/choos/sports/beinxtra.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Uncategorized",Unknown | SHAHRIYAR LIVE TV
@@ -25206,10 +25186,6 @@ http://nayatv.ydns.eu:80/xfireflix/flixfire/11677.ts
 http://nayatv.ydns.eu:80/xfireflix/flixfire/11682.ts
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/q3rN5Jmp/Star-Sports-Select-1-HD.jpg" group-title="Sports",Star Sports Select 1 HD | SHAHRIYAR LIVE TV
 http://nayatv.ydns.eu:80/xfireflix/flixfire/11678.ts
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/3NGbmgY2/Star-Sports-2.jpg" group-title="Sports",Sky Sports Football | SHAHRIYAR LIVE TV
-https://ddy6new.newkso.ru/ddy6/premium558/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/3NGbmgY2/Star-Sports-2.jpg" group-title="Sports",Sky Sports Football | SHAHRIYAR LIVE TV
-https://ddy6new.newkso.ru/ddy6/premium559/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/3NGbmgY2/Star-Sports-2.jpg" group-title="Sports",Sky Sports Golf | SHAHRIYAR LIVE TV
 https://ddy6new.newkso.ru/ddy6/premium574/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/3NGbmgY2/Star-Sports-2.jpg" group-title="Sports",Sky Sports Tennis | SHAHRIYAR LIVE TV
@@ -25220,8 +25196,6 @@ https://ddy6new.newkso.ru/ddy6/premium772/mono.m3u8
 https://ddy6new.newkso.ru/ddy6/premium756/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/qMtBrnST/Astro-Cricket.jpg" group-title="Sports",Nova Sports 5 | SHAHRIYAR LIVE TV
 https://ddy6new.newkso.ru/ddy6/premium774/mono.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/qMtBrnST/Astro-Cricket.jpg" group-title="Sports",OneToro | SHAHRIYAR LIVE TV
-https://ddy6new.newkso.ru/ddy6/premium749/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/7Jzck3ZR/PTV-Sports.jpg" group-title="Sports",Premier Sports 1 | SHAHRIYAR LIVE TV
 https://ddy6new.newkso.ru/ddy6/premium771/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/x1VYmp0L/Ten-Sports.jpg" group-title="Sports",Sport TV | SHAHRIYAR LIVE TV
@@ -25254,8 +25228,12 @@ http://banglajagotv.livebox.co.in:80/banglajagohls/24x7.m3u8
 https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/rmBYB7GQ/Bhojpuri-Cinema.jpg" group-title="India",Bhojpuri Cinema | SHAHRIYAR LIVE TV
 https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/J4n7YN2D/Colors.jpg" group-title="India",Dangal | SHAHRIYAR LIVE TV
+https://live-dangal.akamaized.net/liveabr/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/J4n7YN2D/Colors.jpg" group-title="India",Dangal 2 | SHAHRIYAR LIVE TV
 https://live-dangal2.akamaized.net/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/2S9YWq3f/9X-Jalwa.jpg" group-title="Music",9X Jalwa | SHAHRIYAR LIVE TV
+https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/154N6F39/9-X-Jhakaas.jpg" group-title="Music",9X Jhakaas | SHAHRIYAR LIVE TV
 https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/ec26ed6c-3d9d-47d3-ac70-d23e781adbdf/0.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/RZJmcSt6/9XM.jpg" group-title="Music",9X Tashan | SHAHRIYAR LIVE TV
