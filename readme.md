@@ -51,6 +51,17 @@
 
 ---
 
+## 📦 Official App Downloads (Latest Release v2.0.0)
+
+| Platform | Download Link | File Size | Description |
+| :--- | :--- | :--- | :--- |
+| **💻 Windows App** | [**Download Windows v2.0.0 (.zip)**](https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/releases/download/v2.0.0/SHAHRIYAR-LIVE-TV-Windows-v2.0.0.zip) | **4.1 MB** (Compact) | Native Windows WebView2 App. Extract and run `SHAHRIYAR-LIVE-TV.exe` |
+| **📱 Android App** | [**Download Android v2.0.0 (.apk)**](https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/releases/download/v2.0.0/SHAHRIYAR-LIVE-TV-v2.0.0.apk) | **16.4 MB** | Native Media3 ExoPlayer Live TV App for phones & Android TV |
+
+👉 **Full Release Page:** [GitHub Release v2.0.0](https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/releases/tag/v2.0.0)
+
+---
+
 ## 📡 Live Playlist Links
 
 Copy and paste these direct raw links into your favorite video player or IPTV app:
