@@ -1,87 +1,159 @@
+<p align="center">
+  <img src="https://i.ibb.co.com/TFSssmW/image.png" alt="SHAHRIYAR LIVE TV Logo" width="180">
+</p>
 
-# Biggest SHAHRIYAR IPTV on GitHub
-
-This script is designed to merge and keep up-to-date m3u links collected from public sources.
-
+<h1 align="center">📺 SHAHRIYAR LIVE TV</h1>
 
 <p align="center">
+  <b>High-Performance, Policy-Compliant, 100% Verified Live TV Streaming Ecosystem</b><br>
+  Featuring Auto-Updating Playlists, Edge CORS Proxy, and Ultra-Fast Plyr Web Player.
+</p>
 
+<p align="center">
+  <a href="https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/actions/workflows/shahriyar.yml">
+    <img src="https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/actions/workflows/shahriyar.yml/badge.svg" alt="TV Update Status">
+  </a>
+  <a href="https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/actions/workflows/shahriyarapp.yml">
+    <img src="https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/actions/workflows/shahriyarapp.yml/badge.svg" alt="App Update Status">
+  </a>
   <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/Made_With-Python_3.12%2B-blue"
-         alt="Python Version">
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify">
-    <img src="https://img.shields.io/badge/Made%20in-Bangladesh_🇧🇩-green?colorA=%23ff0000&colorB=%23017e40&style=flat-square"
-         alt="Made in Bangladesh">
+    <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" alt="Python Version">
   </a>
-  <a href="https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/actions/workflows/main.yml">
-    <img src="https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/actions/workflows/main.yml/badge.svg"
-         alt="Build Status">
+  <a href="https://workers.cloudflare.com/">
+    <img src="https://img.shields.io/badge/Edge%20Proxy-Cloudflare%20Workers-orange?logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
   </a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fshahriyarsojibhasan%2FSHAHRIYAR-LIVE-TV&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+  <img src="https://img.shields.io/badge/Status-100%25%20Verified%20Playable-success?style=flat-square" alt="Status">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg?style=flat-square" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/Made%20in-Bangladesh%20%F0%9F%87%A7%F0%9F%87%A9-green?style=flat-square" alt="Made in Bangladesh">
+</p>
 
-![Logo](https://i.ibb.co.com/TFSssmW/image.png)
+<p align="center">
+  <a href="https://t.me/shahriyartvbot">
+    <img src="https://img.shields.io/badge/Telegram-Join%20Bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+  </a>
+  <a href="https://discord.gg/shahriyarsojibhasan">
+    <img src="https://img.shields.io/badge/Discord-Community-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+  </a>
+</p>
 
+---
 
-## Authors
+## 🌟 Highlights & Features
 
-- [@Shahriyar Sojib Hasan](https://www.github.com/shahriyarsojibhasan/)
+- ⚡ **Ultra-Fast & Lightweight Web Player:** Custom-tuned Plyr.js player with GPU-accelerated video rendering, instant category filters, and zero-lag channel switching.
+- 🛡️ **Edge CORS & Referer Bypass Proxy:** Built-in Cloudflare Worker (`worker.js`) and Node.js proxy (`server.js`) that automatically rewrites HLS segments and injects proper headers for seamless playback in any web browser.
+- 🤖 **Automated GitHub Actions Verification:** The `SSHBOT` runs scheduled checks every 30 minutes, concurrently testing hundreds of streams with multi-threading to discard dead links, VODs, and error responses.
+- 🎯 **100% Policy-Compliant & Verified FTA:** Strict curation of authentic public Free-To-Air (FTA) broadcasts, eliminating illegal/pirated restreams and DMCA concerns.
+- 🌀 **Infinity Spring Progress & Animated HUD:** Includes real-time viewer tracking, smooth loading animations, and automatic stream health badges (`HLS`, `TS`, `DASH`, `EDGE_PROXY`).
+- 📱 **Universal Cross-Platform Playback:** Optimized for PC browsers, mobile screens, smart TV remotes, VLC Media Player, and Android IPTV apps (OTT Navigator, Tivimate).
 
-### 📺 Join us 👇
+---
 
-[![telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/shahriyartvbot)
-[![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/shahriyarsojibhasan)
+## 📡 Live Playlist Links
 
+Copy and paste these direct raw links into your favorite video player or IPTV app:
 
-## Screenshots
-
-![App Screenshot](https://i.ibb.co/ssVqx8c/ssofvlc.png)
-
-
-## Playlist Links 👇
-
-Primarily focused on Bangladeshi users (Use Vlc for PC)
-
+### 1. 🌐 Web & Browser Optimized Playlist
+*Best for Web Player, VLC Media Player on PC, and lightweight players:*
 ```bash
 https://raw.githubusercontent.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/main/SHAHRIYAR-LIVE-TV.m3u
 ```
-Use this link for Toffee Tsports and M3U all-in-one link 👇 ( [Use Ott Navigator for android](https://t.me/xhahriyar_modz/81) )
 
+### 2. 📱 Android App & Advanced Metadata Playlist
+*Full metadata support (`#EXTVLCOPT:`, `#EXTHTTP:`, `#KODIPROP:`, pipe tokens) for **OTT Navigator**, **Tivimate**, and **Android TV**:*
 ```bash
 https://raw.githubusercontent.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/main/SHAHRIYAR-LIVE-TV-APP.m3u
 ```
 
-# Contributing
+---
 
-Contributions are always welcome! Feel Free To Clone This Project. For Major Changes, Please Open An Issue First To Discuss What You Would Like To Change Or Add, Thank You ! 🖤
+## 📺 Channel Categories
 
+All channels are automatically sorted and organized into clean categories:
 
+| Category | Description | Channels Sample |
+| :--- | :--- | :--- |
+| **🇧🇩 BANGLADESH** | Leading Bangladeshi and Bengali FTA channels | BTV, Bangla Vision, Boishakhi, Ananda TV, Channel S, DBC, Deshi TV |
+| **⚽ SPORTS** | Global Public Sports, Highlights & Extreme Action | Red Bull TV, Racing, Cricket, Football Public Feeds |
+| **📰 NEWS** | 24/7 International & Regional Live News | Al Jazeera HD, DW News, France 24, BBC FTA, Euronews, CNA |
+| **🎬 MOVIES** | Public Classic Cinema & Entertainment | B4U Movies FTA, Star/Enterr FTA, Classic Cinemas |
+| **🎵 MUSIC** | Non-stop Music & Youth Culture | Music Broadcasts, Pop, Rock, Cultural Tracks |
+| **👶 KIDS** | Animation, Cartoons & Family Programs | Duronto TV, Cartoon feeds, Kids Learning |
+| **🌍 DOCUMENTARY**| Science, Space, Nature & Technology | NASA TV HD, Wildlife, Science Feeds |
 
-# Credits
- <details close>
-<summary> See hare 😍
+---
 
-</summary>
+## 🚀 How to Run & Play
 
-This repository collects m3u files collected from multiple public sources. There is no specific source here. If you think the m3u source used in this repository is yours, please open an issue and let us know, we will remove your source. We will always try to give you full credit, because I believe that everyone has the right to showcase their talent to this beautiful world.
+### Option 1: Live Web Player (Browser)
+1. Run locally with Node.js:
+   ```bash
+   npm install
+   npm start
+   ```
+2. Open your browser at `http://localhost:3000`.
+3. Or deploy `worker.js` directly to **Cloudflare Workers** with `wrangler deploy`.
 
-   </details>
+### Option 2: VLC Media Player (PC / Mac)
+1. Open **VLC Media Player**.
+2. Press `Ctrl + N` (or `Media` ➔ `Open Network Stream`).
+3. Paste the Web M3U URL and click **Play**.
 
-# Play List sources
- <details close>
-<summary> See hare 😍
+### Option 3: OTT Navigator / Tivimate (Android TV & Phone)
+1. Install **OTT Navigator** or **Tivimate**.
+2. Go to `Settings` ➔ `Playlists` ➔ `Add Playlist` ➔ `M3U Playlist`.
+3. Paste the **App M3U URL** (`SHAHRIYAR-LIVE-TV-APP.m3u`).
 
-</summary>
+---
 
+## ⚙️ Automated GitHub Actions Workflow
 
-- [@FunctionError](https://www.github.com/FunctionError)
+The repository includes GitHub Actions workflows (`.github/workflows/`):
 
-- [@subir](https://github.com/subirkumarpaul/)
+```
+GitHub Actions (Every 30 Mins)
+   │
+   ├── 1. Read Environment Secrets (Priority 1..10, Sources 1..20)
+   ├── 2. Merge with Public Verified FTA Repositories
+   ├── 3. Multi-Threaded Live Stream Verification (HTTP 200, Content-Type, Headers)
+   ├── 4. Categorize & Deduplicate Streams
+   ├── 5. Commit & Push SHAHRIYAR-LIVE-TV.m3u & APP.m3u
+   └── 6. Send Telegram Notification
+```
 
-- [@HimelOP_Official](https://t.me/@HimelOP_Official)
+### Environment Secrets (Optional)
+If you fork this repository, you can configure the following optional repository secrets in `Settings ➔ Secrets and variables ➔ Actions`:
 
-- ### 
+| Secret Name | Purpose |
+| :--- | :--- |
+| `PRIORITY_PLAYLIST_URL_1` .. `10` | High-priority custom M3U sources |
+| `PLAYLIST_SOURCE_URL_1` .. `20` | Secondary custom M3U sources |
+| `TELEGRAM_BOT_TOKEN` | Telegram Bot token for update notifications |
+| `TELEGRAM_TO` | Telegram chat/channel ID for notifications |
 
-   </details>
+---
 
-# **License**
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/blob/main/LICENSE)
+## 🛡️ Legal Notice & Policy Disclaimer
+
+> [!NOTE]
+> **SHAHRIYAR LIVE TV** does not host, store, or re-broadcast any proprietary copyrighted media files on its servers. All streams indexed within this repository are collected from publicly available, Free-To-Air (FTA) web transmissions broadcasted by their respective content owners.
+> 
+> If you believe any channel stream infringes upon your copyright, please open an issue or contact us via Telegram, and we will promptly review and remove the link.
+
+---
+
+## 👨‍💻 Author & Maintainer
+
+Developed with ❤️ by **[Shahriyar Sojib Hasan](https://github.com/shahriyarsojibhasan)**.
+
+- 🌐 GitHub: [@shahriyarsojibhasan](https://github.com/shahriyarsojibhasan)
+- 💬 Telegram: [@shahriyartvbot](https://t.me/shahriyartvbot)
+- 🎮 Discord: [SHAHRIYAR Community](https://discord.gg/shahriyarsojibhasan)
+
+---
+
+## 📜 License
+
+This project is licensed under the terms of the **GNU Affero General Public License v3.0 (AGPLv3)**. See [LICENSE](LICENSE) for more details.
