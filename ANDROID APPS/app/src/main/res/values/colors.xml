@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_color">#0B1121</color>
+    <color name="sidebar_bg">#111827</color>
+    <color name="primary_color">#00B3FF</color>
+    <color name="text_main">#F8FAFC</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="hover_bg">#1F2937</color>
+    <color name="border_color">#1F2937</color>
+    <color name="error_color">#EF4444</color>
+    <color name="live_red">#EF4444</color>
+    <color name="live_red_bg">#26EF4444</color>
+    <color name="search_input_bg">#1E293B</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

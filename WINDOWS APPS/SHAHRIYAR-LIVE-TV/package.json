@@ -1,0 +1,37 @@
+{
+  "name": "SHAHRIYAR_LIVE_TV",
+  "version": "1.0.0",
+  "description": "SHAHRIYAR LIVE TV Windows App with VIP Bypass & DRM Support",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "author": "Shahriyar Sojib Hasan",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^42.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.shahriyarsojibhasan.shahriyarlivetv",
+    "productName": "SHAHRIYAR LIVE TV",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "SHAHRIYAR LIVE TV"
+    }
+  }
+}

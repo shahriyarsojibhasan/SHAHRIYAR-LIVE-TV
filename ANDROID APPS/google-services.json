@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "263091615054",
+    "firebase_url": "https://shahriyarlivetv-default-rtdb.firebaseio.com",
+    "project_id": "shahriyarlivetv",
+    "storage_bucket": "shahriyarlivetv.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263091615054:android:e2dc864dae803555369a1f",
+        "android_client_info": {
+          "package_name": "com.shahriayrsojibhasan.shahriyarlivetv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcmoZB0sN2NTniDyAYzSlZCsCkzXkuwls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

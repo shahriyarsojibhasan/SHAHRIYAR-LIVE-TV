@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loadingOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Switching Channel Animation -->
+    <LinearLayout
+        android:id="@+id/switchingAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/letterS" style="@style/LoadingLetter" android:text="S" />
+        <TextView android:id="@+id/letterH" style="@style/LoadingLetter" android:text="H" />
+        <TextView android:id="@+id/letterA" style="@style/LoadingLetter" android:text="A" />
+        <TextView android:id="@+id/letterH2" style="@style/LoadingLetter" android:text="H" />
+        <TextView android:id="@+id/letterR" style="@style/LoadingLetter" android:text="R" />
+        <TextView android:id="@+id/letterI" style="@style/LoadingLetter" android:text="I" />
+        <TextView android:id="@+id/letterY" style="@style/LoadingLetter" android:text="Y" />
+        <TextView android:id="@+id/letterA2" style="@style/LoadingLetter" android:text="A" />
+        <TextView android:id="@+id/letterR2" style="@style/LoadingLetter" android:text="R" />
+
+    </LinearLayout>
+
+    <!-- Circular Buffering Animation (SHAHRIYAR text in circle) -->
+    <FrameLayout
+        android:id="@+id/bufferingCircleAnimation"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <TextView android:id="@+id/circle_letterS" style="@style/LoadingLetter" android:text="S" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterH" style="@style/LoadingLetter" android:text="H" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterA" style="@style/LoadingLetter" android:text="A" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterH2" style="@style/LoadingLetter" android:text="H" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterR" style="@style/LoadingLetter" android:text="R" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterI" style="@style/LoadingLetter" android:text="I" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterY" style="@style/LoadingLetter" android:text="Y" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterA2" style="@style/LoadingLetter" android:text="A" android:layout_gravity="center" />
+        <TextView android:id="@+id/circle_letterR2" style="@style/LoadingLetter" android:text="R" android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <!-- Buffering Spinner (For playback buffering) -->
+    <ProgressBar
+        android:id="@+id/bufferingSpinner"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primary_color"
+        android:visibility="gone" />
+
+</FrameLayout>

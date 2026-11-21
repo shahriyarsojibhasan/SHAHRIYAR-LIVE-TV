@@ -1,11 +1,40 @@
+# Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
 .env
+venv/
+env/
+
+# Node / JS
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Archives & Temporary Releases
 release_v2.0.0/
 *.zip
-WINDOWS APPS/NativeApp/
-WINDOWS APPS/SHAHRIYAR-LIVE-TV/dist/
+*.tar.gz
+
+# Windows Apps Build Outputs & Junk
+WINDOWS APPS/**/dist/
+WINDOWS APPS/**/win-unpacked/
+WINDOWS APPS/**/bin/
+WINDOWS APPS/**/obj/
+
+# Android Apps Build Outputs & IDE
+ANDROID APPS/.gradle/
+ANDROID APPS/.idea/
+ANDROID APPS/**/build/
+ANDROID APPS/local.properties
+ANDROID APPS/**/*.iml
+ANDROID APPS/.cxx/
+ANDROID APPS/captures/
+*.apk
+*.aab

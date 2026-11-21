@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/sidebar_bg" />
+        </shape>
+    </item>
+    <item android:top="53dp"> <!-- Assuming 55dp height approx -->
+        <shape>
+            <solid android:color="@color/primary_color" />
+        </shape>
+    </item>
+</layer-list>

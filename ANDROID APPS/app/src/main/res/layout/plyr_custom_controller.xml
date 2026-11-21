@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- Glassmorphism Background at Bottom -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_player_controls"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Big Center Play/Pause -->
+    <ImageButton
+        android:id="@+id/exo_play_pause"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/plyr_button_bg"
+        android:focusable="true"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <!-- Compact Bottom Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <SeekBar
+            android:id="@+id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:progressDrawable="@drawable/spring_progress"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="0dp" />
+
+        <TextView
+            android:id="@+id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/btnVolume"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:src="@drawable/ic_volume_up"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:src="@drawable/ic_settings"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/exo_fullscreen"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:src="@drawable/ic_fullscreen"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

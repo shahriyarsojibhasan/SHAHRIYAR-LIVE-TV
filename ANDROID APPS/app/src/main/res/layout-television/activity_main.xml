@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="false">
+
+    <!-- Sidebar (TV Specific Scale) -->
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:background="@color/sidebar_bg"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/header_bottom_line">
+
+            <ImageView
+                android:id="@+id/header_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_logo_small" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="24dp"
+                android:text="SHAHRIYAR LIVE TV"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalChannelsBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:text="0"
+                android:textColor="@color/text_main"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/searchBoxContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingTop="32dp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/searchInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_input_bg"
+                android:hint="Search Channels..."
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:nextFocusRight="@+id/playerView" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/channelList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="24dp"
+            android:clipToPadding="false"
+            android:nextFocusRight="@+id/playerView" />
+    </LinearLayout>
+
+    <!-- Player Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/nowPlayingFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:use_controller="false"
+            android:focusable="true" />
+
+        <View
+            android:id="@+id/playerTouchAnchor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/player_logo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="32dp"
+            android:alpha="0.7"
+            android:src="@drawable/ic_logo_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/loading_overlay" />
+
+        <include
+            android:id="@+id/plyr_controller"
+            layout="@layout/plyr_custom_controller"
+            android:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/installBanner"
+        layout="@layout/install_banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="48dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Now Playing Footer -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nowPlayingFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:background="@color/sidebar_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/npLogo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@color/white"
+            android:padding="4dp"
+            android:src="@drawable/placeholder_logo"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/nowPlayingInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/npLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/devInfoSection">
+
+            <TextView
+                android:id="@+id/npName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel Name"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/npCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="@color/text_muted"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/engineLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/badge_bg"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="6dp"
+                    android:text="HLS"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/viewerBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/viewer_badge_bg"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="8dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/live_dot" />
+
+                    <TextView
+                        android:id="@+id/viewCountNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="0"
+                        android:textColor="@color/error_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="watching"
+                        android:textColor="@color/error_color"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Right Aligned Dev Info -->
+        <LinearLayout
+            android:id="@+id/devInfoSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2026 | Developed by"
+                android:textColor="@color/text_muted"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHAHRIYAR SOJIB HASAN"
+                android:textColor="@color/text_muted"
+                android:textSize="16sp"
+                android:layout_marginTop="-4dp" />
+
+            <LinearLayout
+                android:id="@+id/copyrightContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/copyrightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="CONTACT @TELEGRAM"
+                    android:textColor="@color/primary_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- No Internet Overlay -->
+    <LinearLayout
+        android:id="@+id/noInternetOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:elevation="20dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_volume_off"
+            app:tint="@color/text_muted" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="No Internet Connection"
+            android:textColor="@color/text_main"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Retry"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:paddingHorizontal="48dp"
+            android:paddingVertical="16dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="false">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@drawable/header_bottom_line"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/header_logo"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_logo_small" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="SHAHRIYAR LIVE TV"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalChannelsBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_bg"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text="0"
+            android:textColor="@color/text_main"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_search"
+            app:tint="@color/text_muted" />
+    </LinearLayout>
+
+    <!-- Search Box -->
+    <FrameLayout
+        android:id="@+id/searchBoxContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@color/sidebar_bg"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_input_bg"
+            android:hint="Search Channels..."
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_muted"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <!-- Player Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toBottomOf="@id/searchBoxContainer">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:resize_mode="fit"
+            app:use_controller="false" />
+
+        <View
+            android:id="@+id/playerTouchAnchor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/player_logo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="12dp"
+            android:alpha="0.4"
+            android:src="@drawable/ic_logo_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/loading_overlay" />
+
+        <include
+            android:id="@+id/plyr_controller"
+            layout="@layout/plyr_custom_controller"
+            android:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Now Playing Section (Styled like active item) -->
+    <LinearLayout
+        android:id="@+id/nowPlayingFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:background="@color/sidebar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/playerContainer">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/npLogo"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@color/white"
+            android:padding="1dp"
+            android:src="@drawable/placeholder_logo"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/npName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Channel Name"
+                android:textColor="@color/text_main"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:letterSpacing="0.01" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/npCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="@color/text_muted"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/engineLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/badge_bg"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="1dp"
+                    android:text="HLS"
+                    android:textColor="@color/text_main"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/viewerBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/viewer_badge_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:background="@drawable/live_dot" />
+
+                    <TextView
+                        android:id="@+id/viewCountNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="0"
+                        android:textColor="@color/live_red"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="watching"
+                        android:textColor="@color/live_red"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/installBanner"
+        layout="@layout/install_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/nowPlayingFooter" />
+
+    <!-- Channel List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/channelList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/installBanner"
+        app:layout_constraintBottom_toTopOf="@id/copyrightContainer" />
+
+    <!-- Footer Copyright -->
+    <LinearLayout
+        android:id="@+id/copyrightContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sidebar_bg"
+        android:padding="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/copyrightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="SHAHRIYAR SOJIB HASAN"
+            android:textColor="@color/primary_color"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- No Internet Overlay -->
+    <LinearLayout
+        android:id="@+id/noInternetOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_volume_off"
+            app:tint="@color/text_muted" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No Internet Connection"
+            android:textColor="@color/text_main"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Retry"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
