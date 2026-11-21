@@ -1,151 +1,148 @@
+// ========================================================
+// 📺 SHAHRIYAR LIVE TV - Local / Node.js Streaming Server
+// 🚀 High-Performance HLS Segment Rewriting Proxy
+// ========================================================
+
 const express = require('express');
 const fetch = require('node-fetch');
 const path = require('path');
 const app = express();
 
-// ✅ CORS Middleware
+const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS, POST',
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Range',
+    'Access-Control-Expose-Headers': 'Content-Length, Content-Range, Content-Type'
+};
+
+// CORS Middleware
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS, POST');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Range');
-    
-    if (req.method === 'OPTIONS') {
-        return res.sendStatus(200);
-    }
+    Object.entries(corsHeaders).forEach(([k, v]) => res.header(k, v));
+    if (req.method === 'OPTIONS') return res.sendStatus(204);
     next();
 });
 
+// Serve Static Frontend
 app.use(express.static(path.join(__dirname)));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'home.html'));
+// Health check
+app.get('/health', (req, res) => {
+    res.json({
+        status: 'online ✅',
+        uptime: process.uptime(),
+        timestamp: new Date().toISOString()
+    });
 });
 
-// ✅ M3U8 Master Playlist Proxy (Unplayable লিংকের জন্য)
-app.get('/master.m3u8', async (req, res) => {
-    const tsUrl = req.query.url;
-    console.log('✅ M3U8 Request:', tsUrl);
-    
-    if (!tsUrl) {
-        return res.status(400).send('#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-ENDLIST');
-    }
-    
+// Universal Proxy endpoint (/proxy or /stream)
+const handleProxy = async (req, res) => {
+    const targetUrl = req.query.url;
+    if (!targetUrl) return res.status(400).send('Error: Missing "url" parameter');
+
+    let parsedTarget;
     try {
-        const streamProxyUrl = `${req.protocol}://${req.get('host')}/stream?url=${encodeURIComponent(tsUrl)}`;
-        
-        const m3u8Content = `#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-TARGETDURATION:999999
-#EXT-X-MEDIA-SEQUENCE:1
-#EXT-X-PLAYLIST-TYPE:VOD
-#EXTINF:999999.000,
-${streamProxyUrl}
-#EXT-X-ENDLIST`;
-
-        res.set({
-            'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Access-Control-Allow-Origin': '*'
-        });
-        
-        res.send(m3u8Content);
-    } catch (error) {
-        console.error('❌ M3U8 Error:', error.message);
-        res.status(500).send('#EXTM3U\n#EXT-X-ENDLIST');
-    }
-});
-
-// ✅ Stream Proxy - 15s Stop Fix
-app.get('/stream', async (req, res) => {
-    const tsUrl = req.query.url;
-    console.log('🎬 Stream Request:', tsUrl);
-    
-    if (!tsUrl) {
-        return res.status(400).send('Missing URL');
+        parsedTarget = new URL(targetUrl);
+    } catch (e) {
+        return res.status(400).send('Error: Invalid URL');
     }
 
-    // 🚀 FIX 1: Disable Node.js Server Timeouts for Endless Live Stream
     req.socket.setTimeout(0);
     res.setTimeout(0);
 
     const controller = new AbortController();
-    const signal = controller.signal;
+    req.on('close', () => controller.abort());
 
-    req.on('close', () => {
-        console.log('🛑 Client disconnected, aborting stream...');
-        controller.abort();
-    });
-    
     try {
-        const requestOptions = {
-            headers: {
-                'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18',
-                'Accept': '*/*',
-                'Connection': 'keep-alive'
-            },
-            signal
+        const fetchHeaders = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 VLC/3.0.20',
+            'Accept': '*/*',
+            'Referer': parsedTarget.origin + '/',
+            'Origin': parsedTarget.origin
         };
-        
-        const response = await fetch(tsUrl, requestOptions);
-        
-        if (!response.ok) {
-            console.error('❌ Stream Error:', response.status);
-            return res.status(response.status).send('Stream unavailable');
+
+        if (req.headers.range) {
+            fetchHeaders['Range'] = req.headers.range;
         }
+
+        const response = await fetch(targetUrl, {
+            headers: fetchHeaders,
+            signal: controller.signal
+        });
+
+        if (!response.ok && response.status !== 206) {
+            return res.status(response.status).send(`Stream error: Upstream status ${response.status}`);
+        }
+
+        const contentType = (response.headers.get('content-type') || '').toLowerCase();
+        const isM3U8 = targetUrl.toLowerCase().includes('.m3u8') || targetUrl.toLowerCase().includes('.m3u') || contentType.includes('mpegurl');
+
+        // M3U8 Segment rewriting
+        if (isM3U8) {
+            const rawText = await response.text();
+            const serverOrigin = `${req.protocol}://${req.get('host')}`;
+            const baseUrl = targetUrl;
+
+            const rewritten = rawText.split('\n').map(line => {
+                const trimmed = line.trim();
+                if (!trimmed) return line;
+
+                if (trimmed.startsWith('#')) {
+                    return line.replace(/URI=["']([^"']+)["']/gi, (m, keyUri) => {
+                        try {
+                            const absKey = new URL(keyUri, baseUrl).href;
+                            return `URI="${serverOrigin}/proxy?url=${encodeURIComponent(absKey)}"`;
+                        } catch {
+                            return m;
+                        }
+                    });
+                }
+
+                try {
+                    const abs = new URL(trimmed, baseUrl).href;
+                    return `${serverOrigin}/proxy?url=${encodeURIComponent(abs)}`;
+                } catch {
+                    return line;
+                }
+            }).join('\n');
+
+            res.set({
+                'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
+                'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0'
+            });
+            return res.send(rewritten);
+        }
+
+        // Binary streaming (.ts / .mp4 / audio)
+        res.status(response.status);
+        res.setHeader('Content-Type', contentType || 'video/mp2t');
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
         
-        // 🚀 FIX 2: Live Stream Headers Customization
-        // Content-Length পাঠানো যাবে না, তাহলে ব্রাউজার ১৫ সেকেন্ড পর থেমে যাবে!
-        res.setHeader('Content-Type', 'video/mp2t');
-        res.setHeader('Transfer-Encoding', 'chunked'); // Force endless chunks
-        res.setHeader('Connection', 'keep-alive');
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0');
-        
-        console.log('✅ Streaming started without timeout restrictions');
-        
-        // Stream data to client
+        const cl = response.headers.get('content-length');
+        if (cl) res.setHeader('Content-Length', cl);
+
+        const cr = response.headers.get('content-range');
+        if (cr) res.setHeader('Content-Range', cr);
+
         response.body.pipe(res);
-        
-        response.body.on('error', (error) => {
-            if (error.name !== 'AbortError') {
-                console.error('❌ Upstream Error:', error.message);
-            }
+        response.body.on('error', (err) => {
+            if (err.name !== 'AbortError') console.error('Stream pipe error:', err.message);
             res.end();
         });
-        
-    } catch (error) {
-        if (error.name === 'AbortError') {
-            console.log('🛑 Fetch aborted successfully.');
-        } else {
-            console.error('❌ Proxy Error:', error.message);
-            if (!res.headersSent) {
-                res.status(500).send('Proxy Error: ' + error.message);
-            }
+
+    } catch (err) {
+        if (err.name !== 'AbortError') {
+            console.error('Proxy Error:', err.message);
+            if (!res.headersSent) res.status(500).send('Proxy Error: ' + err.message);
         }
     }
-});
+};
 
-// ✅ Health Check
-app.get('/health', (req, res) => {
-    res.json({ 
-        status: 'running ✅',
-        timestamp: new Date().toISOString(),
-        uptime: process.uptime()
-    });
-});
-
-// ✅ Global Error Handler
-app.use((err, req, res, next) => {
-    console.error('❌ Global Error:', err);
-    if (!res.headersSent) {
-        res.status(500).send('Internal Server Error');
-    }
-});
+app.get('/proxy', handleProxy);
+app.get('/stream', handleProxy);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`\n🚀 Server Running on Port ${PORT}`);
-    console.log(`📺 Open: http://localhost:${PORT}`);
-    console.log(`📡 TS Proxy: http://localhost:${PORT}/stream?url=YOUR_TS_URL`);
-    console.log(`💚 Health: http://localhost:${PORT}/health\n`);
+    console.log(`\n🚀 SHAHRIYAR LIVE TV Server running on port ${PORT}`);
+    console.log(`📺 Frontend: http://localhost:${PORT}`);
+    console.log(`📡 Stream Proxy: http://localhost:${PORT}/proxy?url=YOUR_STREAM_URL\n`);
 });

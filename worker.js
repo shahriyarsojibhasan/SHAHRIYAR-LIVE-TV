@@ -1,8 +1,13 @@
-// ✅ CORS Headers Helper
+// ========================================================
+// 📺 SHAHRIYAR LIVE TV - Cloudflare Worker Edge Proxy
+// 🚀 High-Performance HLS Segment Rewriter & CORS Bypass Proxy
+// ========================================================
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS, POST',
-  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Range'
+  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Range',
+  'Access-Control-Expose-Headers': 'Content-Length, Content-Range, Content-Type'
 };
 
 export default {
@@ -10,106 +15,142 @@ export default {
     const url = new URL(request.url);
     const { pathname, searchParams } = url;
 
-    // ✅ 1. Handle CORS Preflight (OPTIONS)
+    // 1. CORS Preflight (OPTIONS)
     if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        status: 200,
-        headers: corsHeaders
+      return new Response(null, { status: 204, headers: corsHeaders });
+    }
+
+    // 2. Health Check
+    if (pathname === '/health') {
+      return new Response(JSON.stringify({
+        status: 'online ✅',
+        service: 'SHAHRIYAR LIVE TV Edge Stream Proxy',
+        timestamp: new Date().toISOString()
+      }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
     }
 
-    try {
-      // ✅ 2. Health Check Endpoint
-      if (pathname === '/health') {
-        return new Response(JSON.stringify({
-          status: 'running ✅',
-          timestamp: new Date().toISOString(),
-          platform: 'Cloudflare Worker'
-        }), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+    // 3. Universal Stream / M3U8 Proxy (/proxy or /stream)
+    if (pathname === '/proxy' || pathname === '/stream') {
+      const targetUrl = searchParams.get('url');
+      if (!targetUrl) {
+        return new Response('Error: Missing "url" parameter', {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'text/plain; charset=utf-8' }
         });
       }
 
-      // ✅ 3. M3U8 Master Playlist Proxy
-      if (pathname === '/master.m3u8') {
-        const tsUrl = searchParams.get('url');
-        
-        if (!tsUrl) {
-          return new Response('#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-ENDLIST', {
-            status: 400,
-            headers: { ...corsHeaders, 'Content-Type': 'application/vnd.apple.mpegurl' }
-          });
-        }
-
-        const streamProxyUrl = `${url.origin}/stream?url=${encodeURIComponent(tsUrl)}`;
-        
-        const m3u8Content = `#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:999999\n#EXT-X-MEDIA-SEQUENCE:1\n#EXT-X-PLAYLIST-TYPE:VOD\n#EXTINF:999999.000,\n${streamProxyUrl}\n#EXT-X-ENDLIST`;
-
-        return new Response(m3u8Content, {
-          headers: {
-            ...corsHeaders,
-            'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
-            'Cache-Control': 'no-cache, no-store, must-revalidate'
-          }
-        });
-      }
-
-      // ✅ 4. Stream Proxy (Endless Live Stream with Bypass Headers)
-      if (pathname === '/stream') {
-        const tsUrl = searchParams.get('url');
-        
-        if (!tsUrl) {
-          return new Response('Missing URL', { status: 400, headers: corsHeaders });
-        }
-
-        // Get actual user's IP to spoof the request
+      try {
         const clientIP = request.headers.get('CF-Connecting-IP') || '1.1.1.1';
-        
-        // Prepare strict bypass headers
-        const fetchHeaders = {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) VLC/3.0.18',
-          'Accept': '*/*',
-          'Connection': 'keep-alive',
-          'X-Forwarded-For': clientIP, // Tries to bypass Cloudflare IP blocks
-          'Referer': new URL(tsUrl).origin + '/' // Some panels require exact referer
-        };
+        let parsedTarget;
+        try {
+          parsedTarget = new URL(targetUrl);
+        } catch {
+          return new Response('Error: Invalid URL format', { status: 400, headers: corsHeaders });
+        }
 
-        // Fetch stream from upstream server
-        const upstreamResponse = await fetch(tsUrl, {
-          method: request.method,
+        const fetchHeaders = new Headers();
+        fetchHeaders.set('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 VLC/3.0.20');
+        fetchHeaders.set('Accept', '*/*');
+        fetchHeaders.set('Accept-Language', 'en-US,en;q=0.9');
+        fetchHeaders.set('Referer', parsedTarget.origin + '/');
+        fetchHeaders.set('Origin', parsedTarget.origin);
+        fetchHeaders.set('X-Forwarded-For', clientIP);
+
+        // Forward Range header if requested (critical for seek / video buffering)
+        const rangeHeader = request.headers.get('Range');
+        if (rangeHeader) {
+          fetchHeaders.set('Range', rangeHeader);
+        }
+
+        const upstreamResponse = await fetch(targetUrl, {
+          method: request.method === 'POST' ? 'POST' : 'GET',
           headers: fetchHeaders,
           redirect: 'follow'
         });
 
-        // Debugging: If stream fails, show the EXACT upstream error (e.g. 403 Forbidden)
-        if (!upstreamResponse.ok) {
-          return new Response(`❌ Stream blocked or unavailable.\nUpstream Server returned: ${upstreamResponse.status} ${upstreamResponse.statusText}\n\nNote: If you see 403 or 401, the IPTV provider (rgkkw.live) is actively blocking Cloudflare Worker IP addresses.`, { 
-            status: upstreamResponse.status === 404 ? 404 : 502, 
-            headers: { ...corsHeaders, 'Content-Type': 'text/plain' }
+        if (!upstreamResponse.ok && upstreamResponse.status !== 206) {
+          return new Response(`Stream error: Upstream server returned ${upstreamResponse.status} ${upstreamResponse.statusText}`, {
+            status: upstreamResponse.status === 404 ? 404 : 502,
+            headers: { ...corsHeaders, 'Content-Type': 'text/plain; charset=utf-8' }
           });
         }
 
-        // Pass exact Content-Type from upstream, fallback to mp2t
+        const contentType = (upstreamResponse.headers.get('content-type') || '').toLowerCase();
+        const urlLower = targetUrl.toLowerCase();
+        const isM3U8 = urlLower.includes('.m3u8') || urlLower.includes('.m3u') || contentType.includes('mpegurl');
+
+        // 🚀 Intelligent M3U8 Parsing & Segment URL Rewriting
+        if (isM3U8) {
+          const rawText = await upstreamResponse.text();
+          const workerOrigin = url.origin;
+          const baseUrl = targetUrl;
+
+          const rewrittenLines = rawText.split('\n').map(line => {
+            const trimmed = line.trim();
+            if (!trimmed) return line;
+
+            // Handle #EXT tags with URIs (such as encryption keys)
+            if (trimmed.startsWith('#')) {
+              return line.replace(/URI=["']([^"']+)["']/gi, (match, keyUri) => {
+                try {
+                  const absoluteKeyUrl = new URL(keyUri, baseUrl).href;
+                  return `URI="${workerOrigin}/proxy?url=${encodeURIComponent(absoluteKeyUrl)}"`;
+                } catch {
+                  return match;
+                }
+              });
+            }
+
+            // Normal segment or child playlist line
+            try {
+              const absoluteSegmentUrl = new URL(trimmed, baseUrl).href;
+              return `${workerOrigin}/proxy?url=${encodeURIComponent(absoluteSegmentUrl)}`;
+            } catch {
+              return line;
+            }
+          });
+
+          return new Response(rewrittenLines.join('\n'), {
+            status: 200,
+            headers: {
+              ...corsHeaders,
+              'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
+              'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0'
+            }
+          });
+        }
+
+        // Binary streaming (.ts segments, .mp4 chunks, key files, etc.)
         const responseHeaders = new Headers(corsHeaders);
-        responseHeaders.set('Content-Type', upstreamResponse.headers.get('content-type') || 'video/mp2t');
+        responseHeaders.set('Content-Type', contentType || 'video/mp2t');
         responseHeaders.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
         
-        // Return the ReadableStream directly to the client
+        const contentLength = upstreamResponse.headers.get('content-length');
+        if (contentLength) responseHeaders.set('Content-Length', contentLength);
+
+        const contentRange = upstreamResponse.headers.get('content-range');
+        if (contentRange) responseHeaders.set('Content-Range', contentRange);
+
         return new Response(upstreamResponse.body, {
           status: upstreamResponse.status,
           headers: responseHeaders
         });
+
+      } catch (err) {
+        return new Response(`Worker Proxy Error: ${err.message}`, {
+          status: 500,
+          headers: { ...corsHeaders, 'Content-Type': 'text/plain; charset=utf-8' }
+        });
       }
-
-      // ✅ 5. Serve Static Assets (index.html, .m3u files)
-      return await env.ASSETS.fetch(request);
-
-    } catch (error) {
-      console.error('❌ Worker Error:', error.message);
-      return new Response('Worker Error: ' + error.message, { 
-        status: 500, 
-        headers: corsHeaders 
-      });
     }
+
+    // 4. Serve Static Assets (index.html, .m3u files, icons)
+    if (env.ASSETS) {
+      return await env.ASSETS.fetch(request);
+    }
+
+    return new Response('Not Found', { status: 404, headers: corsHeaders });
   }
 };
