@@ -9,44 +9,16 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 VLC/3.0.20'
 
-# 100% Legal, Authentic, Public Free-To-Air (FTA) Curated Sources
-DEFAULT_LEGAL_SOURCES = [
-    'https://iptv-org.github.io/iptv/languages/ben.m3u',       # Bengali & BD FTA Channels
-    'https://iptv-org.github.io/iptv/countries/bd.m3u',        # Bangladesh Official FTA
-]
-
-# Top High-Definition Global Public FTA Live Streams (Legal & 100% Free)
-CURATED_GLOBAL_FTA = [
-    {
-        'name': 'Al Jazeera English HD',
-        'group': '📰 NEWS',
-        'logo': 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Al_Jazeera_English_logo.svg/512px-Al_Jazeera_English_logo.svg.png',
-        'url': 'https://live-hls-web-aje.getaj.net/AJE/03.m3u8'
-    },
-    {
-        'name': 'DW English News HD',
-        'group': '📰 NEWS',
-        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Deutsche_Welle_symbol_2012.svg/512px-Deutsche_Welle_symbol_2012.svg.png',
-        'url': 'https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8'
-    },
-    {
-        'name': 'France 24 English HD',
-        'group': '📰 NEWS',
-        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/France_24_logo.svg/512px-France_24_logo.svg.png',
-        'url': 'https://static.france24.com/live/F24_EN_LO_HLS/live_tv.m3u8'
-    },
-    {
-        'name': 'NASA TV Public HD',
-        'group': '🌍 DOCUMENTARY',
-        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/512px-NASA_logo.svg.png',
-        'url': 'https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8'
-    },
-    {
-        'name': 'Red Bull TV HD',
-        'group': '⚽ SPORTS',
-        'logo': 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Red_Bull_TV_logo.svg/512px-Red_Bull_TV_logo.svg.png',
-        'url': 'https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8'
-    }
+# Multi-Category Legal & Verified Public FTA Sources
+CURATED_SOURCES = [
+    ('🇧🇩 BANGLADESH', 'https://iptv-org.github.io/iptv/countries/bd.m3u', 60),
+    ('🇧🇩 BANGLADESH', 'https://iptv-org.github.io/iptv/languages/ben.m3u', 120),
+    ('⚽ SPORTS', 'https://iptv-org.github.io/iptv/categories/sports.m3u', 90),
+    ('📰 NEWS', 'https://iptv-org.github.io/iptv/categories/news.m3u', 100),
+    ('🎵 MUSIC', 'https://iptv-org.github.io/iptv/categories/music.m3u', 60),
+    ('👶 KIDS', 'https://iptv-org.github.io/iptv/categories/animation.m3u', 50),
+    ('🎬 MOVIES', 'https://iptv-org.github.io/iptv/categories/movies.m3u', 50),
+    ('🌍 DOCUMENTARY', 'https://iptv-org.github.io/iptv/categories/documentary.m3u', 50)
 ]
 
 BLOCKED_KEYWORDS = [
@@ -75,10 +47,10 @@ def normalize_group(name, group=""):
     if any(k in n or k in g for k in ['kid', 'cartoon', 'anime', 'duronto', 'disney', 'pogo', 'nick']):
         return "👶 KIDS"
     if any(k in n or k in g for k in ['movie', 'cinema', 'drama', 'entertainment', 'natok', 'zee', 'sony', 'star', 'colors']):
-        return "🎬 ENTERTAINMENT"
+        return "🎬 MOVIES"
     if any(k in n or k in g for k in ['doc', 'science', 'nasa', 'nature', 'geo', 'discovery', 'history']):
         return "🌍 DOCUMENTARY"
-    return "🌐 WORLD TV"
+    return "🌐 GENERAL"
 
 def is_vod(url, group=""):
     url_clean = url.lower().split('?')[0].split('|')[0]
@@ -130,7 +102,7 @@ def verify_stream(args):
     except Exception:
         return None
 
-def fetch_m3u_channels(source_url, max_limit=100):
+def fetch_m3u_channels(source_url, default_group="🌐 GENERAL", max_limit=100):
     if not source_url:
         return []
     try:
@@ -158,7 +130,7 @@ def fetch_m3u_channels(source_url, max_limit=100):
             raw_name = line[name_idx+1:].strip() if name_idx != -1 else "Live TV"
             current['name'] = clean_channel_name(raw_name)
             current['logo'] = logo_m.group(1).strip() if logo_m else ""
-            current['group'] = group_m.group(1).strip() if group_m else "General"
+            current['group'] = group_m.group(1).strip() if group_m else default_group
 
         elif line.startswith('http') and 'name' in current:
             clean_url = line.split('|')[0].strip()
@@ -182,32 +154,45 @@ def generate_web_playlist():
     active_env_priority = [s for s in env_priority if s and s.strip()]
     active_env_sources = [s for s in env_sources if s and s.strip()]
 
-    all_sources = active_env_priority + active_env_sources + DEFAULT_LEGAL_SOURCES
+    print(f"📥 Loading sources: {len(active_env_priority)} priority env, {len(active_env_sources)} regular env, {len(CURATED_SOURCES)} multi-category legal feeds.", flush=True)
 
-    print(f"📥 Loading sources: {len(active_env_priority)} priority env, {len(active_env_sources)} regular env, {len(DEFAULT_LEGAL_SOURCES)} legal defaults.", flush=True)
+    raw_channels = []
+    seen_urls = set()
 
-    raw_channels = list(CURATED_GLOBAL_FTA)
-    seen_urls = {ch['url'] for ch in CURATED_GLOBAL_FTA}
-
-    for src in all_sources:
-        for ch in fetch_m3u_channels(src, max_limit=150):
+    # Load custom env priority first
+    for src in active_env_priority:
+        for ch in fetch_m3u_channels(src, "⭐ VIP", max_limit=150):
             if ch['url'] not in seen_urls:
                 seen_urls.add(ch['url'])
                 raw_channels.append(ch)
 
-    print(f"📡 Collected {len(raw_channels)} candidate channels. Verifying fast (50 workers)... 🚀", flush=True)
+    # Load custom env regular sources
+    for src in active_env_sources:
+        for ch in fetch_m3u_channels(src, "🌐 GENERAL", max_limit=100):
+            if ch['url'] not in seen_urls:
+                seen_urls.add(ch['url'])
+                raw_channels.append(ch)
+
+    # Load curated multi-category legal sources
+    for default_grp, src, limit in CURATED_SOURCES:
+        for ch in fetch_m3u_channels(src, default_grp, max_limit=limit):
+            if ch['url'] not in seen_urls:
+                seen_urls.add(ch['url'])
+                raw_channels.append(ch)
+
+    print(f"📡 Collected {len(raw_channels)} candidate channels across all categories. Fast Verifying (80 workers)... 🚀", flush=True)
 
     verified = []
     with requests.Session() as session:
         tasks = [(ch, session) for ch in raw_channels]
-        with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=80) as executor:
             for res in executor.map(verify_stream, tasks):
                 if res:
                     verified.append(res)
 
     print(f"✅ Verified {len(verified)} 100% playable streams.", flush=True)
 
-    # Deduplicate by Channel Name (keep best link per channel)
+    # Deduplicate by Channel Name (prefer CORS-playable & HTTPS)
     unique_channels = {}
     for ch in verified:
         key = ch['name'].lower()
@@ -220,21 +205,18 @@ def generate_web_playlist():
     final_list = list(unique_channels.values())
 
     category_order = {
+        "⭐ VIP": 0,
         "🇧🇩 BANGLADESH": 1,
         "⚽ SPORTS": 2,
         "📰 NEWS": 3,
-        "🎬 ENTERTAINMENT": 4,
+        "🎬 MOVIES": 4,
         "🎵 MUSIC": 5,
         "👶 KIDS": 6,
         "🌍 DOCUMENTARY": 7,
-        "🌐 WORLD TV": 8
+        "🌐 GENERAL": 8
     }
 
     final_list.sort(key=lambda c: (category_order.get(c['group'], 99), c['name']))
-
-    # Keep top 120 verified channels for optimal lightweight web performance
-    if len(final_list) > 120:
-        final_list = final_list[:120]
 
     now_bd = datetime.now(timezone(timedelta(hours=6))).strftime('%Y-%m-%d %H:%M:%S')
     output_file = 'SHAHRIYAR-LIVE-TV.m3u'
@@ -250,7 +232,8 @@ def generate_web_playlist():
         f.write('https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/raw/refs/heads/main/assest/shahriyarlivetv.m3u8\n\n')
 
         for ch in final_list:
-            f.write(f'#EXTINF:-1 tvg-logo="{ch.get("logo", "")}" group-title="{ch["group"]}",{ch["name"]}\n')
+            logo_val = ch.get('logo', '')
+            f.write(f'#EXTINF:-1 tvg-logo="{logo_val}" group-title="{ch["group"]}",{ch["name"]}\n')
             f.write(f'{ch["url"]}\n')
 
     print(f"🎉 Successfully saved {len(final_list)} verified channels to {output_file}!", flush=True)
