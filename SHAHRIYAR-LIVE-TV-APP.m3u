@@ -1,7 +1,7 @@
 #EXTM3U
 # SHAHRIYAR LIVE TV APP - For OTT Navigator, VLC & Android
-# Updated on: 2026-11-21 20:03:37 (BDT)
-# Total Playable Channels: 535
+# Updated on: 2026-11-21 20:05:50 (BDT)
+# Total Playable Channels: 538
 
 #EXTINF:-1 tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjz0o_rUO-ESkNHIPrS97j51IBvyY35Z8GmEmmDOLQtRmErsvwvDka4XGmqpDlcDy6iNkfo3mc-ApousuAR4mrZoFlGYeBSO6HKxnlM62ODaMOAhOIAzXp34Q5pO39RV6UIKS-WjKFLh6tLB3KLHxqTivKYmRTdnZEmm9xUZw5tFeZ5YakHpd0jF3DU" group-title="🎬 PROMO",SHAHRIYAR LIVE TV Official
 https://github.com/shahriyarsojibhasan/SHAHRIYAR-LIVE-TV/raw/refs/heads/main/assest/shahriyarlivetv.m3u8
@@ -106,8 +106,6 @@ https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8?e=1784102573&u=ee5437
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/Global-tv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/1678abdbf203bb77af4bbf2905a3de59" group-title="🇧🇩 BANGLADESH",IBTV USA
 https://tvsen7.aynaott.com/ibtvusa/index.m3u8?e=1784102566&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=3bc7a2a5fe20a69e8fadc40261b2cbba
-#EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/6653326503fcade746d87881d5c99697" group-title="🇧🇩 BANGLADESH",Independent TV
-https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=faa76e200f238010e464d45a3135f138
 #EXTINF:-1 tvg-logo="https://i.imgur.com/BZBZAeC.png" group-title="🇧🇩 BANGLADESH",Iqra Bangla
 https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/jtv_bangla.png" group-title="🇧🇩 BANGLADESH",JTV Bangla
@@ -747,6 +745,8 @@ https://cdn.pishow.tv/ott/live/1211/master.m3u8
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TgO3Lzi.png" group-title="📰 NEWS",A2 CNN
 https://tv.a2news.com/live/smil:a2cnnweb.stream.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/LnXQkIU.png" group-title="📰 NEWS",A24
+http://138.59.227.20:8000/play/a05u/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XWBmjBk.png" group-title="📰 NEWS",A24 Paraguay
 https://a24-live.argosworkspace.com/a24/index.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/065af1ce1aa68d9d96c27050a8125413" group-title="📰 NEWS",ABC News
@@ -932,6 +932,8 @@ https://stream.ottlive.co.in/onkarnews/index.m3u8
 https://5dd3981940faa.streamlock.net/onkarentertainment/onkarentertainment/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7oTsfQ4.png" group-title="📰 NEWS",Probashi TV News
 http://158.69.24.53:8080/probashi_tv/index.m3u8
+#EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/947715e0a22f16ac21805073ce6eb0b6" group-title="📰 NEWS",Republic TV Bharat
+https://tvsen6.aynaott.com/faGd3tuq/index.m3u8?e=1784102553&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=8133079644fb0609090a409e519aaa73
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/80e4113d034ad20bcbea341dcb4ae27e" group-title="📰 NEWS",Sadhna Prime News
 https://tvsen6.aynaott.com/WZUs6gAU/index.m3u8?e=1784102556&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=49ac20f3ecb8e9577b16afd7195615fa
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/69d8281f965475f3293a3e30de8c0ccb" group-title="📰 NEWS",Sky News
@@ -1192,6 +1194,8 @@ https://fastlive.cctvplus.com/out/v1/8442c3bfd4c64a3984389328f6087879/index.m3u8
 https://cc-mgr91yrk4pehy.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mgr91yrk4pehy/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/x57klfS.png" group-title="🌍 DOCUMENTARY",Documentary+
 https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/2248nxX.png" group-title="🌍 DOCUMENTARY",Docurama
+https://docurama-plex-ingest.cinedigm.com/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GadfTwF.png" group-title="🌍 DOCUMENTARY",Dokusat
 https://muc3.iptv-playoutcenter.de/dokusat/dokusat1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8Zx6dA7.png" group-title="🌍 DOCUMENTARY",Dossiers FBI
@@ -1234,6 +1238,8 @@ https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
 #EXTINF:-1 tvg-logo="https://s4.gifyu.com/images/image534fa27d7683f33d.png" group-title="🌐 GENERAL",Ekushey TV
 http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
+#EXTINF:-1 tvg-logo="https://jtbsclassic.dpdns.org/logo.png" group-title="🌐 GENERAL",JTBS Classic
+https://jtbsclassic.dpdns.org/live.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/2snahLk.png" group-title="🌐 GENERAL",JonmoBhumi TV
 https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/bYiRfAg.png" group-title="🌐 GENERAL",MTA1 World
